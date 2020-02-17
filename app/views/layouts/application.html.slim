@@ -1,0 +1,18 @@
+
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title 食品サンプル規格品管理
+    = csrf_meta_tags
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body.bg-light cz-shortcut-listen="true"
+    = render partial: 'shared/navbar'
+
+  - if flash.notice.present?
+    .alert.alert-success= flash.notice
+
+  = yield

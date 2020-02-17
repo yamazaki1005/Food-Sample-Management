@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    models:
+      product: 規格品
+    attributes:
+      product:
+
+        product_name: 品名
+        product_number: 品番
+        page: 掲載ページ
+        classification: 分類
+        discontinued: 廃番
+        unit_name: 単位
+        price: 価格
+        remark: 備考
+        unit: Lot数
+        user_id: ユーザーID
+        created_at: 作成日時
+        updated_at: 更新日時
+    helpers:
+      select:
+        prompt: 選択してください
+      submit:
+        create: 登録する
+        submit: 保存する
+        update: 更新する

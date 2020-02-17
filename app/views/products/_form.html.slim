@@ -1,0 +1,74 @@
+.bg-light
+  .input_form
+    .border.border-secondary.custom_input_form.bg-white.text-body
+      = form_with model: product, local: true do |f|
+        .form-group.row
+          = f.label "品名：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: "規格品名"
+
+        .form-group.row
+          = f.label "品番：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.text_field :product_number, class: 'form-control', id: 'product_number', type: 'number', placeholder: "品番"
+
+        .form-group.row
+          = f.label "ページ：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.text_field :page, class: 'form-control', id: 'page', placeholder: "掲載ページ番号"
+
+        .form-group.row
+          = f.label "分類：", class: 'col-sm-2 col-form-label'
+          .col-sm-10.text-right
+            = f.select :classification, [["規格完成品", "規格完成品"],
+             ["ポテサラ・赤スパ盛等", "ポテサラ・赤スパ盛等"], ["玉子", "玉子"],
+             ["フライ類", "フライ類"], ["肉・肉製品", "肉・肉製品"],
+             ["パン・サンドイッチ", "パン・サンドイッチ"],["魚介", "魚介"],
+             ["中華部品", "中華部品"],["天ぷら", "天ぷら"],
+             ["焼魚・うなぎ蒲焼き", "焼魚・うなぎ蒲焼き"],["おでん・焼鳥", "おでん・焼鳥"],
+             ["和食部品", "和食部品"],["漬物", "漬物"],["刺身・寿司ネタ", "刺身・寿司ネタ"],
+             ["薬味", "薬味"],["笹の葉・ハラン", "笹の葉・ハラン"],
+             ["和食カット部品", "和食カット部品"],["手巻寿司", "手巻寿司"],
+             ["握り寿司", "握り寿司"],["巻寿司", "巻寿司"],["押し寿司", "押し寿司"],
+             ["麺・パスタ", "麺・パスタ"],["米", "米"],["野菜", "野菜"],
+             ["飾り葉", "飾り葉"],["喫茶部品", "喫茶部品"],["果物・野菜一個物", "果物・野菜一個物"],
+             ["ソフトクリーム部品", "ソフトクリーム部品"]] ,class:"form-control"
+
+
+        .form-check.text-right
+          .form-group.mb-2
+            / = f.label :discontinued, class: 'form-check-label' do
+            = f.check_box :discontinued, class: 'form-check-input'
+            | 廃番
+
+        .form-group.row
+          = f.label "Lot：", class: 'col-sm-2 col-form-label'
+          .col-sm-10.text-right
+            = f.text_field :unit, class: 'form-control', id: 'unit', placeholder: "発注ロット"
+            .form-check.text-right
+              = f.radio_button :unit_name, :"個", checked: true
+              = f.label :unit_name, "個", {value: :number, style: "display: form-check-inline"}
+              = f.radio_button :unit_name, :"Kg"
+              = f.label :unit_naem, "Kg", {value: :weight, style: "display: form-check-inline"}
+
+
+
+        .form-group.row
+          = f.label "価格：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.text_field :price, class: 'form-control', id: 'price', placeholder: "価格"
+
+        .form-group.row
+          = f.label "備考：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: "備考記入欄"
+
+        .form-group.row
+          = f.label "画像：", class: 'col-sm-2 col-form-label'
+          .col-sm-10
+            = f.file_field :image, class: 'form_control'
+
+        .text-right
+          input[type="reset" value="リセットする" class='btn btn-danger']
+        br
+        = f.submit nil , class: 'btn btn-primary btn-block'

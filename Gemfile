@@ -23,6 +23,9 @@ gem 'devise-i18n'
 gem 'slim-rails', '>= 3.1.3'
 gem 'html2slim'
 
+#検索機能
+gem 'ransack'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
