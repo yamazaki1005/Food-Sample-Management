@@ -15,10 +15,10 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
         /   li.nav-item.active= link_to '規格品登録', new_product_path, class: 'nav-link active'
         /   / li.nav-item.active= link_to '分類一覧', products_path, class: 'nav-link'
         /   li.nav-item.active= link_to 'ユーザー管理(管理者権限)', admin_users_path, class: 'nav-link text-muted'
-        li.nav-item.= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link'
+        li.nav-item.= link_to t('logout'), destroy_user_session_path, method: :delete, class: 'nav-link'
       - else
           li.nav-item.active= link_to '新規登録', new_user_registration_path, class: 'nav-link active'
-          li.nav-item.active= link_to 'ログイン', new_user_session_path, class: 'nav-link active'
+          li.nav-item.active= link_to t('login'), new_user_session_path, class: 'nav-link active'
           li.nav-item.= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link'
 
       / - if user_signed_in?

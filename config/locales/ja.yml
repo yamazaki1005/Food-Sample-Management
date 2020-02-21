@@ -1,10 +1,18 @@
+# ja:
+#   create: 登録
+#   # t('create')
+#   profile: プロフィール
+#   msg:
+#     infomation: '%{v}の情報です'
+#     # t('msg.infomation', v: t('profile'))
 ja:
+  login: ログイン（テスト）
+  logout: ログアウト(テスト)
   activerecord:
     models:
       product: 規格品
     attributes:
       product:
-
         product_name: 品名
         product_number: 品番
         page: 掲載ページ

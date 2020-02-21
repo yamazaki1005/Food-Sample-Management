@@ -12,7 +12,7 @@ html
   body.bg-light cz-shortcut-listen="true"
     = render partial: 'shared/navbar'
 
-  - if flash.notice.present?
-    .alert.alert-success= flash.notice
+    - if flash.notice.present?
+      .alert.alert-success= flash.notice
 
-  = yield
+    = yield
