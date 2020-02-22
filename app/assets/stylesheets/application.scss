@@ -22,3 +22,178 @@
 .alert-alert {
   @extend .alert-danger;
 }
+// @import "bootstrap-sprockets";
+
+
+/* 全体 ================================ */
+
+
+/* body ================================ */
+body {
+  padding-top: 53px;
+}
+
+
+.container {
+    max-width: 1300px;
+}
+
+h1 {
+  padding-top: 5px;
+}
+
+.input_form{
+  width: 650px;
+  margin: auto;
+}
+
+
+/* フォーム ================================ */
+.custom_input_form {
+  padding: 20px;
+}
+
+/* ナビゲーションバー  ================================ */
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: brown;
+}
+
+.navbar {
+    padding: 0.1rem 0.5rem;
+}
+
+.header-logo {
+   float: left;
+  width: 130px;
+  height: 40px;
+}
+
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  color: white;
+  padding-left: 15px;
+}
+
+.header-menus a {
+  float: left;
+  font-size: 13px;
+  color: white;
+}
+
+.header-menus .fa {
+  padding-right: 5px;
+}
+
+.header-menus input[type="submit"] {
+  padding: 0 20px;
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 0rem !important;
+}
+/* フラッシュ ================================ */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: rgb(251, 170, 88);
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+/* alert ================================ */
+.alert {
+  margin-bottom: 0px;
+}
+
+/* card ================================ */
+// .card {
+//   height: 270px;
+// }
+
+.card-img-top {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto;
+
+}
+
+img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+
+
+.card-content {
+  padding: 20px;
+}
+.card-title {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin: 0px;
+}
+.card-text {
+  color: #1b1919;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-link {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.card-link a {
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+}
+.card-link a:hover {
+  color: #0090aa;
+}
+
+.card-body {
+  padding: 1px;
+}
+
+.py-3 {
+    padding: 0.5px !important;
+}
+
+/* ボタン ================================ */
+
+.btn-custom {
+  margin-left: 9px;
+}
+
+
+.col-xs-6.col-sm-4.col-md-2 {
+  padding: 5px;
+}
