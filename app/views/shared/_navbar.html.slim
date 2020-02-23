@@ -5,10 +5,10 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
     span.navbar-toggler-icon
   #navbarCollapse.collapse.navbar-collapse
     ul.navbar-nav.ml-auto
-      li.nav-item.active= link_to '規格品登録（仮）', new_product_path, class: 'nav-link active'
-      li.nav-item.active= link_to '規格品一覧（仮）', products_path, class: 'nav-link active'
       - if user_signed_in?
         / li.nav-item.active= link_to 'タスク一覧', tasks_path, class: 'nav-link'
+        li.nav-item.active= link_to '規格品登録（仮）', new_product_path, class: 'nav-link active'
+        li.nav-item.active= link_to '規格品一覧（仮）', products_path, class: 'nav-link active'
         li.nav-item.active= link_to '＃', root_path, class: 'nav-link active'
         li.nav-item.active= link_to '＃', root_path, class: 'nav-link active'
         / - if current_user.admin?
@@ -19,7 +19,6 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
       - else
           li.nav-item.active= link_to '新規登録', new_user_registration_path, class: 'nav-link active'
           li.nav-item.active= link_to t('login'), new_user_session_path, class: 'nav-link active'
-          li.nav-item.= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link'
 
       / - if user_signed_in?
         = search_form_for @q, class: 'mb-5 form-inline' do |f|

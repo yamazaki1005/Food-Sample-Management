@@ -5,9 +5,14 @@
 #   msg:
 #     infomation: '%{v}の情報です'
 #     # t('msg.infomation', v: t('profile'))
+# "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
 ja:
   login: ログイン（テスト）
   logout: ログアウト(テスト)
+  product_number: 「品番%{number}:%{name}」
+  msg:
+    update: を更新しました。
+
   activerecord:
     models:
       product: 規格品

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# app_whole_manage_due_to_class
 class ApplicationController < ActionController::Base
   # before_action :set_current_user
   helper_method :current_user
@@ -10,11 +11,6 @@ class ApplicationController < ActionController::Base
   before_action :set_search_query
 
   private
-
-  # ログイン機能実装の段階で、メソッドを消してもcurrent_userが取ってこれるか確認する。
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
 
   def login_required
     # redirect_to new_user_session_path unless user_signed_in?
@@ -34,12 +30,12 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:user_id])
   end
 
-  def authenticate_user
-    if @current_user.nil?
-      flash[:notice] = 'ログインが必要です'
-      redirect_to('/user_session_path')
-    end
-  end
+  # def authenticate_user
+  #   if @current_user.nil?
+  #     flash[:notice] = 'ログインが必要です'
+  #     redirect_to('/user_session_path')
+  #   end
+  # end
 
   def forbid_login_user
     flash[:notice] = 'すでにログインしています' if @current_user
