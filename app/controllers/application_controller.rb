@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_search_query
 
-
   private
 
   def login_required
@@ -30,13 +29,6 @@ class ApplicationController < ActionController::Base
   def set_current_user
     @current_user = User.find_by(id: session[:user_id])
   end
-
-  # def authenticate_user
-  #   if @current_user.nil?
-  #     flash[:notice] = 'ログインが必要です'
-  #     redirect_to('/user_session_path')
-  #   end
-  # end
 
   def forbid_login_user
     flash[:notice] = 'すでにログインしています' if @current_user
