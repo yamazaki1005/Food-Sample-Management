@@ -93,7 +93,7 @@ class ProductsController < ApplicationController
         %W(飾り葉 飾り葉),
         %W(喫茶部品 喫茶部品),
         %W(果物･野菜一個物 果物･野菜一個物),
-        %W(ソフトクリーム部品 ソフトクリーム部品),
+        %W(ソフトクリーム部品 ソフトクリーム部品)
     ]
   end
 end

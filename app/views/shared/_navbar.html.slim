@@ -19,6 +19,7 @@ nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
       - else
           li.nav-item.active= link_to '新規登録', new_user_registration_path, class: 'nav-link active'
           li.nav-item.active= link_to 'ログイン', new_user_session_path, class: 'nav-link active'
+          li.nav-item.active= link_to 'ゲストログイン(閲覧用)', users_guest_sign_in_path, method: :post, class: 'btn btn-warning'
       / - if user_signed_in?
         = search_form_for @q, class: 'mb-5 form-inline' do |f|
           form.form-inline
