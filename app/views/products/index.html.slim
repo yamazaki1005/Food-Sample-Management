@@ -2,9 +2,9 @@
 .bg-light
   .container-custom
     h1.mx-auto style=("width: 300px;") 規格部品一覧
-
-    .nav.justify-content-end
-      = link_to '新規登録', new_product_path, class: 'nav-link btn btn-primary'
+    - if user_signed_in?
+      .nav.justify-content-end
+        = link_to '新規登録', new_product_path, class: 'nav-link btn btn-primary'
 
 .bg-light
   .container
@@ -19,6 +19,7 @@
                 |品番：#{product.product_number}
                 br
                 |前回発注日：#{product.updated_at.strftime('%Y/%m/%d')}
-              p.mb-0
-                = link_to '編集', edit_product_path(product), class: 'btn btn-primary mr-3'
-                = link_to '削除', product, method: :delete, date: { confirm: "タスク「#{product.product_name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
+              - if user_signed_in?
+                p.mb-0
+                  = link_to '編集', edit_product_path(product), class: 'btn btn-primary mr-3'
+                  = link_to '削除', product, method: :delete, date: { confirm: "タスク「#{product.product_name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'

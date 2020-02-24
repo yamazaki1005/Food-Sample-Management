@@ -45,6 +45,6 @@
         th= Product.human_attribute_name(:updated_at)
         td= @product.updated_at.strftime('%Y/%m/%d')
 
-
-    = link_to '編集', edit_product_path, class: 'btn btn-primary mr-3'
-    = link_to '削除', @product, method: :delete, date: { confirm: "タスク「#{@product.product_name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
+    - if user_signed_in?
+      = link_to '編集', edit_product_path, class: 'btn btn-primary mr-3'
+      = link_to '削除', @product, method: :delete, date: { confirm: "タスク「#{@product.product_name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
