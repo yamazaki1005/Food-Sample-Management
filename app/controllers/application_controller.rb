@@ -18,5 +18,4 @@ class ApplicationController < ActionController::Base
   #   @error = error
   #   render :custom_error
   # end
-
 end
