@@ -1,6 +1,6 @@
 .container-login
   h1
-    | アカウント編集
+    = t('.account_edit')
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
     = bootstrap_devise_error_messages!
     .form-group

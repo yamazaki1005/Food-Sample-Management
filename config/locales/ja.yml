@@ -7,12 +7,6 @@
 #     # t('msg.infomation', v: t('profile'))
 # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
 ja:
-  login: ログイン（テスト）
-  logout: ログアウト(テスト)
-  product_number: 「品番%{number}:%{name}」
-  msg:
-    update: を更新しました。
-
   activerecord:
     models:
       product: 規格品
@@ -37,3 +31,59 @@ ja:
         create: 登録する
         submit: 保存する
         update: 更新する
+  dictionary:
+  products:
+    index:
+      product_list: 規格部品一覧
+      sign_up: 新規登録
+      product_number: '品番：%{n}'
+      last_order_days: 前回発注日：%{m}
+      deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
+      edit: 編集
+      delete: 削除
+    edit:
+      product_edit: 規格部品編集
+      product_list: 一覧
+    new:
+      registered_product: 規格部品登録
+      sign_up: 新規登録
+      product_list: 一覧
+    show:
+      product_list: 一覧
+      detail: 登録内容
+      deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
+      edit: 編集
+      delete: 削除
+    form:
+      product_name: 品名：
+      form_product_name: 規格品名
+      product_number: 品番：
+      form_product_number: 規格品番
+      page: ページ：
+      form_page: 掲載ページ
+      classification: 分類：
+      discontinued: 廃番：
+      lot: Lot：
+      form_lot: 発注ロット
+      count: 個
+      weight: Kg
+      price: 価格：
+      form_price: 価格
+      remark: 備考：
+      form_remark: 備考：
+      image: 画像：
+      reset: リセットする
+  shared:
+    navbar:
+      login: ログイン
+      logout: ログアウト
+      sign_up: 新規登録
+      registered_product: 規格品登録
+      guest_login: ゲストログイン(閲覧用)
+      account_edit: アカウント編集
+      product_list: 規格品一覧
+      search_product_number: 品番を入力...
+      admin_users: ユーザー管理(管理者権限)
+      # product_number: 「品番%{number}:%{name}」
+      # msg:
+      #   update: を更新しました。
