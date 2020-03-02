@@ -27,6 +27,10 @@ gem 'rubocop'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
+  gem 'pry-alias'
+  gem 'pry-doc'
+  gem 'pry-byebug'
 end
 
 group :development do
