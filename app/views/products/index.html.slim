@@ -2,10 +2,10 @@
 .bg-light
   .container-custom
     h1.mx-auto style=("width: 300px;")
-      = t('.product_list')
+      = t('product_list')
     - if user_signed_in?
       .nav.justify-content-end
-        = link_to t('.sign_up'), new_product_path, class: 'nav-link btn btn-primary'
+        = link_to t('sign_up'), new_product_path, class: 'nav-link btn btn-primary'
 .bg-light
   .container
     .row.form-inline
@@ -16,10 +16,10 @@
             .card-body.px-2.py-3
               p.card-title= link_to product.product_name, product
               p.card-text
-                = t('.product_number', n: product.product_number )
+                = t('product_number', n: product.product_number )
                 br
-                = t('.last_order_days', m: product.updated_at.strftime('%Y/%m/%d') )
+                = t('last_order_days', m: product.updated_at.strftime('%Y/%m/%d') )
               - if user_signed_in?
                 p.mb-0
-                  = link_to t('.edit'), edit_product_path(product), class: 'btn btn-primary mr-3'
-                  = link_to t('.delete'), product, method: :delete, date: { confirm: t('.deleted_information', v: product.product_name) }, class: 'btn btn-danger'
+                  = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3'
+                  = link_to t('delete'), product, method: :delete, date: { confirm: t('deleted_information', v: product.product_name) }, class: 'btn btn-danger'
