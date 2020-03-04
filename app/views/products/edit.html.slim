@@ -1,8 +1,9 @@
 .bg-light
   .container-custom
-    h1.mx-auto style=("width: 300px;") 規格部品編集
+    h1.mx-auto style=("width: 300px;")
+      = t('product_edit')
 
     .nav.justify-content-end
-      = link_to '一覧', products_path, class: 'nav-link btn btn-primary'
+      = link_to t('product_list'), products_path, class: 'nav-link btn btn-primary'
 
     = render partial: 'form', locals: { product: @product }

@@ -3,60 +3,62 @@
     .border.border-secondary.custom_input_form.bg-white.text-body
       = form_with model: product, local: true do |f|
         .form-group.row
-          = f.label "品名：", class: 'col-sm-2 col-form-label'
+          = f.label t('product_name'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: "規格品名"
+            = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: t('product_name')
+            - if @product.errors
+              - @product.errors.full_messages.each do |message|
+                .errors.text-danger = message
 
         .form-group.row
-          = f.label "品番：", class: 'col-sm-2 col-form-label'
+          = f.label t('product_number'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.text_field :product_number, class: 'form-control', id: 'product_number', type: 'number', placeholder: "品番"
+            = f.text_field :product_number, class: 'form-control', id: 'product_number', type: 'number', placeholder: t('product_number')
 
         .form-group.row
-          = f.label "ページ：", class: 'col-sm-2 col-form-label'
+          = f.label t('page'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.text_field :page, class: 'form-control', id: 'page', placeholder: "掲載ページ番号"
+            = f.text_field :page, class: 'form-control', id: 'page', placeholder: t('page')
 
         .form-group.row
-          = f.label "分類：", class: 'col-sm-2 col-form-label'
+          = f.label t('classification'), class: 'col-sm-2 col-form-label'
           .col-sm-10.text-right
             = f.select :classification, @classification_option ,class:"form-control"
-
 
         .form-check.text-right
           .form-group.mb-2
             / = f.label :discontinued, class: 'form-check-label' do
             = f.check_box :discontinued, class: 'form-check-input'
-            | 廃番
+             = t('discontinued')
 
         .form-group.row
-          = f.label "Lot：", class: 'col-sm-2 col-form-label'
+          = f.label t('lot'), class: 'col-sm-2 col-form-label'
           .col-sm-10.text-right
-            = f.text_field :unit, class: 'form-control', id: 'unit', placeholder: "発注ロット"
+            = f.text_field :unit, class: 'form-control', id: 'unit', placeholder: t('lot')
             .form-check.text-right
               = f.radio_button :unit_name, :"個", checked: true
-              = f.label :unit_name, "個", {value: :number, style: "display: form-check-inline"}
+              = f.label :unit_name, t('count'), {value: :number, style: "display: form-check-inline"}
               = f.radio_button :unit_name, :"Kg"
-              = f.label :unit_naem, "Kg", {value: :weight, style: "display: form-check-inline"}
+              = f.label :unit_naem, t('weight'), {value: :weight, style: "display: form-check-inline"}
 
 
 
         .form-group.row
-          = f.label "価格：", class: 'col-sm-2 col-form-label'
+          = f.label t('price'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.text_field :price, class: 'form-control', id: 'price', placeholder: "価格"
+            = f.text_field :price, class: 'form-control', id: 'price', placeholder: t('price')
 
         .form-group.row
-          = f.label "備考：", class: 'col-sm-2 col-form-label'
+          = f.label t('remark'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: "備考記入欄"
+            = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: t('remark')
 
         .form-group.row
-          = f.label "画像：", class: 'col-sm-2 col-form-label'
+          = f.label t('image'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.file_field :image, class: 'form_control'
+            = f.file_field :image, class: 'control'
 
         .text-right
-          input[type="reset" value="リセットする" class='btn btn-danger']
+          input[type="reset" value=t('reset') class='btn btn-danger']
         br
         = f.submit nil , class: 'btn btn-primary btn-block'
