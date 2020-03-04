@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+# classification_option
+class CreateCategories < ActiveRecord::Migration[6.0]
+  def change
+    create_table :categories do |t|
+      t.string :classification_name
+
+      t.timestamps
+    end
+  end
+end
