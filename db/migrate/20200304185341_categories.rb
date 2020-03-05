@@ -39,6 +39,6 @@ class Categories < ActiveRecord::Migration[6.0]
   end
 
   def down
-    Category.find_by(classification_name: n[:classification_name]).delete
+    Category.delete_all
   end
 end
