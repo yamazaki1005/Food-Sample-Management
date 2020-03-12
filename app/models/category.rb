@@ -2,5 +2,5 @@
 
 # Category
 class Category < ApplicationRecord
-  has_many :classification_name
+  
 end

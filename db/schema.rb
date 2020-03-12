@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_185341) do
+ActiveRecord::Schema.define(version: 2020_03_12_124631) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "classification_name"
@@ -18,11 +18,10 @@ ActiveRecord::Schema.define(version: 2020_03_04_185341) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "product_name"
     t.integer "product_number"
     t.integer "page"
-    t.integer "classification"
     t.boolean "discontinued"
     t.string "unit_name"
     t.integer "price"
@@ -31,9 +30,11 @@ ActiveRecord::Schema.define(version: 2020_03_04_185341) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "classification_ID"
+    t.index ["product_name"], name: "index_products_on_product_name", unique: true
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
