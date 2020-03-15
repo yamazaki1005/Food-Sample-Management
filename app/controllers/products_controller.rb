@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    #  binding.pry
+    # binding.pry
     if @product.valid?
       @product.save
       redirect_to products_path, notice: "規格品「#{@product.product_name}」を登録しました。"
