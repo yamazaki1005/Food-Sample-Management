@@ -3,7 +3,6 @@
 # products controller
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
-  before_action :classification_option, only: %i[new edit create]
   before_action :authenticate_user!, except: %i[index show]
   PAGE_LIMIT_NUMBER = 30
 
@@ -21,7 +20,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    # binding.pry
+    #  binding.pry
     if @product.valid?
       @product.save
       redirect_to products_path, notice: "規格品「#{@product.product_name}」を登録しました。"
@@ -62,7 +61,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:product_name, :product_number, :page, :classification, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at)
+    params.require(:product).permit(:product_name, :product_number, :page, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at, :category_id)
   end
 
   def set_product

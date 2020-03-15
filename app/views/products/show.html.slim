@@ -18,7 +18,7 @@
       /   td.img-mini= @product.image if @product.image.attached?
       tr
         th= Product.human_attribute_name(:classification)
-        td= @product.classification
+        td= @product.categoroy_id
       tr
         th= Product.human_attribute_name(:page)
         td= @product.page

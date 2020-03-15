@@ -23,7 +23,7 @@
         .form-group.row
           = f.label t('classification'), class: 'col-sm-2 col-form-label'
           .col-sm-10.text-right
-            = f.select :classification, @classification_option ,class:"form-control"
+            = f.select :category_id,  Category.all.map{|n| [n.classification_name, n.id]}, class: 'form-control'
 
         .form-check.text-right
           .form-group.mb-2

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +13,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_03_12_124631) do
-
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "classification_name"
     t.datetime "created_at", precision: 6, null: false
@@ -30,7 +31,10 @@ ActiveRecord::Schema.define(version: 2020_03_12_124631) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "classification_ID"
+    t.bigint "categoroy_id"
+    t.bigint "category_id"
+    t.index ["categoroy_id"], name: "index_products_on_categoroy_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["product_name"], name: "index_products_on_product_name", unique: true
   end
 
@@ -46,4 +50,5 @@ ActiveRecord::Schema.define(version: 2020_03_12_124631) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, length: 191
   end
 
+  add_foreign_key "products", "categories"
 end
