@@ -16,9 +16,11 @@
             .card-body.px-2.py-3
               p.card-title= link_to product.product_name, product
               p.card-text
-                = t('product_number', n: product.product_number )
+                = t('product_number')
+                = product.product_number
                 br
-                = t('last_order_days', m: product.updated_at.strftime('%Y/%m/%d') )
+                = t('last_order_days')
+                = product.updated_at.strftime('%Y/%m/%d')
               - if user_signed_in?
                 p.mb-0
                   = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3'

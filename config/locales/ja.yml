@@ -1,6 +1,6 @@
 ja:
   # product_number: '品番：%{n}'
-  last_order_days: 前回発注日：%{m}
+  last_order_days: 前回発注日
 
   edit: 編集
   delete: 削除
