@@ -29,6 +29,9 @@
         th= Product.human_attribute_name(:discontinued)
         td= @product.discontinued
       tr
+        th= Product.human_attribute_name(:image)
+        td= image_tag @product.image if @product.image.attached?
+      tr
         th= Product.human_attribute_name(:unit)
         td= @product.unit
       tr

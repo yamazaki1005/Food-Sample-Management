@@ -12,7 +12,9 @@
       - @products.each do | product |
         .col-xs-6.col-sm-4.col-md-2
           .card.img-thumbnail
-            / img.card-img-top= image_tag product.image if product.image.attached?
+            .img-body
+              .img-item
+                img.card-img-top= image_tag product.image if product.image.attached?
             .card-body.px-2.py-3
               p.card-title= link_to product.product_name, product
               p.card-text
