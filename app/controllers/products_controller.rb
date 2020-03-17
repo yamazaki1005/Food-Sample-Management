@@ -20,19 +20,24 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    # binding.pry
     if @product.valid?
       @product.save
       redirect_to products_path, notice: "規格品「#{@product.product_name}」を登録しました。"
     else
       render :new
     end
-    # binding.pry
   end
 
   def update
-    @product.update!(product_params)
-    redirect_to products_url, notice: t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
+    begin
+      @product.update!(product_params)
+      redirect_to products_url, notice: t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
+    rescue ActiveRecord::RecordInvalid
+      render :edit
+    rescue
+      @product.errors.add(:base, "予期しないエラーが発生しました。「#{@product.product_name}」は更新できませんでした。")
+      render :edit
+    end
   end
 
   def destroy

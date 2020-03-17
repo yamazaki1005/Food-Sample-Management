@@ -2,13 +2,14 @@
   .input_form
     .border.border-secondary.custom_input_form.bg-white.text-body
       = form_with model: product, local: true do |f|
+        - if @product.errors
+          - @product.errors.full_messages.each do |message|
+            .errors.text-danger = message
+
         .form-group.row
           = f.label t('product_name'), class: 'col-sm-2 col-form-label'
           .col-sm-10
             = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: t('product_name')
-            - if @product.errors
-              - @product.errors.full_messages.each do |message|
-                .errors.text-danger = message
 
         .form-group.row
           = f.label t('product_number'), class: 'col-sm-2 col-form-label'

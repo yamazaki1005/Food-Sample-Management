@@ -14,7 +14,7 @@ class Product < ApplicationRecord
             uniqueness: true
 
   validates :page,
-           numericality: { only_integer: true }
+            numericality: { only_integer: true }
 
   validates :discontinued,
             inclusion: { in: [true, false] }
