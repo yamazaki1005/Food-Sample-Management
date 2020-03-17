@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.valid?
       @product.save
-      redirect_to products_path, notice: "規格品「#{@product.product_name}」を登録しました。"
+      redirect_to products_path, notice: t('msg.create_information', name: @product.product_name)
     else
       render :new
     end
@@ -31,18 +31,18 @@ class ProductsController < ApplicationController
   def update
     begin
       @product.update!(product_params)
-      redirect_to products_url, notice: t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
+      redirect_to products_url, notice: t('msg.update_information', name: @product.product_name)
     rescue ActiveRecord::RecordInvalid
       render :edit
     rescue
-      @product.errors.add(:base, "予期しないエラーが発生しました。「#{@product.product_name}」は更新できませんでした。")
+      @product.errors.add(:base, t('msg.error_information', name: @product.product_name))
       render :edit
     end
   end
 
   def destroy
     @product.destroy
-    redirect_to products_url, notice: "「品番#{@product.product_number}:#{@product.product_name}」を削除しました。"
+    redirect_to products_url, notice: t('msg.destroy_information', name: @product.product_name)
   end
 
   #   def self.ransackable_attributes(auth_object = nil)
