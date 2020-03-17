@@ -135,18 +135,43 @@ header {
 //   height: 270px;
 // }
 
-.card-img-top {
+.img-body {
+  padding: 5px;
+  text-align:  center;
+  // background-color: #ddd;
+  height: 130px;
+  position: relative;
+}
+.card-img-top img{
   border-radius: 5px 5px 0 0;
-  width: 100%;
+  width: 60%;
+  max-height:130px;
   height: auto;
-
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-}
+// .img-item {
+//   width: 70%;
+//   max-width: 180px;
+//   height: auto;
+//   position: absolute;
+//   // top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+// }
+
+// img {
+//   width: 90%;
+//   max-width: 180px;
+//   height: auto;
+// }
 
 
 
@@ -155,6 +180,7 @@ img {
 }
 .card-title {
   font-size: 14px;
+  font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
   color: #333;
