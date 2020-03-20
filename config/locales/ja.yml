@@ -33,12 +33,13 @@ ja:
   create: 登録
   profile: プロフィール
 
+  product: "規格品「%{name}」"
   msg:
+    create:  "%{v}を登録しました。"
+    update:  "%{v}を更新しました。"
+    delete:  "%{v}を削除しました。"
     deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
     infomation: '%{v}の情報です'
-    create_information: "規格品「%{name}」を登録しました。"
-    update_information: "規格品「%{name}」を更新しました。"
-    destroy_information: "規格品「%{name}」を削除しました。"
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
