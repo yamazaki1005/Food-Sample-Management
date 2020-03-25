@@ -1,3 +1,4 @@
+= render partial: 'modal'
 .bg-light
   .container-custom
     h1.mx-auto style=("width: 300px;")
@@ -50,4 +51,4 @@
 
     - if user_signed_in?
       = link_to t('edit'), edit_product_path, class: 'btn btn-primary mr-3'
-      = link_to t('delete'), @product, method: :delete, date: { confirm: t('deleted_information', v: @product.product_name) }, class: 'btn btn-danger'
+      button.btn.btn-danger data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}" 削除
