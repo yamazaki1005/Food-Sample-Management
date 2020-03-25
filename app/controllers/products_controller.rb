@@ -2,6 +2,8 @@
 
 # products controller
 class ProductsController < ApplicationController
+  # CSRFトークン検証をスキップする
+  skip_before_action :verify_authenticity_token
   before_action :set_product, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
   PAGE_LIMIT_NUMBER = 30

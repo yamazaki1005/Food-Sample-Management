@@ -25,6 +25,10 @@ gem 'slim-rails', '>= 3.1.3'
 gem 'ransack'
 gem 'rubocop'
 
+gem 'bootstrap-sass'
+gem 'data-confirm-modal'
+gem 'jquery-rails'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
