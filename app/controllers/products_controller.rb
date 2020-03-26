@@ -2,6 +2,8 @@
 
 # products controller
 class ProductsController < ApplicationController
+  # CSRFトークン検証をスキップする
+  skip_before_action :verify_authenticity_token
   before_action :set_product, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
   PAGE_LIMIT_NUMBER = 30
@@ -22,7 +24,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.valid?
       @product.save
-      redirect_to products_path, notice: t('msg.create_information', name: @product.product_name)
+      redirect_to products_path, notice: t('msg.create', v: t('product', name: @product.product_name))
     else
       render :new
     end
@@ -31,7 +33,7 @@ class ProductsController < ApplicationController
   def update
     begin
       @product.update!(product_params)
-      redirect_to products_url, notice: t('msg.update_information', name: @product.product_name)
+      redirect_to products_url, notice: t('msg.update', v: t('product', name: @product.product_name))
     rescue ActiveRecord::RecordInvalid
       render :edit
     rescue
@@ -42,7 +44,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_url, notice: t('msg.destroy_information', name: @product.product_name)
+    redirect_to products_url, notice: t('msg.delete', v: t('product', name: @product.product_name))
   end
 
   #   def self.ransackable_attributes(auth_object = nil)

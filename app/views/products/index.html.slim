@@ -1,4 +1,4 @@
-
+= render partial: 'modal'
 .bg-light
   .container-custom
     h1.mx-auto style=("width: 300px;")
@@ -6,11 +6,12 @@
     - if user_signed_in?
       .nav.justify-content-end
         = link_to t('sign_up'), new_product_path, class: 'nav-link btn btn-primary'
+
 .bg-light
   .container
     .row.form-inline
       - @products.each do | product |
-        .col-xs-6.col-sm-4.col-md-2
+        .form.col-xs-6.col-sm-4.col-md-2
           .card.img-thumbnail
             .img-body
               .card-img-top
@@ -26,4 +27,4 @@
               - if user_signed_in?
                 p.mb-0
                   = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3'
-                  = link_to t('delete'), product, method: :delete, date: { confirm: t('deleted_information', v: product.product_name) }, class: 'btn btn-danger'
+                  button.btn.btn-danger data-target="#myModal" data-name=product.product_name data-number=product.product_number data-id=product.id data-toggle="modal" type="button" data-url="products/#{product.id}" 削除
