@@ -56,7 +56,15 @@
         .form-group.row
           = f.label t('image'), class: 'col-sm-2 col-form-label'
           .col-sm-10
-            = f.file_field :image, class: 'control'
+            .field.image
+                = form_with(model: @product, local: true) do |form|
+                  #img_field
+                    - if @product.image.present?
+                      = image_tag(@product.image)
+                    - else
+                      i.fas.fa-image.add2
+                      i.fas.fa-file-upload.add
+                  = form.file_field "file", class: "image", id: "file", style: "display:none;"
 
         .text-right
           input[type="reset" value=t('reset') class='btn btn-danger']

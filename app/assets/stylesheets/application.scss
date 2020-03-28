@@ -223,3 +223,68 @@ header {
 .col-xs-6.col-sm-4.col-md-2 {
   padding: 5px;
 }
+
+/* form ================================ */
+#img_field {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+
+#img_field i {
+  font-size: 100px;
+  color: #aaa;
+  line-height: 250px;
+  margin: 0 auto;
+  transition: 0.3s ease-out;
+}
+
+#img_field i.add {
+  // display: none;
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  right: 15px;
+}
+
+#img_field i.add2 {
+  /* display: none; */
+  font-size: 150px;
+  position: absolute;
+  top: 25px;
+  right: 185px;
+}
+
+#img_field:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
+
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff;
+}
+
+.preview {
+  max-height: 300px;
+  max-width: 485px;
+  width: auto;
+  display: block;
+  margin: auto;
+}
