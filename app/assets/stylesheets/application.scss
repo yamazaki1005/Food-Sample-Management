@@ -4,7 +4,8 @@
  */
 
 @import "bootstrap/scss/bootstrap";
-
+@import "products";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 // ログイン画面
 
 .container-login {
@@ -22,7 +23,6 @@
 .alert-alert {
   @extend .alert-danger;
 }
-// @import "bootstrap-sprockets";
 
 
 /* 全体 ================================ */
@@ -49,11 +49,6 @@ p {
     // background-color: #ccc;
     padding: 0px 0px 0px 11px;
 }
-/* 位置修正 ================================ */
-.margin-custom {
-  margin-right: 5px !important;
-  padding: 5px;
-}
 
 /* body ================================ */
 body {
@@ -74,13 +69,22 @@ h1 {
   margin: auto;
 }
 
+/* ボタン ================================ */
 
-/* フォーム ================================ */
-.custom_input_form {
-  padding: 20px;
+.btn-custom {
+  margin-left: 9px;
 }
 
-/* ナビゲーションバー  ================================ */
+.btn-primary-costom {
+  color: initial;
+  background: ghostwhite;
+  border-color: lemonchiffon;
+  border: solid 1px indianred;
+}
+
+.col-xs-6.col-sm-4.col-md-2 {
+  padding: 5px;
+}
 
 /* ヘッダー ================================ */
 header {
@@ -155,168 +159,4 @@ header {
 /* alert ================================ */
 .alert {
   margin-bottom: 0px;
-}
-
-/* card ================================ */
-.card-top {
-  height: 25px;
-    background: lemonchiffon;
-}
-
-.img-body {
-  padding: 5px;
-  text-align:  center;
-  // border: solid 1px #EDBC6C;
-  height: 180px;
-  position: relative;
-}
-
-.card:hover {
-  background-color: #EDBC6C;
-  transition: 0.3s ease-out;
-  opacity: 0.9;
-}
-
-.card-img-top img{
-  border-radius: 5px 5px 0 0;
-  // width: 90%;
-  max-width: 200px;
-  max-height: 180px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: darkslategray;
- margin: 0px;
-}
-
-.card-text {
-  color: #1b1919;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.card-link {
-  text-align: center;
-  border-top: 1px solid #eee;
-  padding: 20px;
-}
-.card-link a {
-  text-decoration: none;
-  color: #0bd;
-  margin: 0 10px;
-}
-.card-link a:hover {
-  color: #0090aa;
-}
-
-.card-body {
-  padding: 1px;
-}
-
-.py-3 {
-    padding: 0.5px !important;
-}
-
-/* ボタン ================================ */
-
-.btn-custom {
-  margin-left: 9px;
-}
-
-.btn-primary-costom {
-  color: initial;
-  background: ghostwhite;
-  border-color: lemonchiffon;
-  border: solid 2px indianred;
-}
-
-.col-xs-6.col-sm-4.col-md-2 {
-  padding: 5px;
-}
-
-/* form ================================ */
-#img_field {
-  font-size: 15px;
-  margin-top: 10px;
-  padding: 5px 8px;
-  border: solid 1px #EDBC6C;
-  color: #666;
-  position: relative;
-  border-radius: 5px;
-  cursor: pointer;
-  width: auto;
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #fff;
-  overflow: hidden;
-  box-sizing: border-box;
-  transition: 0.3s ease-out;
-}
-
-#img_field i {
-  font-size: 100px;
-  color: #aaa;
-  line-height: 250px;
-  margin: 0 auto;
-  transition: 0.3s ease-out;
-}
-
-#img_field i.add {
-  font-size: 50px;
-  position: absolute;
-  top: -90px;
-  right: 15px;
-}
-
-#img_field i.add2 {
-  font-size: 150px;
-  position: absolute;
-  top: 25px;
-  right: 185px;
-}
-
-#img_field:hover {
-  background-color: #EDBC6C;
-  transition: 0.3s ease-out;
-  opacity: 0.9;
-}
-
-#img_field:hover i {
-  transition: 0.3s ease-out;
-  display: block;
-  color: #fff;
-}
-
-.preview {
-  max-height: 300px;
-  max-width: 485px;
-  width: auto;
-  display: block;
-  margin: auto;
-}
-
-.btn_custom {
-  margin-top: 20px;
-}
-
-/* show ================================ */
-.img_custom img{
-  max-width: 1300px;
-  max-height: 1300px;
 }

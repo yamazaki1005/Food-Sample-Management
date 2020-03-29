@@ -1,74 +1,75 @@
-.bg-light
-  .input_form
-    .border.border-secondary.custom_input_form.bg-white.text-body
-      = form_with model: product, local: true do |f|
-        - if @product.errors
-          - @product.errors.full_messages.each do |message|
-            .errors.text-danger = message
+.container.bg-light
+    .row
+      .input_form.col-sm-offset-1.col-sm-9.col-md-offset-2.col-md-7
+        #form.border.border-secondary.custom-input-form.bg-white.text-body
+          = form_with model: product, local: true do |f|
+            - if @product.errors
+              - @product.errors.full_messages.each do |message|
+                .errors.text-danger = message
 
-        .form-group.row
-          = f.label t('product_name'), class: 'col-sm-2 col-form-label'
-          .col-sm-10
-            = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: t('product_name')
+            .form-group.row
+              = f.label t('product_name'), class: 'col-sm-2 col-form-label'
+              .col-sm-10
+                = f.text_field :product_name, class: 'form-control', id: 'product_name', placeholder: t('product_name')
 
-        .form-group.row
-          = f.label t('product_number'), class: 'col-sm-2 col-form-label'
-          .col-sm-10
-            = f.text_field :product_number, class: 'form-control', id: 'product_number', type: 'number', placeholder: t('product_number')
+            .form-group.row
+              = f.label t('product_number'), class: 'col-sm-2 col-form-label'
+              .col-sm-10
+                = f.text_field :product_number, class: 'form-control', id: 'product_number', type: 'number', placeholder: t('product_number')
 
-        .form-group.row
-          = f.label t('page'), class: 'col-sm-2 col-form-label'
-          .col-sm-10
-            = f.text_field :page, class: 'form-control', id: 'page', placeholder: t('page')
+            .form-group.row
+              = f.label t('page'), class: 'col-sm-2 col-form-label'
+              .col-sm-10
+                = f.text_field :page, class: 'form-control', id: 'page', placeholder: t('page')
 
-        .form-group.row
-          = f.label t('classification'), class: 'col-sm-2 col-form-label'
-          .col-sm-10.text-right
-            = f.select :category_id,  Category.all.map{|n| [n.classification_name, n.id]}, class: 'form-control'
+            .form-group.row
+              = f.label t('classification'), class: 'col-sm-2 col-form-label'
+              .col-sm-10.text-right
+                = f.select :category_id,  Category.all.map{|n| [n.classification_name, n.id]}, class: 'form-control'
 
-        .form-check.text-right
-          .form-group.mb-2
-            = f.check_box :discontinued, class: 'form-check-input'
-            = t('discontinued')
-
-        .form-group.row
-          = f.label t('lot'), class: 'col-sm-2 col-form-label'
-          .col-sm-10.text-right
-            = f.text_field :unit, class: 'form-control', id: 'unit', placeholder: t('lot')
-            .form-check.text-right
-              = f.radio_button :unit_name, :"個", checked: true
-              = f.label :unit_name, t('count'), {value: :number, style: "display: form-check-inline"}
-              = f.radio_button :unit_name, :"Kg"
-              = f.label :unit_naem, t('weight'), {value: :weight, style: "display: form-check-inline"}
+            .form-group.row
+              = f.label t('discontinued'), class: 'col-sm-2 col-form-label'
+              .form-check.text-right
+                  .form-group.mb-2
+                    = f.check_box :discontinued, class: 'form-check-input check-box', id: "box-1"
+                    label for="box-1"
 
 
 
-        .form-group.row
-          = f.label t('price'), class: 'col-sm-2 col-form-label'
-          .col-sm-10
-            = f.text_field :price, class: 'form-control', id: 'price', placeholder: t('price')
+            .form-group.row
+              = f.label t('lot'), class: 'col-sm-2 col-form-label'
+              .col-sm-10.text-right
+                .field
+                  = f.text_field :unit, class: 'lot-form-control', id: 'unit', placeholder: t('lot')
+                  = f.radio_button :unit_name, t('count'), class: "radio_btn", id: 'count', checked: true
+                  = f.label t('count'), for: 'count'
 
-        .form-group.row
-          = f.label t('remark'), class: 'col-sm-2 col-form-label'
-          .col-sm-10
-            = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: t('remark')
+                  = f.radio_button :unit_name, t('weight'), class: "radio_btn", id: 'weight'
+                  = f.label t('weight'), for: 'weight'
+            .form-group.row
+              = f.label t('price'), class: 'col-sm-2 col-form-label'
+              .col-sm-10
+                = f.text_field :price, class: 'form-control', id: 'price', placeholder: t('price')
 
-        .form-group.row
-          = f.label t('image'), class: 'col-sm-2 col-form-label'
-          / .col-sm-10
-          /   = f.file_field :image, class: 'control'
-          .col-sm-10
-            .field.image
-                = form_with(model: @product, local: true) do |form|
-                  #img_field
-                    - if @product.image.present?
-                      = image_tag(@product.image)
-                    - else
-                      i.fas.fa-image.add2
-                      i.fas.fa-file-upload.add
-            = f.file_field :image, class: 'control', id: "file", style: "display:none;"
+            .form-group.row
+              = f.label t('remark'), class: 'col-sm-2 col-form-label'
+              .col-sm-10
+                = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: t('remark')
 
-            = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
-
-            .text-right
-              input[type="reset" value=t('reset') class='btn btn-danger btn_custom' id="reset"]
+            .form-group.row
+              = f.label t('image'), class: 'col-sm-2 col-form-label'
+              / .col-sm-10
+              /   = f.file_field :image, class: 'control'
+              .col-sm-10
+                .field.image
+                    = form_with(model: @product, local: true) do |form|
+                      #img_field
+                        - if @product.image.present?
+                          = image_tag(@product.image)
+                        - else
+                          i.fas.fa-image.add2
+                          i.fas.fa-file-upload.add
+                = f.file_field :image, class: 'control', id: "file", style: "display:none;"
+                = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
+                .text-right
+                  input[type="reset" value=t('reset') class='btn btn-danger btn_custom' id="reset"]

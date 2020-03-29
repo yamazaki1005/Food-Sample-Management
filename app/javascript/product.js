@@ -25,6 +25,12 @@ $(document).on('turbolinks:load', function() {
     $preview.empty();
   })
 
+  $('#box-1').click(function () {
+    $("#form").toggleClass("bg-dark");
+    $("#form").toggleClass("bg-white");
+    $("#form").toggleClass("discontinued");
+  })
+
   $fileField = $('#file')
 
   $($fileField).on('change', $fileField, function (e) {
