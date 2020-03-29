@@ -266,3 +266,37 @@
   -ms-transition: 1.8s;
   transition: 1.8s;
 }
+/*  =========================== */
+
+#product_category_id {
+    padding: 5px 27px;
+    border: solid 1px #EDBC6C;
+    color: #666;
+    position: relative;
+    border-radius: 5px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: cornsilk;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+}
+#product_category_id:hover {
+    background-color: #EDBC6C;
+    transition: 0.3s ease-out;
+    opacity: 0.9;
+}
+
+.img_field {
+  position:  relative;
+}
+.img_field i.add3 {
+  font-size: 23px;
+  position: absolute;
+  top: 14%;
+  right: 93%;
+  z-index: 1;
+  color: #666;
+}

@@ -24,8 +24,9 @@
 
             .form-group.row
               = f.label t('classification'), class: 'col-sm-2 col-form-label'
-              .col-sm-10.text-right
-                = f.select :category_id,  Category.all.map{|n| [n.classification_name, n.id]}, class: 'form-control'
+              .col-sm-10.img_field
+                i.fas.fa-angle-right.add3
+                = f.select :category_id, Category.all.map{|n| [n.classification_name, n.id]}
 
             .form-group.row
               = f.label t('discontinued'), class: 'col-sm-2 col-form-label'
@@ -33,8 +34,6 @@
                   .form-group.mb-2
                     = f.check_box :discontinued, class: 'form-check-input check-box', id: "box-1"
                     label for="box-1"
-
-
 
             .form-group.row
               = f.label t('lot'), class: 'col-sm-2 col-form-label'
