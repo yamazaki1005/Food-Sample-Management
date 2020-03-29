@@ -51,7 +51,8 @@ p {
 }
 /* 位置修正 ================================ */
 .margin-custom {
-  margin-right: 5px;
+  margin-right: 5px !important;
+  padding: 5px;
 }
 
 /* body ================================ */
@@ -178,7 +179,8 @@ header {
 
 .card-img-top img{
   border-radius: 5px 5px 0 0;
-  width: 90%;
+  // width: 90%;
+  max-width: 200px;
   max-height: 180px;
   height: auto;
   position: absolute;
@@ -235,6 +237,12 @@ header {
   margin-left: 9px;
 }
 
+.btn-primary-costom {
+  color: initial;
+  background: ghostwhite;
+  border-color: lemonchiffon;
+  border: solid 2px indianred;
+}
 
 .col-xs-6.col-sm-4.col-md-2 {
   padding: 5px;
@@ -305,4 +313,10 @@ header {
 
 .btn_custom {
   margin-top: 20px;
+}
+
+/* show ================================ */
+.img_custom img{
+  max-width: 1300px;
+  max-height: 1300px;
 }
