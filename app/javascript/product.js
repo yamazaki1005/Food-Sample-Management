@@ -20,6 +20,10 @@ $(document).on('turbolinks:load', function() {
     $("#file").click();
   })
 
+  $('#reset').click(function () {
+    $preview = $("#img_field");
+    $preview.empty();
+  })
 
   $fileField = $('#file')
 

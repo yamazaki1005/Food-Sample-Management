@@ -55,6 +55,8 @@
 
         .form-group.row
           = f.label t('image'), class: 'col-sm-2 col-form-label'
+          / .col-sm-10
+          /   = f.file_field :image, class: 'control'
           .col-sm-10
             .field.image
                 = form_with(model: @product, local: true) do |form|
@@ -64,9 +66,9 @@
                     - else
                       i.fas.fa-image.add2
                       i.fas.fa-file-upload.add
-                  = form.file_field "file", class: "image", id: "file", style: "display:none;"
+            = f.file_field :image, class: 'control', id: "file", style: "display:none;"
 
-        .text-right
-          input[type="reset" value=t('reset') class='btn btn-danger']
-        br
-        = f.submit nil , class: 'btn btn-primary btn-block'
+            = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
+
+            .text-right
+              input[type="reset" value=t('reset') class='btn btn-danger btn_custom' id="reset"]
