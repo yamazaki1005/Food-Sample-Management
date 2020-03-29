@@ -26,7 +26,33 @@
 
 
 /* 全体 ================================ */
+p {
+  margin-bottom: 0;
+}
 
+.left {
+  margin-right: auto;
+  text-align:left;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+.right {
+  margin-left: auto;
+  text-align:right;
+}
+
+.inline-block_test {
+    display: inline-block;
+    // background-color: #ccc;
+    padding: 0px 0px 0px 11px;
+}
+/* 位置修正 ================================ */
+.margin-custom {
+  margin-right: 5px;
+}
 
 /* body ================================ */
 body {
@@ -131,21 +157,29 @@ header {
 }
 
 /* card ================================ */
-// .card {
-//   height: 270px;
-// }
+.card-top {
+  height: 25px;
+    background: lemonchiffon;
+}
 
 .img-body {
   padding: 5px;
   text-align:  center;
-  // background-color: #ddd;
-  height: 130px;
+  // border: solid 1px #EDBC6C;
+  height: 180px;
   position: relative;
 }
+
+.card:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
+
 .card-img-top img{
   border-radius: 5px 5px 0 0;
-  width: 60%;
-  max-height:130px;
+  width: 90%;
+  max-height: 180px;
   height: auto;
   position: absolute;
   top: 0;
@@ -155,37 +189,19 @@ header {
   margin: auto;
 }
 
-// .img-item {
-//   width: 70%;
-//   max-width: 180px;
-//   height: auto;
-//   position: absolute;
-//   // top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-// }
-
-// img {
-//   width: 90%;
-//   max-width: 180px;
-//   height: auto;
-// }
-
-
-
 .card-content {
   padding: 20px;
 }
+
 .card-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
-  margin: 0px;
+  color: darkslategray;
+ margin: 0px;
 }
+
 .card-text {
   color: #1b1919;
   font-size: 14px;
@@ -254,7 +270,6 @@ header {
 }
 
 #img_field i.add {
-  // display: none;
   font-size: 50px;
   position: absolute;
   top: -90px;
@@ -262,7 +277,6 @@ header {
 }
 
 #img_field i.add2 {
-  /* display: none; */
   font-size: 150px;
   position: absolute;
   top: 25px;

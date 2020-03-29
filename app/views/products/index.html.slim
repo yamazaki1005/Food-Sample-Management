@@ -5,7 +5,7 @@
       = t('product_list')
     - if user_signed_in?
       .nav.justify-content-end
-        = link_to t('sign_up'), new_product_path, class: 'nav-link btn btn-primary'
+        = link_to t('sign_up'), new_product_path, class: 'nav-link btn btn-primary margin-custom'
 
 .bg-light
   .container
@@ -13,17 +13,27 @@
       - @products.each do | product |
         .form.col-xs-6.col-sm-4.col-md-2
           .card.img-thumbnail
+            .card-top
+              = link_to product
+                .card-title
+                  = product.product_name
             .img-body
-              .card-img-top
-                img= image_tag product.image if product.image.attached?
+              = link_to product
+                .card-img-top
+                    = image_tag product.image if product.image.attached?
             .card-body.px-2.py-3
-              p.card-title= link_to product.product_name, product
               p.card-text
-                = t('product_number')
-                = product.product_number
-                br
-                = t('last_order_days')
-                = product.updated_at.strftime('%Y/%m/%d')
+                .left.inline-block_test
+                  = t('product_number')
+                  br
+                  = t('classification')
+                .right.inline-block_test
+                  = product.product_number
+                  br
+                  = product.category_id
+                / br
+                / = t('last_order_days')
+                / = product.updated_at.strftime('%Y/%m/%d')
               - if user_signed_in?
                 p.mb-0
                   = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3'
