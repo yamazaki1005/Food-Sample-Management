@@ -54,7 +54,7 @@
   margin-bottom: 20px;
   text-align: center;
   color: darkslategray;
- margin: 0px;
+  margin: 0px;
 }
 
 .card-text {
@@ -62,16 +62,19 @@
   font-size: 14px;
   line-height: 1.5;
 }
+
 .card-link {
   text-align: center;
   border-top: 1px solid #eee;
   padding: 20px;
 }
+
 .card-link a {
   text-decoration: none;
   color: #0bd;
   margin: 0 10px;
 }
+
 .card-link a:hover {
   color: #0090aa;
 }
@@ -81,7 +84,7 @@
 }
 
 .py-3 {
-    padding: 0.5px !important;
+  padding: 0.5px !important;
 }
 
 /* form ================================ */
@@ -150,6 +153,7 @@
 .btn_custom {
   margin-top: 10px;
 }
+
 /* input-form ================================ */
 
 .custom-input-form {
@@ -199,14 +203,11 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-
-
 /* show ================================ */
 .img_custom img{
   max-width: 1300px;
   max-height: 1300px;
 }
-
 
 /* check_box =========================== */
 
@@ -248,14 +249,11 @@
   left: 15px;
   border-radius: 0;
   opacity: 1;
-
   border-top-color: transparent;
   border-left-color: transparent;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-
 }
-
 
 .discontinued {
   color: white !important;
@@ -269,29 +267,31 @@
 /*  =========================== */
 
 #product_category_id {
-    padding: 5px 27px;
-    border: solid 1px #EDBC6C;
-    color: #666;
-    position: relative;
-    border-radius: 5px;
-    width: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: cornsilk;
-    overflow: hidden;
-    box-sizing: border-box;
-    transition: 0.3s ease-out;
+  padding: 5px 27px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  border-radius: 5px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: cornsilk;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
 }
+
 #product_category_id:hover {
-    background-color: #EDBC6C;
-    transition: 0.3s ease-out;
-    opacity: 0.9;
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
 }
 
 .img_field {
   position:  relative;
 }
+
 .img_field i.add3 {
   font-size: 23px;
   position: absolute;

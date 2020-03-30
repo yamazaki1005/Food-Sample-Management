@@ -20,7 +20,7 @@
             .img-body
               = link_to product
                 .card-img-top
-                    = image_tag product.image if product.image.attached?
+                  = image_tag product.image if product.image.attached?
             / .card-body.px-2.py-3
             /   p.card-text
             /     .left.inline-block_test
@@ -36,7 +36,7 @@
                 / = product.updated_at.strftime('%Y/%m/%d')
             - if user_signed_in?
               p.mb-0
-                buton.btn.btn-primary.btn-primary-costom.margin-custom type="button" dummy
+                / buton.btn.btn-primary.btn-primary-costom.margin-custom type="button" dummy
                 = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3 btn-primary-costom margin-custom'
                 button.btn.btn-danger data-target="#myModal" data-name=product.product_name data-number=product.product_number data-id=product.id data-toggle="modal" type="button" data-url="products/#{product.id}" 削除
             - else

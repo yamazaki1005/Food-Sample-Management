@@ -1,5 +1,7 @@
 $(document).on('turbolinks:load', function() {
 
+  $(".time-limit").fadeOut( 4000 );
+
   // // 文字色を赤に変える: javascriptが効いているかどうかの確認用
   // $(".card-text").css("color", "red");
   // $(".form-group").css("color", "red");
@@ -14,7 +16,6 @@ $(document).on('turbolinks:load', function() {
     modal.find(".modal-body").text("品番:" + number + " " + name + "を削除します。");
     modal.find("form").attr("action", url);
   });
-
 
   $('#img_field').click(function () {
     $("#file").click();
@@ -37,7 +38,6 @@ $(document).on('turbolinks:load', function() {
     file = e.target.files[0]
     reader = new FileReader(),
     $preview = $("#img_field");
-
     reader.onload = (function (file) {
       return function (e) {
         $preview.empty();
