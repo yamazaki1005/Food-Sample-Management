@@ -4,6 +4,9 @@
  */
 
 @import "bootstrap/scss/bootstrap";
+@import "products";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 // ログイン画面
 
@@ -13,7 +16,7 @@
   padding: 2rem;
 }
 
-// 「ログインしました」などのフラッシュ用スタイル
+/* flash ================================ */
 
 .alert-notice {
   @extend .alert-info;
@@ -22,20 +25,38 @@
 .alert-alert {
   @extend .alert-danger;
 }
-// @import "bootstrap-sprockets";
 
-
+.alert {
+  padding: 7.5px;
+  border: 1px solid transparent;
+}
 /* 全体 ================================ */
+p {
+  margin-bottom: 0;
+}
 
+.left {
+  margin-right: auto;
+  text-align:left;
+}
+
+.right {
+  margin-left: auto;
+  text-align:right;
+}
+
+.inline-block_test {
+  display: inline-block;
+  padding: 0px 0px 0px 11px;
+}
 
 /* body ================================ */
 body {
   padding-top: 53px;
 }
 
-
 .container {
-    max-width: 1300px;
+  max-width: 1300px;
 }
 
 h1 {
@@ -47,13 +68,22 @@ h1 {
   margin: auto;
 }
 
+/* ボタン ================================ */
 
-/* フォーム ================================ */
-.custom_input_form {
-  padding: 20px;
+.btn-custom {
+  margin-left: 9px;
 }
 
-/* ナビゲーションバー  ================================ */
+.btn-primary-costom {
+  color: initial;
+  background: ghostwhite;
+  border-color: lemonchiffon;
+  border: solid 1px indianred;
+}
+
+.col-xs-6.col-sm-4.col-md-2 {
+  padding: 5px;
+}
 
 /* ヘッダー ================================ */
 header {
@@ -65,15 +95,14 @@ header {
 }
 
 .navbar {
-    padding: 0px;
+  padding: 2px 10px;
 }
 
 .header-logo {
-   float: left;
+  float: left;
   width: 130px;
   height: 40px;
 }
-
 
 .header-menus {
   float: right;
@@ -128,98 +157,4 @@ header {
 /* alert ================================ */
 .alert {
   margin-bottom: 0px;
-}
-
-/* card ================================ */
-// .card {
-//   height: 270px;
-// }
-
-.img-body {
-  padding: 5px;
-  text-align:  center;
-  // background-color: #ddd;
-  height: 130px;
-  position: relative;
-}
-.card-img-top img{
-  border-radius: 5px 5px 0 0;
-  width: 60%;
-  max-height:130px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-// .img-item {
-//   width: 70%;
-//   max-width: 180px;
-//   height: auto;
-//   position: absolute;
-//   // top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-// }
-
-// img {
-//   width: 90%;
-//   max-width: 180px;
-//   height: auto;
-// }
-
-
-
-.card-content {
-  padding: 20px;
-}
-.card-title {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333;
-  margin: 0px;
-}
-.card-text {
-  color: #1b1919;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.card-link {
-  text-align: center;
-  border-top: 1px solid #eee;
-  padding: 20px;
-}
-.card-link a {
-  text-decoration: none;
-  color: #0bd;
-  margin: 0 10px;
-}
-.card-link a:hover {
-  color: #0090aa;
-}
-
-.card-body {
-  padding: 1px;
-}
-
-.py-3 {
-    padding: 0.5px !important;
-}
-
-/* ボタン ================================ */
-
-.btn-custom {
-  margin-left: 9px;
-}
-
-
-.col-xs-6.col-sm-4.col-md-2 {
-  padding: 5px;
 }
