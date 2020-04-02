@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
 
-  root 'homes#index'
+  root 'cookings#index'
 
   devise_for :users
 
