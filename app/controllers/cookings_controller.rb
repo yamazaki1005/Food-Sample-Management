@@ -12,6 +12,7 @@ class CookingsController < ApplicationController
 
   def new
     @cooking = Cooking.new
+    @cooking.cooking_product_relations.build
   end
 
   def edit
@@ -30,9 +31,15 @@ class CookingsController < ApplicationController
   end
 
   def create
-    cooking = Cooking.new(cooking_params)
-    cooking.save!
-    redirect_to cookings_url, notice: "「」を登録しました。"
+    @cooking = Cooking.new(cooking_params)
+    if @cooking.save
+      redirect_to cookings_url, notice: "「」を登録しました。"
+    else
+      render 'new'
+    end
+
+
+
   end
 
   def destroy
@@ -43,7 +50,7 @@ class CookingsController < ApplicationController
   private
 
   def cooking_params
-    params.require(:cooking).permit(:cooking_name, :image, :user_id, :created_at, :updated_at, :category_id)
+    params.require(:cooking).permit(:cooking_name, :image, :user_id, :created_at, :updated_at, :category_id, { :product_ids=> [] })
   end
 
   def set_cooking

@@ -25,6 +25,11 @@
       tr
         th= t('updated_at')
         td= @cooking.updated_at.strftime('%Y/%m/%d')
+      tr
+        th= t('product_list')
+        td
+          - @cooking.cooking_product_relations.each do |cooking_product_relation|
+             = cooking_product_relation.product.product_name
 
     - if user_signed_in?
       = link_to t('edit'), edit_cooking_path, class: 'btn btn-primary mr-3'
