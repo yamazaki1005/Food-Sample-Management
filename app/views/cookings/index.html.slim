@@ -1,12 +1,27 @@
-.top_image
-  =image_tag 'restaurant.png'
-.box_container
-  .images_holder
-    .image_div.left
-      =image_tag 'sample1.jpg'
-    .image_div.right
-      =image_tag 'sample5.jpg'
-    .clear
-  p 店内に入ったイメージ
+= render partial: 'modal'
+.bg-light
+  .container-custom
+    h1.mx-auto style=("width: 300px;")
+      = t('cooking_list')
+    - if user_signed_in?
+      .nav.justify-content-end
+        / = link_to t('sign_up'), new_cooking_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+        =link_to '料理新規登録', new_cooking_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+        =link_to t('product_list'), products_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
 
-/ 店頭で食品サンプルを見た子供が自動ドア通って店内に入って行くイメージ
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= t('cooking_name')
+      th= t('created_at')
+      th= t('classification')
+    tbody
+     - @cookings.each do |cooking|
+      tr
+        td= link_to cooking.cooking_name, cooking
+        td= cooking.created_at
+        td= cooking.category_id
+        td.nav.justify-content-end
+          = link_to '編集', edit_cooking_path(cooking), class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+          button.btn.btn-danger data-target="#MyCookingModal" data-name=cooking.cooking_name  data-id=cooking.id data-toggle="modal" type="button" data-url="cookings/#{cooking.id}" delete

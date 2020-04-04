@@ -10,6 +10,12 @@ ja:
   product_edit: 規格部品編集
   detail: 登録内容
 
+  id: ID
+  cooking_name: 料理名
+  cooking_list: 料理一覧
+  created_at: 作成日
+  updated_at: 更新日
+
   product_name: 品名
   product_number: 品番
   page: ページ
@@ -37,12 +43,12 @@ ja:
   profile: プロフィール
 
   product: "規格品「%{name}」"
-
+  cooking: "料理「%{name}」"
   msg:
     delete_confirm: データを削除しますか？
     create:  "%{v}を登録しました。"
-    update:  "%{v}を更新しました。"
-    delete:  "%{v}を削除しました。"
+    update:  "%{name}を更新しました。"
+    delete:  "%{name}を削除しました。"
     deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"

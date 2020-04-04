@@ -2,9 +2,16 @@ $(document).on('turbolinks:load', function () {
 
   $(".time-limit").fadeOut(4000);
 
-  // // 文字色を赤に変える: javascriptが効いているかどうかの確認用
-  // $(".card-text").css("color", "red");
-  // $(".form-group").css("color", "red");
+  $("#MyCookingModal").on("shown.bs.modal", function (event) {
+    var button = $(event.relatedTarget);
+    var name = button.data("name");
+    var id = button.data("id");
+    var url = button.data("url");
+    var modal = $(this);
+    modal.find(".modal-body").text(name + "を削除します。");
+    modal.find("form").attr("action", url);
+  });
+
   $('.box_container').hover(function () { //box_containerにマウスを乗せた時
     var width = $(this).outerWidth() / 2; //box_containerの幅を取って半分にします
     $(this).find('.left').animate(  //class="left"にアニメーションを与えます

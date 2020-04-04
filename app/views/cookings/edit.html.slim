@@ -1,2 +1,6 @@
-h1 Cookings#edit
-p Find me in app/views/cookings/edit.html.slim
+.bg-light
+  .container-custom
+    h1.mx-auto style=("width: 300px;") 料理更新
+    .nav.justify-content-end
+      = link_to "料理一覧画面", cookings_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+    = render partial: 'form', locals: { cooking: @cooking }

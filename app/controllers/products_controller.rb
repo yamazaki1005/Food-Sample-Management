@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
   def update
     begin
       @product.update!(product_params)
-      redirect_to products_url, notice: t('msg.update', v: t('product', name: @product.product_name))
+      redirect_to products_url, notice: t('msg.update', name: t('product', name: @product.product_name))
     rescue ActiveRecord::RecordInvalid
       render :edit
     rescue
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_url, notice: t('msg.delete', v: t('product', name: @product.product_name))
+    redirect_to products_url, notice: t('msg.delete', name: t('product', name: @product.product_name))
   end
 
   #   def self.ransackable_attributes(auth_object = nil)
