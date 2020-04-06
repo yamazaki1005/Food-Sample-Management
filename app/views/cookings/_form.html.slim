@@ -21,20 +21,20 @@
               = f.label t('product_list'), class: 'col-sm-2 col-form-label'
               .col-sm-10
                 = form_with model: cooking, local: true do |f|
-                  = f.collection_check_boxes :product_ids, Product.all, :id, :product_name
-                   / 分類で絞り込んで表示が切り替わるようにしたい。
-            .form-group.row
+                  = f.collection_check_boxes :product_ids, @products, :id, :product_name
+
               = f.label t('image'), class: 'col-sm-2 col-form-label'
               .col-sm-10
                 .field.image
-                  = form_with(model: @cooking, local: true) do |form|
-                    #img_field
-                      / - if @cooking.image.present?
-                      /   = image_tag(@cooking.image)
-                      / - else
-                      i.fas.fa-image.add2
-                      i.fas.fa-file-upload.add
-                    = f.file_field :image, class: 'control', id: "file", style: "display:none;"
-                    = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
-                    .text-right
-                      input[type="reset" value=t('reset') class='btn btn-danger btn_custom' id="reset"]
+                    = form_with(model: @cooking, local: true) do |f|
+                      #img_field
+                        - if @cooking.image.present?
+                          = image_tag(@cooking.image)
+                        - else
+                          i.fas.fa-image.add2
+                          i.fas.fa-file-upload.add
+                = f.file_field :image, class: 'control', id: "file", style: "display:none;"
+
+                = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
+                .text-right
+                  input[type="reset" value=t('reset') class='btn btn-danger btn_custom' id="reset"]

@@ -1,3 +1,4 @@
+= render partial: 'modal'
 .bg-light
   .container-custom
     h1.mx-auto style=("width: 300px;")
@@ -26,6 +27,9 @@
         th= t('updated_at')
         td= @cooking.updated_at.strftime('%Y/%m/%d')
       tr
+        th= t('image')
+        td.img_custom= image_tag @cooking.image if @cooking.image.attached?
+      tr
         th= t('product_list')
         td
           - @cooking.cooking_product_relations.each do |cooking_product_relation|
@@ -33,4 +37,4 @@
 
     - if user_signed_in?
       = link_to t('edit'), edit_cooking_path, class: 'btn btn-primary mr-3'
-      / button.btn.btn-danger data-target="#myModal" data-name=@cooking.cooking_name data-number=@cooking.cooking_number data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}" å‰Šé™¤
+      button.btn.btn-danger data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}" delete
