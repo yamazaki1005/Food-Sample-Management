@@ -3,8 +3,6 @@
   height:95vh;
 }
 
-
-
 .box_container{
   position:relative;
   width:100vw;
@@ -13,18 +11,22 @@
   background: black;
   color:white;
 }
+
 .images_holder{
   position:absolute;
 }
+
 .image_div {
   position:relative;
   overflow:hidden;
   width:50%;  //半分だけ見えるようにしています
   float:left; //2つの左右に並べています
 }
+
 .right {
-    margin-left: -100%; //左半分を見えなくしています
+  margin-left: -100%; //左半分を見えなくしています
 }
+
 .clear{
-    clear:both;
+  clear:both;
 }
