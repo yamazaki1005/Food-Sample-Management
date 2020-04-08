@@ -23,7 +23,9 @@ gem 'html2slim'
 gem 'slim-rails', '>= 3.1.3'
 
 gem 'ransack'
-gem 'rubocop'
+gem 'rubocop', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-performance', require: false
 
 gem 'bootstrap-sass'
 gem 'data-confirm-modal'

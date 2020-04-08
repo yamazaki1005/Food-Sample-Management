@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.valid?
       @product.save
-      redirect_to products_path, notice: t('msg.create', v: t('product', name: @product.product_name))
+      redirect_to products_path, notice: t('msg.create', name: t('product', name: @product.product_name))
     else
       render :new
     end

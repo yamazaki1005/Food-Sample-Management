@@ -1,18 +1,17 @@
 ja:
-  # product_number: '品番：%{n}'
   last_order_days: 前回発注日
-
-  test: '品名：%{v}'
+  new_registration: "%{v}新規登録"
 
   edit: 編集
-  delete: 削除
-  delete_confirm: 削除確認
+  update: 更新
   product_edit: 規格部品編集
   detail: 登録内容
 
   id: ID
+  cookings: 料理
   cooking_name: 料理名
   cooking_list: 料理一覧
+  cooking_update: 料理更新
   created_at: 作成日
   updated_at: 更新日
 
@@ -41,12 +40,17 @@ ja:
 
   create: 登録
   profile: プロフィール
-
   product: "規格品「%{name}」"
   cooking: "料理「%{name}」"
+  # modal
+  confirm_deletion: 削除確認
+  close: 閉じる
+  cancel: キャンセル
+  delete: 削除
+  delete_confirm: 削除確認
   msg:
     delete_confirm: データを削除しますか？
-    create:  "%{v}を登録しました。"
+    create:  "%{name}を登録しました。"
     update:  "%{name}を更新しました。"
     delete:  "%{name}を削除しました。"
     deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'

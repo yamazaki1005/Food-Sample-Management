@@ -5,6 +5,6 @@ class Cooking < ApplicationRecord
   belongs_to :category
 
   def product_by?(cooking)
-        cooking_product_relations.where(cooking_id: cooking.id).exists?
+    cooking_product_relations.where(cooking_id: cooking.id).exists?
   end
 end

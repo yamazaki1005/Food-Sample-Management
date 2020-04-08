@@ -49,5 +49,5 @@
     "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
     "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
     "workbench.editor.tabSizing": "shrink", // タブの表示設定
-    "workbench.startupEditor": "none" // Welcome Page を表示しない
+    "workbench.startupEditor": "none"
 }

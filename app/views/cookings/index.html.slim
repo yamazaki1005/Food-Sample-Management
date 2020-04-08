@@ -6,9 +6,9 @@
     - if user_signed_in?
       .nav.justify-content-end
         / = link_to t('sign_up'), new_cooking_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-        =link_to '料理新規登録', new_cooking_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+        =link_to new_cooking_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+          =t('new_registration', v: t('cookings'))
         =link_to t('product_list'), products_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-
 .mb-3
 table.table.table-hover
   thead.thead-default
@@ -16,6 +16,7 @@ table.table.table-hover
       th= t('cooking_name')
       th= t('created_at')
       th= t('classification')
+      / 紐付け確認のための仮表示
       th= "使われている規格品数"
       th= "規格品との紐付けカウント削除"
       th= "規格品との紐付けカウント登録"
@@ -28,9 +29,8 @@ table.table.table-hover
         td= cooking.cooking_product_relations.count
         td= link_to cooking.cooking_product_relations.count, cooking_cooking_product_relations_path(cooking.id), method: :delete
         td= link_to cooking.cooking_product_relations.count, cooking_cooking_product_relations_path(cooking.id), method: :post
-
-
-
         td.nav.justify-content-end
-          = link_to '編集', edit_cooking_path(cooking), class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-          button.btn.btn-danger data-target="#MyCookingModal" data-name=cooking.cooking_name  data-id=cooking.id data-toggle="modal" type="button" data-url="cookings/#{cooking.id}" delete
+          = link_to edit_cooking_path(cooking), class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+            =t('edit')
+          button.btn.btn-danger data-target="#MyCookingModal" data-name=cooking.cooking_name  data-id=cooking.id data-toggle="modal" type="button" data-url="cookings/#{cooking.id}"
+            =t('delete')

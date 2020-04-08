@@ -3,11 +3,14 @@
     .modal-dialog.modal-dialog-centered role="document"
       .modal-content
         .modal-header
-          h4.modal-title 削除確認
+          h4.modal-title
+            =t('confirm_deletion')
           button.close aria-label="閉じる" data-dismiss="modal" type="button"
             span aria-hidden="true"  ×
         .modal-body
         .modal-footer
-          button.btn.btn-default data-dismiss="modal" type="button"  キャンセル
+          button.btn.btn-default data-dismiss="modal" type="button"
+            =t('cancel')
           input name="_method" type="hidden" value="DELETE"
-          button.btn.btn-danger type="submit" 削除
+          button.btn.btn-danger type="submit"
+            =t('delete')
