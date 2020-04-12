@@ -1,0 +1,8 @@
+.bg-light
+  .container-custom
+    h1.mx-auto.title
+      = t('new_registration', v: t('cookings'))
+    .nav.justify-content-end
+      = link_to cookings_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+        = t('cooking_list')
+    = render partial: 'form', locals: { cooking: @cooking }

@@ -1,0 +1,40 @@
+.container.bg-light
+  .row
+    .input_form.col-sm-offset-1.col-sm-9.col-md-offset-2.col-md-7
+      #form.border.border-secondary.custom-input-form.bg-white.text-body
+        = form_with model: cooking, local: true do |f|
+          - if @cooking.errors
+            - @cooking.errors.full_messages.each do |message|
+              .errors.text-danger = message
+
+          .form-group.row
+            = f.label t('cooking_name'), class: 'col-sm-2 col-form-label'
+            .col-sm-10
+              = f.text_field :cooking_name, class: 'form-control', id: 'cooking_name', placeholder: t('cooking_name')
+
+          .form-group.row
+            = f.label t('classification'), class: 'col-sm-2 col-form-label'
+            .col-sm-10.img_field
+              = f.select :category_id, @categories
+
+          .form-group.row
+            = f.label t('product_list'), class: 'col-sm-2 col-form-label'
+            .col-sm-10
+              = form_with model: cooking, local: true do |f|
+                = f.collection_check_boxes :product_ids, @products, :id, :product_name
+
+            = f.label t('image'), class: 'col-sm-2 col-form-label'
+            .col-sm-10
+              .field.image
+                = form_with(model: @cooking, local: true) do |f|
+                  #img_field
+                    - if @cooking.image.present?
+                      = image_tag(@cooking.image)
+                    - else
+                      i.fas.fa-image.add2
+                      i.fas.fa-file-upload.add
+              = f.file_field :image, class: 'control', id: "file", style: "display:none;"
+
+              = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
+              .text-right
+                input[type="reset" value= t('reset') class='btn btn-danger btn_custom' id="reset"]

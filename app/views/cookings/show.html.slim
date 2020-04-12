@@ -1,0 +1,41 @@
+= render partial: 'modal'
+.bg-light
+  .container-custom
+    h1.mx-auto.title
+      = t('detail')
+
+    .nav.justify-content-end
+     = link_to t('cooking_list'), cookings_path, class: 'nav-link margin-custom btn-primary-costom'
+     table.table.table-hover
+      tbody
+      tr
+        th= t('id')
+        td= @cooking.id
+      tr
+        th= t('cooking_name')
+        td= @cooking.cooking_name
+      tr
+        th= t('classification')
+        td= @cooking.category_id
+      / tr
+      /   th= Cooking.human_attribute_name(:image)
+      /   td.img_custom= image_tag @cooking.image if @cooking.image.attached?
+      tr
+        th= t('created_at')
+        td= @cooking.created_at.strftime('%Y/%m/%d')
+      tr
+        th= t('updated_at')
+        td= @cooking.updated_at.strftime('%Y/%m/%d')
+      tr
+        th= t('image')
+        td.img_custom= image_tag @cooking.image if @cooking.image.attached?
+      tr
+        th= t('product_list')
+        td
+          - @cooking.cooking_product_relations.each do |cooking_product_relation|
+            = cooking_product_relation.product.product_name
+
+    - if user_signed_in?
+      = link_to t('edit'), edit_cooking_path, class: 'btn btn-primary mr-3'
+      button.btn.btn-danger data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+        = t('delete')

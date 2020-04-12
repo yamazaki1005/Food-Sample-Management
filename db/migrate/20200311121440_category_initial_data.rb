@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Categories
 class CategoryInitialData < ActiveRecord::Migration[6.0]
   def up
