@@ -68,6 +68,8 @@ ja:
     models:
       product: 規格品
     attributes:
+      cooking:
+        cooking_name: 料理名
       product:
         product_name: 品名
         product_number: 品番

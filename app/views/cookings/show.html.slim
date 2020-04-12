@@ -1,7 +1,7 @@
 = render partial: 'modal'
 .bg-light
   .container-custom
-    h1.mx-auto style=("width: 300px;")
+    h1.mx-auto.title
       = t('detail')
 
     .nav.justify-content-end
@@ -37,4 +37,5 @@
 
     - if user_signed_in?
       = link_to t('edit'), edit_cooking_path, class: 'btn btn-primary mr-3'
-      button.btn.btn-danger data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}" delete
+      button.btn.btn-danger data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+        = t('delete')

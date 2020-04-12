@@ -35,10 +35,11 @@ class CookingsController < ApplicationController
 
   def create
     @cooking = Cooking.new(cooking_params)
-    if @cooking.save
+    if @cooking.valid?
+      @cooking.save
       redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
     else
-      render 'new'
+      render :new
     end
   end
 

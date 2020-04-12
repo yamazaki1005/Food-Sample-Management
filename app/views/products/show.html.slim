@@ -1,7 +1,7 @@
 = render partial: 'modal'
 .bg-light
   .container-custom
-    h1.mx-auto style=("width: 300px;")
+    h1.mx-auto.title
       = t('detail')
 
     .nav.justify-content-end
@@ -50,4 +50,5 @@
 
     - if user_signed_in?
       = link_to t('edit'), edit_product_path, class: 'btn btn-primary mr-3'
-      button.btn.btn-danger data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}" 削除
+      button.btn.btn-danger data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
+        = t('delete')

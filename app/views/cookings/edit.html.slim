@@ -1,7 +1,7 @@
 .bg-light
   .container-custom
-    h1.mx-auto style=("width: 300px;")
-      =t('cooking_update')
+    h1.mx-auto.title
+      = t('cooking_update')
     .nav.justify-content-end
       = link_to t('cooking_list'), cookings_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
     = render partial: 'form', locals: { cooking: @cooking }
