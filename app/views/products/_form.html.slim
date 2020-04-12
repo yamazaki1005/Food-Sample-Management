@@ -26,7 +26,7 @@
               = f.label t('classification'), class: 'col-sm-2 col-form-label'
               .col-sm-10.img_field
                 / i.fas.fa-angle-right.add3
-                = f.select :category_id, Category.all.map{|n| [n.classification_name, n.id]}
+                = f.select :product_category_id, ProductCategory.all.map{|n| [n.classification_name, n.id]}
 
             .form-group.row
               = f.label t('discontinued'), class: 'col-sm-2 col-form-label'

@@ -16,7 +16,7 @@
         td= @cooking.cooking_name
       tr
         th= t('classification')
-        td= @cooking.category_id
+        td= @cooking.product_category_id
       / tr
       /   th= Cooking.human_attribute_name(:image)
       /   td.img_custom= image_tag @cooking.image if @cooking.image.attached?

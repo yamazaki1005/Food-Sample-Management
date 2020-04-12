@@ -25,7 +25,7 @@ table.table.table-hover
       tr
         td= link_to cooking.cooking_name, cooking
         td= cooking.created_at
-        td= cooking.category_id
+        td= cooking.product_category_id
         td= cooking.cooking_product_relations.count
         td= link_to cooking.cooking_product_relations.count, cooking_cooking_product_relations_path(cooking.id), method: :delete
         td= link_to cooking.cooking_product_relations.count, cooking_cooking_product_relations_path(cooking.id), method: :post
