@@ -5,6 +5,7 @@ class CookingsController < ApplicationController
   before_action :set_cooking, only: %i[show edit update destroy]
   before_action :set_products, only: %i[new create edit update]
   before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_cooking_categories, only: %i[new create edit update]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
 
@@ -51,7 +52,7 @@ class CookingsController < ApplicationController
   private
 
   def cooking_params
-    params.require(:cooking).permit(:cooking_name, :product_category_id, :user_id, :image, :created_at, :updated_at, { :product_ids=> [] }, :image)
+    params.require(:cooking).permit(:cooking_name, :cooking_category_id, :product_category_id, :user_id, :image, :created_at, :updated_at, { :product_ids=> [] }, :image)
   end
 
   def set_cooking
@@ -64,5 +65,9 @@ class CookingsController < ApplicationController
 
   def set_product_categories
     @product_categories = ProductCategory.all.map{|n| [n.classification_name, n.id]}
+  end
+
+  def set_cooking_categories
+    @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
   end
 end

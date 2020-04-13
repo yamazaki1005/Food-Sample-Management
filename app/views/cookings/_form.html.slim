@@ -13,9 +13,14 @@
               = f.text_field :cooking_name, class: 'form-control', id: 'cooking_name', placeholder: t('cooking_name')
 
           .form-group.row
-            = f.label t('classification'), class: 'col-sm-2 col-form-label'
-            .col-sm-10.img_field
-              = f.select :product_category_id, @product_categories
+              = f.label t('classification'), class: 'col-sm-2 col-form-label'
+              .col-sm-10.img_field
+                = f.select :cooking_category_id, CookingCategory.all.map{|n| [n.classification_name, n.id]}
+
+          .form-group.row
+              = f.label t('classification'), class: 'col-sm-2 col-form-label'
+              .col-sm-10.img_field
+                = f.select :product_category_id, ProductCategory.all.map{|n| [n.classification_name, n.id]}
 
           .form-group.row
             = f.label t('product_list'), class: 'col-sm-2 col-form-label'
