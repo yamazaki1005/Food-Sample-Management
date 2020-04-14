@@ -15,7 +15,12 @@
           .form-group.row
             = f.label t('classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field
-              = f.select :category_id, @categories
+              = f.select :cooking_category_id, @cooking_categories
+
+          .form-group.row
+            = f.label t('classification'), class: 'col-sm-2 col-form-label'
+            .col-sm-10.img_field
+              = f.select :product_category_id, @product_categories
 
           .form-group.row
             = f.label t('product_list'), class: 'col-sm-2 col-form-label'

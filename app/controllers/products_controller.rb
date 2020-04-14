@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
   PAGE_LIMIT_NUMBER = 30
+  before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_cooking_categories, only: %i[new create edit update]
 
   def index
     @products = Product.all
@@ -68,7 +70,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:product_name, :product_number, :page, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at, :category_id)
+    params.require(:product).permit(:product_name, :product_number, :page, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at, :product_category_id, :cooking_category_id)
   end
 
   def set_product

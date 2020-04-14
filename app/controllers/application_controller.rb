@@ -9,13 +9,16 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def set_product_categories
+    @product_categories = ProductCategory.all.map{|n| [n.classification_name, n.id]}
+  end
+
+  def set_cooking_categories
+    @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
+  end
+
   def set_search_query
     @q = current_user.products.ransack(params[:q]) if session[:user_id]
     @products = @q.result(products_number: true) if session[:user_id]
   end
-
-  # def show_custom_error_page(error)
-  #   @error = error
-  #   render :custom_error
-  # end
 end

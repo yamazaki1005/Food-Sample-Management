@@ -28,7 +28,8 @@ class Product < ApplicationRecord
   validates :unit,
             presence: true,
             numericality: { only_integer: true }
-  belongs_to :category
+  belongs_to :product_category
+  belongs_to :cooking_category
   has_one_attached :image
   has_many :cooking_product_relations, dependent: :destroy
   has_many :cookings, through: :cooking_product_relations

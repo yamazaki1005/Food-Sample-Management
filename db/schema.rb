@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_123505) do
+ActiveRecord::Schema.define(version: 2020_04_13_134641) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name", null: false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_03_31_123505) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+  create_table "cooking_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "classification_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -50,7 +50,14 @@ ActiveRecord::Schema.define(version: 2020_03_31_123505) do
 
   create_table "cookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "cooking_name"
-    t.bigint "category_id"
+    t.bigint "product_category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "cooking_category_id"
+  end
+
+  create_table "product_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.string "classification_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,8 +74,9 @@ ActiveRecord::Schema.define(version: 2020_03_31_123505) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "category_id"
-    t.index ["category_id"], name: "index_products_on_category_id"
+    t.bigint "product_category_id"
+    t.bigint "cooking_category_id"
+    t.index ["product_category_id"], name: "index_products_on_product_category_id"
     t.index ["product_name"], name: "index_products_on_product_name", unique: true
   end
 
@@ -87,5 +95,5 @@ ActiveRecord::Schema.define(version: 2020_03_31_123505) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cooking_product_relations", "cookings"
   add_foreign_key "cooking_product_relations", "products"
-  add_foreign_key "products", "categories"
+  add_foreign_key "products", "product_categories"
 end

@@ -2,8 +2,8 @@
 
 one:
   cooking_name: MyString
-  category_id: 
+  product_category_id:
 
 two:
   cooking_name: MyString
-  category_id: 
+  product_category_id:
