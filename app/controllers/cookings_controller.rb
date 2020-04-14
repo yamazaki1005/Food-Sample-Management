@@ -62,12 +62,4 @@ class CookingsController < ApplicationController
   def set_products
     @products = Product.all
   end
-
-  def set_product_categories
-    @product_categories = ProductCategory.all.map{|n| [n.classification_name, n.id]}
-  end
-
-  def set_cooking_categories
-    @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
-  end
 end

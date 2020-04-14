@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
   PAGE_LIMIT_NUMBER = 30
+  before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_cooking_categories, only: %i[new create edit update]
 
   def index
     @products = Product.all

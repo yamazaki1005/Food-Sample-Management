@@ -25,13 +25,13 @@
             .form-group.row
               = f.label t('classification'), class: 'col-sm-2 col-form-label'
               .col-sm-10.img_field
-                = f.select :cooking_category_id, CookingCategory.all.map{|n| [n.classification_name, n.id]}
+                = f.select :cooking_category_id, @cooking_categories
 
             .form-group.row
               = f.label t('classification'), class: 'col-sm-2 col-form-label'
               .col-sm-10.img_field
                 / i.fas.fa-angle-right.add3
-                = f.select :product_category_id, ProductCategory.all.map{|n| [n.classification_name, n.id]}
+                = f.select :product_category_id, @product_categories
 
             .form-group.row
               = f.label t('discontinued'), class: 'col-sm-2 col-form-label'
