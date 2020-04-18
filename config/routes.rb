@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
 
+  get 'cooking_categories/index'
   root 'homes#index'
 
   devise_for :users
@@ -16,4 +17,6 @@ Rails.application.routes.draw do
   resources :cookings do
     resource :cooking_product_relations, only: [:create, :destroy]
   end
+
+  resources :cooking_categories
 end

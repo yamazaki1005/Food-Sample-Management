@@ -5,10 +5,10 @@ class CookingCategoryInitialData < ActiveRecord::Migration[6.0]
       '洋食',
       '中華',
       'エスニック',
-      'アジア',
+      'アジア料理',
       'カフェ・スイーツ',
       '菓子',
-      'おせち'
+      '匠の技'
     ]
     names.each do |m|
       CookingCategory.create(classification_name: m)

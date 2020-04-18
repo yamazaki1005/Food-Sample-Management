@@ -1,0 +1,23 @@
+#carousel
+  figure#spinner
+    - @cooking_categories.each.with_index(1) do | cooking_category, n |
+      div class="sample_img sample_img#{n}"
+        = link_to cooking_category
+          .spinner_img=image_tag "/assets/#{cooking_category.classification_name}.jpg"
+.image_area
+  .image_area_left
+    =image_tag "menu_tenin_yobu-2.png"
+  .image_area_right
+    =image_tag "menu_chumon_family.png"
+span.ss-icon.left_arrow &lt;
+span.ss-icon.right_arrow &gt;
+.bg-light
+  .container
+    .row.form-inline
+      - @cooking_categories.each do | cooking_category |
+        .form.col-xs-6.col-sm-4.col-md-3
+          .card.img-thumbnail
+            .card-top
+              = link_to cooking_category
+                .card-title
+                  = cooking_category.classification_name
