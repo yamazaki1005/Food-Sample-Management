@@ -3,7 +3,7 @@
     - @cooking_categories.each.with_index(1) do | cooking_category, n |
       div class="sample_img sample_img#{n}"
         = link_to cooking_category
-          .spinner_img=image_tag "/assets/#{cooking_category.classification_name}.jpg"
+          .spinner_img=image_tag "/assets/#{cooking_category.classification_reference_name}.jpg"
 .image_area
   .image_area_left
     =image_tag "menu_tenin_yobu-2.png"
