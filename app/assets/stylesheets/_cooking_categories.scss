@@ -1,21 +1,17 @@
-
-
 .image_area{
-  height: 20vh;
   background: #ffdc7238;
   position: relative;
-  margin-bottom: 10px;
 }
 
 .image_area_left img {
-  height:200%;
+  height:70%;
   position: absolute;
-  left: 80px;
-  bottom: -5px;
+  left: 30px;
+  bottom: 5px;
 }
 
 .image_area_right img {
-  height:150%;
+  height:40%;
   position: absolute;
   right: 0px;
   bottom: -5px;
@@ -24,28 +20,41 @@
 
 div#carousel {
   perspective: 3000px;
-  background: #ffdc7238;
+  // background: #ffdc7238;
   padding: 1% 0 0 0;
   // overflow: hidden;
-  height: 60vh;
+  height: 75vh;
 }
 
 figure#spinner {
   transform-style: preserve-3d;
-  height: 300px;
-  transform-origin: 50% 50% -500px;
+  height: 0%;
+  transform-origin: 54% 40% -500px;
   transition: 1s;
 }
 
 figure#spinner .sample_img {
-  width: 28%; max-width: 500px;
-  position: absolute; left: 40%;
-  transform-origin: 50% 50% -500px;
+  width: 55%;
+  height: 80%;
+  max-width: 500px;
+  position: absolute;
+  left: 36%;
+  transform-origin: 54% 50% -500px;
   outline:1px solid transparent;
 }
 
 .spinner_img img {
   height: 70vh;
+  border-radius:3%;
+  border: 3px solid #343a40;
+  max-height: 530px;
+  margin: 0 70px;
+}
+
+.spinner_img img:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.1, 1.1);
+  border: 8px #ff7900 solid;
 }
 
 .sample_img1 { transform:rotateY(0deg); }
@@ -66,7 +75,8 @@ div#carousel ~ span {
   position: relative;
   margin-top: -6rem;
   border-bottom: none;
-  line-height: 0; }
+  line-height: 0;
+}
 
 div#carousel ~ span:hover { color: #888; cursor: pointer; }
 
@@ -97,11 +107,4 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
 .left_arrow:active, .right_arrow:active {
   top: 104px;
   box-shadow: 0 1px 0 #999;
-}
-
-.emphasize_card {
-  background-color: #EDBC6C;
-  transition: 0.3s ease-out;
-  opacity: 0.9;
-  transform: scale(1.1, 1.1);
 }
