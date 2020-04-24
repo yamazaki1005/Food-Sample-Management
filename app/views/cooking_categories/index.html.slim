@@ -15,9 +15,9 @@ h1.mx-auto.title.image_area
 .bg-light
   .container
     .row.form-inline
-      - @cooking_categories.each do | cooking_category |
+      - @cooking_categories.each.with_index(1) do | cooking_category, m |
         .form.col-xs-6.col-sm-4.col-md-3
-          .card.img-thumbnail
+          div class="card img-thumbnail #{m}"
             .card-top
               = link_to cooking_category
                 .card-title
