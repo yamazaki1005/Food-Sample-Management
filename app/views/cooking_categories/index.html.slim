@@ -17,7 +17,7 @@ h1.mx-auto.title.image_area
     .row.form-inline
       - @cooking_categories.each.with_index(1) do | cooking_category, m |
         .form.col-xs-6.col-sm-4.col-md-3
-          div class="card img-thumbnail #{m}"
+          div class="card img-thumbnail gallery-item#{m}"
             .card-top
               = link_to cooking_category
                 .card-title
