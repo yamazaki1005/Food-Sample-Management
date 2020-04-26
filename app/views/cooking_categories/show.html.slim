@@ -4,12 +4,12 @@
       = t('detail')
 
     .nav.justify-content-end
-     = link_to t('product_list'), products_path, class: 'nav-link margin-custom btn-primary-costom'
-     table.table.table-hover
+      = link_to t('product_list'), products_path, class: 'nav-link margin-custom btn-primary-costom'
+      table.table.table-hover
       tbody
-      tr
-        th= CookingCategory.human_attribute_name(:id)
-        td= @cooking_category.id
-      tr
-        th= CookingCategory.human_attribute_name(:product_name)
-        td= @cooking_category.classification_name
+        tr
+          th= CookingCategory.human_attribute_name(:id)
+          td= @cooking_category.id
+        tr
+          th= CookingCategory.human_attribute_name(:product_name)
+          td= @cooking_category.classification_name

@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
 
-  get 'cooking_categories/index'
   root 'homes#index'
 
   devise_for :users
