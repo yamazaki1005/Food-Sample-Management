@@ -42,6 +42,9 @@ ja:
   profile: プロフィール
   product: "規格品「%{name}」"
   cooking: "料理「%{name}」"
+
+  cooking_category_list: 料理メニュー
+
   # modal
   confirm_deletion: 削除確認
   close: 閉じる

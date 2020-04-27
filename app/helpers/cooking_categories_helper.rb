@@ -1,0 +1,2 @@
+module CookingCategoriesHelper
+end

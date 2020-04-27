@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :cookings do
     resource :cooking_product_relations, only: [:create, :destroy]
   end
+
+  resources :cooking_categories
 end
