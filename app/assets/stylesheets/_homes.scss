@@ -131,10 +131,13 @@ nav.top_global_nav {
 }
 
 .ca-sub {
+  position: absolute;
+  top: -15px;
+  left: 0px;
   font-weight: bold;
   display: none;
-  font-size: 24px;
-  animation: fadeIn 1s ease 0s 1 normal;
+  font-size: 25px;
+  animation: fadeIn 0.8s ease 0s 1 normal;
 }
 
 @keyframes fadeIn {
