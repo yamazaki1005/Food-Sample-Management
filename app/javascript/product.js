@@ -1,11 +1,5 @@
 $(document).on('turbolinks:load', function() {
 
-  $(".time-limit").fadeOut( 4000 );
-
-  // // 文字色を赤に変える: javascriptが効いているかどうかの確認用
-  // $(".card-text").css("color", "red");
-  // $(".form-group").css("color", "red");
-
   $("#myModal").on("shown.bs.modal", function(event) {
     var button = $(event.relatedTarget);
     var name = button.data("name");

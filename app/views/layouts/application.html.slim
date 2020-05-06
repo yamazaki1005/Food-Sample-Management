@@ -10,10 +10,9 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     meta charset="utf-8" /
-
-  body.bg-light cz-shortcut-listen="true"
-    = render partial: 'shared/navbar'
-    .time-limit
+  body
+    .base
       - if flash.notice.present?
         = render 'shared/flash_massages'
+    = render partial: 'shared/navbar'
     = yield

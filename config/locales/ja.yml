@@ -32,7 +32,7 @@ ja:
   logout: ログアウト
   sign_up: 新規登録
   registered_product: 規格品登録
-  guest_login: ゲストログイン(閲覧用)
+  guest_login: ゲストログイン
   account_edit: アカウント編集
   product_list: 規格品一覧
   search_product_number: 品番を入力...
