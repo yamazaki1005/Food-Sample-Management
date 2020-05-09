@@ -130,7 +130,7 @@ h1 {
   margin: auto;
 }
 
-/*  ================================ */
+/* btn================================ */
 
 .btn-custom {
   margin-left: 9px;
@@ -147,13 +147,11 @@ h1 {
   padding: 5px;
 }
 
-.nav-btn {
-  padding: 10px 10px;
-  font-size: 13px;
-  font-weight: bolder;
+.my-btn-warning:hover {
+  background-color: $accent-color;
+  color: white;
 }
-
-/* ヘッダー ================================ */
+/* header ================================ */
 header {
   height: 64px;
   position: absolute;
@@ -168,10 +166,10 @@ header {
 
 .header-logo {
   float: left;
-  width: 125px;
-  height: 45px;
-  border: 3px solid $logo-boder-color;
-  background-color: $logo-color;
+  width: 105px;
+  height: 105px;
+  // border: 3px solid $logo-boder-color;
+  // background-color: $logo-color;
 }
 
 .header-menus {
@@ -197,6 +195,99 @@ header {
   padding-right: 5px;
 }
 
+.nav-submenus {
+  margin: 0;
+  display: flex;
+  float: right;
+  height: 39px;
+}
+.functions {
+  float: right;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  // width: 75%;
+  max-width: 1800px;
+}
+.functions li {
+  display: table-cell;
+  // vertical-align: bottom;
+  width: 90px;
+}
+.functions li a {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin: 2px;
+  // height: 40px;
+  // padding: 15px 0 0;
+  // color: #222222;
+  font-size: 80%;
+  line-height: 0.9;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.my-subnavbar {
+  flex-direction: column;
+}
+
+.nav-btn {
+  padding: 10px 10px;
+  font-size: 23px;
+  font-weight: bolder;
+  color: $sub-color;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.my-navbtn {
+  width: 120px !important;
+  // height: 90px;
+  font-size: 15px;
+  // padding: 0px 1px 20px 1px;
+  margin-left: 5px;
+}
+
+.nav-item {
+  width: 70px !important;
+  // height: 90px;
+  font-size: 15px;
+  // padding: 0px 1px 20px 1px;
+  margin-left: 5px;
+}
+
+.nav-text {
+  font-size: 15px;
+  font-weight: initial;
+}
+
+.functions li:hover {
+  color: $sub-color;
+}
+
+.functions li:hover .nav-text {
+  display: none;
+}
+
+.nav-subtext {
+  display: none;
+}
+
+.functions li:hover .nav-subtext {
+  display: block;
+  // font-weight: bolder;
+}
+
+.catch-copy {
+  font-size: 21px;
+  line-height: 1.7;
+  // color: $accent-color;
+  letter-spacing: 0.05em;
+  font-family: 'arial unicode ms','ヒラギノ角ゴ Pro W3','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
+}
 /* alert ================================ */
 .alert {
   margin-bottom: 0px;

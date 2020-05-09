@@ -92,6 +92,10 @@ nav.top_global_nav {
   transition: all 400ms linear;
 }
 
+// .ca-menu li:last-of-type {
+//   overflow: hidden;
+// }
+
 .ca-menu li a {
   text-align: left;
   width: 100%;
@@ -128,6 +132,21 @@ nav.top_global_nav {
 
 .ca-main2 {
   display: none;
+}
+
+.self-introduction {
+  background: url("common/profile.jpg") left top no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.ca-sub2 {
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  font-weight: bold;
+  font-size: 25px;
+  animation: fadeIn 0.8s ease 0s 1 normal;
 }
 
 .ca-sub {
@@ -177,7 +196,7 @@ nav.top_global_nav {
 
 .ca-menu li:hover .ca-main2 {
   display: block;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 100%;
   position: absolute;
   top: 125px;
@@ -389,7 +408,7 @@ nav.top_global_nav {
 
 .restaurant-last {
   transition: none;
-  background: url("top/restaurant3.jpg") left top no-repeat;
+  background: url("top/restaurant2.jpg") left top no-repeat;
   background-size: cover;
 }
 
@@ -627,12 +646,10 @@ footer .footer_inner .footer_bottom .logo {
   float: left
 }
 
-footer .footer_inner .footer_bottom .copyright {
-  width: 700px;
-  padding-top: 12px;
-  font-size: .5625rem;
-  letter-spacing: 1px;
-  padding-left: 15%;
+.copyright {
+  padding: 17% 0 0 53%;
+  font-size: 0.5625rem;
+  letter-spacing: 5px;
 }
 
 .main_image .inner {

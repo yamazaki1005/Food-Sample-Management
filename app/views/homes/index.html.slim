@@ -42,7 +42,7 @@ article.contents
           h3.ca-sub
             | 食品サンプル
           h4.ca-main2
-            | 投稿
+            | 一覧
         .circle
           .circle-inner
       li
@@ -82,6 +82,13 @@ article.contents
             | 食品サンプル
           h4.ca-main2
             | 質問
+        .circle
+          .circle-inner
+      li
+        a.self-introduction[href="#"]
+        .ca-content
+          h3.ca-sub2
+            | 自己紹介
         .circle
           .circle-inner
   footer
@@ -224,6 +231,6 @@ article.contents
                   | テキストテキスト
       .footer_bottom
         a.navbar-brand.header_logo[href="/"]
-          img.header-logo[src="/user_images/facebook_cover_photo_1.png"]
-        p.copyright
-          | 世界に誇る食品サンプル
+          = image_tag 'common/logo2.png', class: 'header-logo'
+          p.copyright
+            | あなたの「する」にこたえる！<br>食品サンプルそうごうサイト

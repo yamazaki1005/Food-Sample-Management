@@ -1,26 +1,23 @@
 nav.navbar.navbar-expand-md.my-navbar.bg-white
   a.navbar-brand.header_logo href="/"
-    img.header-logo src="/user_images/facebook_cover_photo_1.png"
+    = image_tag 'common/logo3.png', class: 'header-logo'
   button.navbar-toggler aria-controls="navbarCollapse" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarCollapse" data-toggle="collapse" type="button"
     span.navbar-toggler-icon
-  #navbarCollapse.collapse.navbar-collapse
-    ul.navbar-nav.ml-auto
-      li= link_to "知る", products_path, class: 'nav-link fas fa-search nav-btn btn'
-      li= link_to "見る", products_path, class: 'nav-link far fa-images nav-btn btn'
-      li= link_to "作る", products_path, class: 'nav-link fas fa-utensils nav-btn btn'
-      li= link_to "買う", products_path, class: 'nav-link fas fa-shopping-cart nav-btn btn'
-      li= link_to "聞く", products_path, class: 'nav-link far fa-question-circle nav-btn btn'
+  .catch-copy
+    | あなたの「する」にこたえる！<br>食品サンプルのそうごうサイト
+  #navbarCollapse.collapse.navbar-collapse.my-subnavbar
+    ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
         / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
         - if current_user.id ==! 1
-          li.nav-item= link_to t('account_edit'), edit_user_registration_path, class: 'nav-link nav-btn btn-primary btn btn-primary-costom margin-custom'
+          li.nav-item= link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn-primary btn btn-primary-costom'
         / - if current_user.admin?
         /   li.nav-item.active= link_to t('admin_users'), admin_users_path, class: 'nav-link text-muted'
-        li.nav-item.= link_to t('logout'), destroy_user_session_path, method: :delete, class: 'nav-link btn-warning nav-btn btn'
+        li.my-navbtn = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'nav-link btn-warning btn my-btn-warning'
       - else
-          li.nav-item= link_to t('sign_up'), new_user_registration_path, class: 'nav-link nav-btn btn-primary btn btn-primary-costom margin-custom'
-          li.nav-item= link_to t('login'), new_user_session_path, class: 'nav-link nav-btn btn-primary btn btn-primary-costom margin-custom'
-          li.nav-item= link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link btn-warning nav-btn btn'
+          li.nav-item= link_to t('sign_up'), new_user_registration_path, class: 'nav-link btn-primary btn btn-primary-costom'
+          li.nav-item= link_to t('login'), new_user_session_path, class: 'nav-link btn-primary btn btn-primary-costom'
+          li.my-navbtn= link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link btn-warning btn my-btn-warning'
       / - if user_signed_in?
         = search_form_for @q, class: 'mb-5 form-inline' do |f|
           form.form-inline
@@ -28,3 +25,29 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
               = f.search_field :product_number_cont, class: 'form-control', placeholder: t('search_product_number')
             .form-group
               = f.submit class: 'btn btn-outline-primary btn-custom'
+    ul.navbar-nav.ml-auto.functions
+      li.nav-link.fas.fa-search.nav-btn.btn= link_to products_path
+        .nav-subtext
+          |食品サンプル紹介
+        .nav-text
+          |知る
+      li.nav-link.far.fa-images.nav-btn.btn= link_to products_path
+        .nav-subtext
+          |食品サンプル一覧
+        .nav-text
+          | 見る
+      li.nav-link.fas.fa-utensils.nav-btn.btn= link_to products_path
+        .nav-subtext
+            |食品サンプル体験
+        .nav-text
+          | 作る
+      li.nav-link.fas.fa-shopping-cart.nav-btn.btn= link_to products_path
+        .nav-subtext
+          |食品サンプル購入
+        .nav-text
+          | 買う
+      li.nav-link.far.fa-question-circle.nav-btn.btn= link_to products_path
+        .nav-subtext
+          |食品サンプル質問
+        .nav-text
+          | 聞く
