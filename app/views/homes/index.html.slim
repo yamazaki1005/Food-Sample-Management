@@ -1,18 +1,18 @@
 article.contents
   .main_image
     .inner
-      a.main_link[href="/about/"]
+      a.main_link[href="/cookings"]
         img[src="" alt=""]
       p#slideshow
-        / 画像は後に別のものに差し替える
-        = image_tag 'sample1.jpg', class: 'active', alt: "画像1"
-        = image_tag 'sample2.jpg', alt: "画像2"
-        = image_tag 'sample3.jpg', alt: "画像3"
-        = image_tag 'sample4.jpg', alt: "画像4"
-        = image_tag 'sample5.jpg', alt: "画像5"
+        / 後に別の画像に差し替える
+        = image_tag 'sample1.jpg', class: 'active'
+        = image_tag 'sample2.jpg'
+        = image_tag 'sample3.jpg'
+        = image_tag 'sample4.jpg'
+        = image_tag 'sample5.jpg'
     .main_banner
       .center-content
-        a.restaurant[href="#"]
+        a.restaurant[href="/cooking_categories"]
           span.restaurant-first
           span.left-door
           span.right-door
@@ -24,12 +24,9 @@ article.contents
           span.ca-icon
             i.fas.fa-search
         .ca-content
-          h2.ca-main
-            | 知る
-          h3.ca-sub
-            | 食品サンプル
-          h4.ca-main2
-            | 紹介
+          h2.ca-main = t('know')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('introduction')
         .circle
           .circle-inner
       li
@@ -37,12 +34,9 @@ article.contents
           span.ca-icon
             i.far.fa-images
         .ca-content
-          h2.ca-main
-            | 見る
-          h3.ca-sub
-            | 食品サンプル
-          h4.ca-main2
-            | 一覧
+          h2.ca-main = t('view')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('list')
         .circle
           .circle-inner
       li
@@ -50,12 +44,9 @@ article.contents
           span.ca-icon
             i.fas.fa-utensils
         .ca-content
-          h2.ca-main
-            | 作る
-          h3.ca-sub
-            | 食品サンプル
-          h4.ca-main2
-            | 体験
+          h2.ca-main = t('create')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('experience')
         .circle
           .circle-inner
       li
@@ -63,12 +54,9 @@ article.contents
           span.ca-icon
             i.fas.fa-shopping-cart
         .ca-content
-          h2.ca-main
-            | 買う
-          h3.ca-sub
-            | 食品サンプル
-          h4.ca-main2
-            | 購入
+          h2.ca-main = t('buy')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('purchase')
         .circle
           .circle-inner
       li
@@ -76,19 +64,15 @@ article.contents
           span.ca-icon
             i.far.fa-question-circle
         .ca-content
-          h2.ca-main
-            | 聞く
-          h3.ca-sub
-            | 食品サンプル
-          h4.ca-main2
-            | 質問
+          h2.ca-main = t('listen')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('question')
         .circle
           .circle-inner
       li
         a.self-introduction[href="#"]
         .ca-content
-          h3.ca-sub2
-            | 自己紹介
+          h3.ca-sub2 =t('self_introduction')
         .circle
           .circle-inner
   footer
@@ -99,138 +83,116 @@ article.contents
             li
               h2
                 a[href="/"]
-                  | 食品サンプル
-                  strong
-                    | 紹介
+                  = t('food-sample')
+                  strong = t('introduction')
               ul.sub_list
                 li
-                  a[href="/"]
-                    | ・食品サンプルとは？
+                  a[href="/"] = t('text')
+                    / | ・食品サンプルとは？
                 li
-                  a[href="/"]
-                    | ・食品サンプルの歴史
+                  a[href="/"] = t('text')
+                    / | ・食品サンプルの歴史
                 li
-                  a[href="/"]
-                    | ・食品サンプルの効果
+                  a[href="/"] = t('text')
+                    / | ・食品サンプルの効果
                 li
-                  a[href="/"]
-                    | ・食品サンプルの作り方
+                  a[href="/"] = t('text')
+                    / | ・食品サンプルの作り方
             li
               h2
                 a[href="/"]
-                  | 食品サンプル
-                  strong
-                    | 投稿
+                  = t('food-sample')
+                  strong = t('list')
               ul.sub_list
                 li
-                  a[href="/"]
-                    | ・食品サンプルをシェアしよう！
+                  a[href="/"] = t('text')
+                    / | ・食品サンプルをシェアしよう！
                 li
-                  a[href="/"]
-                    | ・みんなの投稿
+                  a[href="/"] = t('text')
+                    / | ・みんなの投稿
                 li
-                  a[href="/"]
-                    | ・わたしの投稿
+                  a[href="/"] = t('text')
+                    / | ・わたしの投稿
                 li
-                  a[href="/"]
-                    | ・特集レシピ
+                  a[href="/"] = t('text')
+                    / | ・特集レシピ
             li
               h2
                 a[href="/"]
-                  | 食品サンプル
-                  strong
-                    | 体験
+                  = t('food-sample')
+                  strong = t('experience')
               ul.sub_list.unimplement
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
             li
               h2
                 a[href="/"]
-                  | 食品サンプル
-                  strong
-                    | 購入
+                  = t('food-sample')
+                  strong = t('purchase')
               ul.sub_list.unimplement
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
             li
               h2
                 a[href="/"]
-                  | 食品サンプル
-                  strong
-                    | 質問
+                  = t('food-sample')
+                  strong = t('question')
               ul.sub_list.unimplement
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
                 li
-                  a[href="/"]
-                    | テキストテキスト
+                  a[href="/"] = t('text')
           ul.list.lowBlock
             li.unimplement
               h2
-                a[href="/"]
-                  | 一般のお客さまへ
-                  span
-                    | （商品のご紹介）
+                a[href="/"] = t('text')
+                  / | 一般のお客さまへ
+                  span = t('text')
+                    / | （商品のご紹介）
             li.unimplement
               h2
-                a[href="/"]
-                  | 企業のお客さまへ
-                  span
-                    | （販促物カタログのご紹介）
+                a[href="/"] = t('text')
+                  / | 企業のお客さまへ
+                  span = t('text')
+                    / | （販促物カタログのご紹介）
       .footer_nav02
         .inner
           .nav_block
             ul
               li
-                a[href="/"]
-                  | 勉強進捗
+                a[href="/"] = t('text')
               li.unimplement
-                a[href="/"]
-                  | テキストテキスト
+                a[href="/"] = t('text')
               li.unimplement
-                a[href="/"]
-                  | テキストテキスト
+                a[href="/"] = t('text')
               li.unimplement
-                a[href="/"]
-                  | テキストテキスト
+                a[href="/"] = t('text')
               li.unimplement
-                a[href="/"]
-                  | テキストテキスト
+                a[href="/"] = t('text')
       .footer_bottom
         a.navbar-brand.header_logo[href="/"]
           = image_tag 'common/logo2.png', class: 'header-logo'
           p.copyright
-            | あなたの「する」にこたえる！<br>食品サンプルそうごうサイト
+             = t('catch_copy1')
+             <br>
+             = t('catch_copy2')

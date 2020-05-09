@@ -4,11 +4,13 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
   button.navbar-toggler aria-controls="navbarCollapse" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarCollapse" data-toggle="collapse" type="button"
     span.navbar-toggler-icon
   .catch-copy
-    | あなたの「する」にこたえる！<br>食品サンプルのそうごうサイト
+    = t('catch_copy1')
+    <br>
+    = t('catch_copy2')
   #navbarCollapse.collapse.navbar-collapse.my-subnavbar
     ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
-        / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+        / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
         - if current_user.id ==! 1
           li.nav-item= link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn-primary btn btn-primary-costom'
         / - if current_user.admin?
@@ -28,26 +30,26 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
     ul.navbar-nav.ml-auto.functions
       li.nav-link.fas.fa-search.nav-btn.btn= link_to products_path
         .nav-subtext
-          |食品サンプル紹介
+          = t('food-sample2', v: t('introduction'))
         .nav-text
-          |知る
+          =t('know')
       li.nav-link.far.fa-images.nav-btn.btn= link_to products_path
         .nav-subtext
-          |食品サンプル一覧
+          = t('food-sample2', v: t('list'))
         .nav-text
-          | 見る
+          =t('view')
       li.nav-link.fas.fa-utensils.nav-btn.btn= link_to products_path
         .nav-subtext
-            |食品サンプル体験
+          = t('food-sample2', v: t('experience'))
         .nav-text
-          | 作る
+          =t('create')
       li.nav-link.fas.fa-shopping-cart.nav-btn.btn= link_to products_path
         .nav-subtext
-          |食品サンプル購入
+          = t('food-sample2', v: t('purchase'))
         .nav-text
-          | 買う
+          =t('buy')
       li.nav-link.far.fa-question-circle.nav-btn.btn= link_to products_path
         .nav-subtext
-          |食品サンプル質問
+          = t('food-sample2', v: t('question'))
         .nav-text
-          | 聞く
+          =t('listen')

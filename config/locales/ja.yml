@@ -51,6 +51,7 @@ ja:
   cancel: キャンセル
   delete: 削除
   delete_confirm: 削除確認
+
   msg:
     delete_confirm: データを削除しますか？
     create:  "%{name}を登録しました。"
@@ -67,6 +68,24 @@ ja:
     # (controller)
     # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
 
+  # homes
+  food-sample: 食品サンプル
+  food-sample2: "食品サンプル%{v}"
+  know: 知る
+  view: 見る
+  create: 作る
+  buy: 買う
+  listen: 聞く
+  introduction: 紹介
+  list: 一覧
+  experience: 体験
+  purchase: 購入
+  question: 質問
+  self_introduction: 自己紹介
+  text: テキストテキスト
+  catch_copy1: あなたの「する」にこたえる！
+  catch_copy2: 食品サンプルのそうごうサイト
+  
   activerecord:
     models:
       product: 規格品
