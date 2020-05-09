@@ -28,28 +28,38 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
             .form-group
               = f.submit class: 'btn btn-outline-primary btn-custom'
     ul.navbar-nav.ml-auto.functions
-      li.nav-link.fas.fa-search.nav-btn.btn= link_to products_path
-        .nav-subtext
-          = t('food-sample2', v: t('introduction'))
-        .nav-text
-          =t('know')
-      li.nav-link.far.fa-images.nav-btn.btn= link_to products_path
-        .nav-subtext
-          = t('food-sample2', v: t('list'))
-        .nav-text
-          =t('view')
-      li.nav-link.fas.fa-utensils.nav-btn.btn= link_to products_path
-        .nav-subtext
-          = t('food-sample2', v: t('experience'))
-        .nav-text
-          =t('create')
-      li.nav-link.fas.fa-shopping-cart.nav-btn.btn= link_to products_path
-        .nav-subtext
-          = t('food-sample2', v: t('purchase'))
-        .nav-text
-          =t('buy')
-      li.nav-link.far.fa-question-circle.nav-btn.btn= link_to products_path
-        .nav-subtext
-          = t('food-sample2', v: t('question'))
-        .nav-text
-          =t('listen')
+      li.nav-btn
+        a[href="/products"]
+          i.fas.fa-search.nav-icon
+          .nav-subtext
+            = t('food-sample2', v: t('introduction'))
+          .nav-text
+            =t('know')
+      li.nav-btn
+        a[href="/cookings"]
+          i.far.fa-images.nav-icon
+          .nav-subtext
+            = t('food-sample2', v: t('list'))
+          .nav-text
+            =t('view')
+      li.nav-btn
+        a[href=""]
+          i.fas.fa-utensils.nav-icon
+          .nav-subtext
+            = t('food-sample2', v: t('experience'))
+          .nav-text
+            =t('create')
+      li.nav-btn
+        a[href=""]
+          i.fas.fa-shopping-cart.nav-icon
+          .nav-subtext
+            = t('food-sample2', v: t('purchase'))
+          .nav-text
+            =t('buy')
+      li.nav-btn
+        a[href=""]
+          i.far.fa-question-circle.nav-icon
+          .nav-subtext
+            = t('food-sample2', v: t('question'))
+          .nav-text
+            =t('listen')
