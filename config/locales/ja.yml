@@ -1,4 +1,5 @@
 ja:
+  title: 食品サンプル総合サイト
   last_order_days: 前回発注日
   new_registration: "%{v}新規登録"
 
@@ -52,22 +53,6 @@ ja:
   delete: 削除
   delete_confirm: 削除確認
 
-  msg:
-    delete_confirm: データを削除しますか？
-    create:  "%{name}を登録しました。"
-    update:  "%{name}を更新しました。"
-    delete:  "%{name}を削除しました。"
-    deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
-    infomation: '%{v}の情報です'
-    error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
-    # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
-    # ja:
-    #   product_number: 「品番%{number}:%{name}」
-    #   msg:
-    #     update: を更新しました。
-    # (controller)
-    # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
-
   # homes
   food-sample: 食品サンプル
   food-sample2: "食品サンプル%{v}"
@@ -83,8 +68,24 @@ ja:
   question: 質問
   self_introduction: 自己紹介
   text: テキストテキスト
-  catch_copy1: あなたの「する」がある！
-  catch_copy2: 食品サンプルのそうごうサイト
+  catch_copy1: 食品サンプル総合サイト
+  # catch_copy2:
+
+  msg:
+    delete_confirm: データを削除しますか？
+    create:  "%{name}を登録しました。"
+    update:  "%{name}を更新しました。"
+    delete:  "%{name}を削除しました。"
+    deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
+    infomation: '%{v}の情報です'
+    error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
+    # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
+    # ja:
+    #   product_number: 「品番%{number}:%{name}」
+    #   msg:
+    #     update: を更新しました。
+    # (controller)
+    # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
 
   activerecord:
     models:

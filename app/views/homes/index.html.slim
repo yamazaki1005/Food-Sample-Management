@@ -1,9 +1,8 @@
 article.contents
   .main_image
     .inner
-      a.main_link[href="/cookings"]
-        img[src="" alt=""]
       p#slideshow
+        = link_to "", cookings_url
         / 後に別の画像に差し替える
         = image_tag 'sample1.jpg', class: 'first active'
         = image_tag 'sample2.jpg'
@@ -12,7 +11,7 @@ article.contents
         = image_tag 'sample5.jpg', class: 'last'
     .main_banner
       .center-content
-        a.restaurant[href="/cooking_categories"]
+        .restaurant= link_to cooking_categories_url
           span.restaurant-first
           span.left-door
           span.right-door
@@ -20,8 +19,8 @@ article.contents
   nav.top_global_nav
     ul.ca-menu
       li
-        a[href="/products"]
-          span.ca-icon
+        = link_to products_url
+          .ca-icon
             i.fas.fa-search
         .ca-content
           h2.ca-main = t('know')
@@ -30,7 +29,7 @@ article.contents
         .circle
           .circle-inner
       li
-        a[href="/cookings"]
+        = link_to cookings_url
           span.ca-icon
             i.far.fa-images
         .ca-content
@@ -40,7 +39,7 @@ article.contents
         .circle
           .circle-inner
       li
-        a[href="#"]
+        = link_to ""
           span.ca-icon
             i.fas.fa-utensils
         .ca-content
@@ -50,7 +49,7 @@ article.contents
         .circle
           .circle-inner
       li
-        a[href="#"]
+        = link_to ""
           span.ca-icon
             i.fas.fa-shopping-cart
         .ca-content
@@ -60,7 +59,7 @@ article.contents
         .circle
           .circle-inner
       li
-        a[href="#"]
+        = link_to ""
           span.ca-icon
             i.far.fa-question-circle
         .ca-content
@@ -69,10 +68,10 @@ article.contents
           h4.ca-main2 = t('question')
         .circle
           .circle-inner
-      li
-        a.self-introduction[href="#"]
+      li.self-introduction
+        = link_to ""
         .ca-content
-          h3.ca-sub2 =t('self_introduction')
+          h3.ca-sub2 = t('self_introduction')
         .circle
           .circle-inner
   footer
@@ -82,117 +81,118 @@ article.contents
           ul.list
             li
               h2
-                a[href="/"]
+                = link_to ""
                   = t('food-sample')
                   strong = t('introduction')
               ul.sub_list
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・食品サンプルとは？
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・食品サンプルの歴史
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・食品サンプルの効果
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・食品サンプルの作り方
             li
               h2
-                a[href="/"]
+                = link_to ""
                   = t('food-sample')
                   strong = t('list')
               ul.sub_list
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・食品サンプルをシェアしよう！
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・みんなの投稿
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・わたしの投稿
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
                     / | ・特集レシピ
             li
               h2
-                a[href="/"]
+                = link_to ""
                   = t('food-sample')
                   strong = t('experience')
               ul.sub_list.unimplement
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
             li
               h2
-                a[href="/"]
+                = link_to ""
                   = t('food-sample')
                   strong = t('purchase')
               ul.sub_list.unimplement
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
             li
               h2
-                a[href="/"]
+                = link_to ""
                   = t('food-sample')
                   strong = t('question')
               ul.sub_list.unimplement
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
-                li
-                  a[href="/"] = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
           ul.list.lowBlock
             li.unimplement
               h2
-                a[href="/"] = t('text')
-                  / | 一般のお客さまへ
+                = link_to ""
+                  = t('text')
+                    / | 一般のお客さまへ
                   span = t('text')
-                    / | （商品のご紹介）
+                      / | （商品のご紹介）
             li.unimplement
               h2
-                a[href="/"] = t('text')
-                  / | 企業のお客さまへ
+                = link_to ""
+                  = t('text')
+                    / | 企業のお客さまへ
                   span = t('text')
-                    / | （販促物カタログのご紹介）
+                      / | （販促物カタログのご紹介）
       .footer_nav02
         .inner
           .nav_block
             ul
-              li
-                a[href="/"] = t('text')
-              li.unimplement
-                a[href="/"] = t('text')
-              li.unimplement
-                a[href="/"] = t('text')
-              li.unimplement
-                a[href="/"] = t('text')
-              li.unimplement
-                a[href="/"] = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
       .footer_bottom
-        a.navbar-brand.header_logo[href="/"]
-          = image_tag 'common/logo2.png', class: 'header-logo'
+        .navbar-brand.footer_logo
+        = link_to ""
+          = image_tag 'common/logo2.png', class: 'footer-logo'
           p.copyright
              = t('catch_copy1')
-             <br>
-             = t('catch_copy2')

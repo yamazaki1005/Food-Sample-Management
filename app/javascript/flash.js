@@ -1,3 +1,5 @@
 $(document).on('turbolinks:load', function () {
-  setTimeout(function () { $('.alert').fadeOut('slow') }, 2000);
+  setTimeout(function () {
+    $('.alert').fadeOut('slow')
+  }, 2000);
 });
