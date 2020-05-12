@@ -1,7 +1,5 @@
 $(document).on('turbolinks:load', function () {
 
-  $(".time-limit").fadeOut(4000);
-
   $("#MyCookingModal").on("shown.bs.modal", function (event) {
     var button = $(event.relatedTarget);
     var name = button.data("name");

@@ -1,16 +1,198 @@
-.bg-light
-  .container-custom
-    h1.mx-auto.title
-  .nav.justify-content-end
-    =link_to t('cooking_list'), cookings_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-    =link_to t('cooking_category_list'), cooking_categories_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-.top_image
-  =image_tag 'restaurant.png'
-.box_container
-  .images_holder
-    .image_div.left
-      =image_tag 'sample1.jpg'
-    .image_div.right
-      =image_tag 'sample5.jpg'
-    .clear
-  / p 店内に入ったイメージ
+article.contents
+  .main_image
+    .inner
+      p#slideshow
+        = link_to "", cookings_url
+        / 後に別の画像に差し替える
+        = image_tag 'sample1.jpg', class: 'first active'
+        = image_tag 'sample2.jpg'
+        = image_tag 'sample3.jpg'
+        = image_tag 'sample4.jpg'
+        = image_tag 'sample5.jpg', class: 'last'
+    .main_banner
+      .center-content
+        = link_to cooking_categories_url, class: "restaurant"
+          span.restaurant-first
+          span.left-door
+          span.right-door
+          span.restaurant-last
+  nav.top_global_nav
+    ul.ca-menu
+      li
+        = link_to products_url
+          .ca-icon
+            i.fas.fa-search
+        .ca-content
+          h2.ca-main = t('know')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('introduction')
+        .circle
+          .circle-inner
+      li
+        = link_to cookings_url
+          span.ca-icon
+            i.far.fa-images
+        .ca-content
+          h2.ca-main = t('view')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('list')
+        .circle
+          .circle-inner
+      li
+        = link_to ""
+          span.ca-icon
+            i.fas.fa-utensils
+        .ca-content
+          h2.ca-main = t('create')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('experience')
+        .circle
+          .circle-inner
+      li
+        = link_to ""
+          span.ca-icon
+            i.fas.fa-shopping-cart
+        .ca-content
+          h2.ca-main = t('buy')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('purchase')
+        .circle
+          .circle-inner
+      li
+        = link_to ""
+          span.ca-icon
+            i.far.fa-question-circle
+        .ca-content
+          h2.ca-main = t('listen')
+          h3.ca-sub = t('food-sample')
+          h4.ca-main2 = t('question')
+        .circle
+          .circle-inner
+      li.self-introduction
+        = link_to ""
+        .ca-content
+          h3.ca-sub2 = t('self_introduction')
+        .circle
+          .circle-inner
+  footer
+    .footer_inner.my-footer
+      .footer_nav01
+        .inner
+          ul.list
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('introduction')
+              ul.sub_list
+                li= link_to ""
+                   = t('text')
+                    / | ・食品サンプルとは？
+                li= link_to ""
+                   = t('text')
+                    / | ・食品サンプルの歴史
+                li= link_to ""
+                   = t('text')
+                    / | ・食品サンプルの効果
+                li= link_to ""
+                   = t('text')
+                    / | ・食品サンプルの作り方
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('list')
+              ul.sub_list
+                li= link_to ""
+                   = t('text')
+                    / | ・食品サンプルをシェアしよう！
+                li= link_to ""
+                   = t('text')
+                    / | ・みんなの投稿
+                li= link_to ""
+                   = t('text')
+                    / | ・わたしの投稿
+                li= link_to ""
+                   = t('text')
+                    / | ・特集レシピ
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('experience')
+              ul.sub_list.unimplement
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('purchase')
+              ul.sub_list.unimplement
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('question')
+              ul.sub_list.unimplement
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+                li= link_to ""
+                   = t('text')
+          ul.list.lowBlock
+            li.unimplement
+              h2
+                = link_to ""
+                  = t('text')
+                    / | 一般のお客さまへ
+                  span = t('text')
+                      / | （商品のご紹介）
+            li.unimplement
+              h2
+                = link_to ""
+                  = t('text')
+                    / | 企業のお客さまへ
+                  span = t('text')
+                      / | （販促物カタログのご紹介）
+      .footer_nav02
+        .inner
+          .nav_block
+            ul
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+      .footer_bottom
+        .navbar-brand.footer_logo
+        = link_to ""
+          = image_tag 'common/logo2.png', class: 'footer-logo'
+          p.copyright
+             = t('catch_copy1')

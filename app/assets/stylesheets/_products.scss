@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 /* 位置修正 ================================ */
 .margin-custom {
   margin-right: 5px !important;
@@ -24,7 +23,7 @@
 }
 
 .card:hover {
-  background-color: #EDBC6C;
+  background-color: $accent-color;
   transition: 0.3s ease-out;
   opacity: 0.9;
   transform: scale(1.1, 1.1);

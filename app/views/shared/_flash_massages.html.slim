@@ -1,7 +1,5 @@
 - flash.each do |name, msg|
-  |  <div class="alert alert-
-  = name
-  | " role="alert" id="alert">
-  a.close[href="#" data-dismiss="alert"]
-    | ×
-  = msg
+  div class="fas fa-info-circle alert alert-#{name}" role="alert" id="alert"
+    a.close[href="#" data-dismiss="alert"]
+      | ×
+    = msg

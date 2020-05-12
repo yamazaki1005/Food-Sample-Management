@@ -1,4 +1,5 @@
 ja:
+  title: 食品サンプル総合サイト
   last_order_days: 前回発注日
   new_registration: "%{v}新規登録"
 
@@ -32,7 +33,7 @@ ja:
   logout: ログアウト
   sign_up: 新規登録
   registered_product: 規格品登録
-  guest_login: ゲストログイン(閲覧用)
+  guest_login: ゲストログイン
   account_edit: アカウント編集
   product_list: 規格品一覧
   search_product_number: 品番を入力...
@@ -51,6 +52,25 @@ ja:
   cancel: キャンセル
   delete: 削除
   delete_confirm: 削除確認
+
+  # homes
+  food-sample: 食品サンプル
+  food-sample2: "食品サンプル%{v}"
+  know: 知る
+  view: 見る
+  create: 作る
+  buy: 買う
+  listen: 聞く
+  introduction: 紹介
+  list: 一覧
+  experience: 体験
+  purchase: 購入
+  question: 質問
+  self_introduction: 自己紹介
+  text: テキストテキスト
+  catch_copy1: 食品サンプル総合サイト
+  # catch_copy2:
+
   msg:
     delete_confirm: データを削除しますか？
     create:  "%{name}を登録しました。"
