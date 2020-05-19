@@ -71,6 +71,6 @@
                         i.fas.fa-image.add2
                         i.fas.fa-file-upload.add
                 = f.file_field :image, class: 'control', id: "file", style: "display:none;"
-                = f.submit nil , class: 'btn btn-primary btn-block btn_custom'
+                = f.submit nil , class: 'btn btn-block btn_custom link-btn'
                 .text-right
-                  input[type="reset" value= t('reset') class='btn btn-danger btn_custom' id="reset"]
+                  input[type="reset" value= t('reset') class='btn delete-btn btn_custom' id="reset"]

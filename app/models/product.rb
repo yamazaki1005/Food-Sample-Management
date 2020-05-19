@@ -5,13 +5,13 @@ class Product < ApplicationRecord
   validates :product_name,
             presence: true,
             length: { maximum: 30 },
-            uniqueness: true
+            uniqueness: { case_sensitive: true }
 
   validates :product_number,
             presence: true,
             numericality: { only_integer: true },
             length: { maximum: 10 },
-            uniqueness: true
+            uniqueness: { case_sensitive: true }
 
   validates :page,
             numericality: { only_integer: true }
@@ -31,6 +31,6 @@ class Product < ApplicationRecord
   belongs_to :product_category
   belongs_to :cooking_category
   has_one_attached :image
-  has_many :cooking_product_relations, dependent: :destroy
-  has_many :cookings, through: :cooking_product_relations
+  has_many :cooking_product_relations, dependent: :destroy, autosave: false
+  has_many :cookings, through: :cooking_product_relations, autosave: false
 end

@@ -34,7 +34,7 @@ nav.top_global_nav {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 #slideshow img {
@@ -94,6 +94,7 @@ nav.top_global_nav {
   display: block;
   color: #333;
   position: relative;
+  z-index: 6;
 }
 
 .ca-icon {

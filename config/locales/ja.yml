@@ -1,5 +1,7 @@
 ja:
   title: 食品サンプル総合サイト
+  Japanese: 日本語
+  English: 英語
   last_order_days: 前回発注日
   new_registration: "%{v}新規登録"
 
@@ -35,6 +37,7 @@ ja:
   registered_product: 規格品登録
   guest_login: ゲストログイン
   account_edit: アカウント編集
+  products: 規格品
   product_list: 規格品一覧
   search_product_number: 品番を入力...
   admin_users: ユーザー管理(管理者権限)
@@ -73,12 +76,14 @@ ja:
 
   msg:
     delete_confirm: データを削除しますか？
-    create:  "%{name}を登録しました。"
-    update:  "%{name}を更新しました。"
-    delete:  "%{name}を削除しました。"
+    create: "%{name}を登録しました。"
+    update: "%{name}を更新しました。"
+    delete: "%{name}を削除しました。"
     deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
+    cooking-using: "を使った料理"
+    product-used: "に使われている規格部品"
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」
