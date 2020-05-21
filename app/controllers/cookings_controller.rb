@@ -11,9 +11,12 @@ class CookingsController < ApplicationController
 
   def index
     @cookings = Cooking.all
+    @cooking_categories = CookingCategory.all
   end
 
-  def show; end
+  def show
+    @cooking_categories = CookingCategory.all
+  end
 
   def new
     @cooking = Cooking.new
@@ -45,14 +48,6 @@ class CookingsController < ApplicationController
     rescue
       render :new
     end
-
-    # @cooking = Cooking.new(cooking_params)
-    # if @cooking.valid?
-    #   @cooking.save
-    #   redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
-    # else
-    #   render :new
-    # end
   end
 
   def destroy

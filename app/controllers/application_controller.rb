@@ -3,7 +3,6 @@
 # app_whole_manage_due_to_class
 class ApplicationController < ActionController::Base
   helper_method :current_user
-  # before_action :set_locale
   protect_from_forgery with: :exception
   before_action :set_search_query
 

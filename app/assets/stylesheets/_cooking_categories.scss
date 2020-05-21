@@ -52,8 +52,8 @@ figure#spinner .sample_img {
 
 .spinner_img img:hover {
   transition: 0.3s ease-out;
-  transform: scale(1.1, 1.1);
-  border: 8px #ff7900 solid;
+  transform: scale(1.05, 1.05);
+  border: 8px $sub-color solid;
 }
 
 .sample_img1 { transform:rotateY(0deg); }
@@ -66,7 +66,7 @@ figure#spinner .sample_img {
 .sample_img8 { transform: rotateY(-315deg); }
 
 div#carousel ~ span {
-  margin: 5%;
+  margin: 4%;
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
@@ -87,7 +87,7 @@ div#carousel ~ span:hover {
   float: left;
   color: #444;
   position: absolute;
-  top: 100px;
+  top: -400px;
   padding: 1em 2em;
   cursor: pointer;
   background: #CCC;
@@ -112,7 +112,7 @@ div#carousel ~ span:hover {
 
 .left_arrow:active,
 .right_arrow:active {
-  top: 104px;
+  top: -396px;
   box-shadow: 0 1px 0 #999;
 }
 
@@ -145,5 +145,3 @@ div#carousel ~ span:hover {
   max-width: 40vw;
   margin-top: 17px;
 }
-
-

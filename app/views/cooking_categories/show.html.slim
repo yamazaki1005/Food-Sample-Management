@@ -1,15 +1,27 @@
-.container-custom
-  h1.mx-auto.title
+.background-co
+  = render partial: 'shared/cooking-title'
+  .cooking-category-title
     = @cooking_category.classification_name
-    = t('list')
-
-  .nav.justify-content-end
-    = link_to t('product_list'), products_path, class: 'nav-link margin-custom link-btn'
-    table.table.table-hover
-    tbody
-      tr
-        th= CookingCategory.human_attribute_name(:id)
-        td= @cooking_category.id
-      tr
-        th= CookingCategory.human_attribute_name(:product_name)
-        td= @cooking_category.classification_name
+  .container
+    .row.form-inline
+      - @cooking_category.cookings.each do | cooking |
+        .col-sm-3
+          = link_to cooking
+            .card
+              .ribbon.ribbon-top-right
+                span= @cooking_category.classification_name
+              .card-top
+                .card-title
+                  = cooking.cooking_name
+              .img-body-co
+                .card-img-top
+                  = image_tag cooking.image if cooking.image.attached?
+  .container
+    .row
+      - @cooking_categories.each do | cooking_category |
+        .col-xs-6.col-sm-4.col-md-3
+          div class="card img-thumbnail"
+            .card-top
+              = link_to cooking_category
+                .card-title
+                  = cooking_category.classification_name
