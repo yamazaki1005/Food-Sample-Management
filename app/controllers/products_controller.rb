@@ -2,13 +2,14 @@
 
 # products controller
 class ProductsController < ApplicationController
-  # CSRFトークン検証をスキップする
-  skip_before_action :verify_authenticity_token
   before_action :set_product, only: %i[show edit update destroy]
+  before_action :set_cookings, only: %i[new create edit update]
   before_action :authenticate_user!, except: %i[index show]
-  PAGE_LIMIT_NUMBER = 30
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
+  # CSRFトークン検証をスキップする
+  skip_before_action :verify_authenticity_token
+  PAGE_LIMIT_NUMBER = 30
 
   def index
     @products = Product.all
@@ -18,6 +19,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.cooking_product_relations.build
   end
 
   def edit; end
@@ -75,5 +77,9 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def set_cookings
+    @cookings = Cooking.all
   end
 end

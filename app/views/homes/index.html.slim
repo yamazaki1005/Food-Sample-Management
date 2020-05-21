@@ -1,4 +1,11 @@
 article.contents
+  ul.m-header-lang
+    li.m-header-lang__item
+      / 日本語・英語の切り替え
+      / 実際に機能を追加する時はjQueryでis-currentクラスを付け替える
+      = link_to t('Japanese'), "", class: "is-current"
+    li.m-header-lang__item.unimplement
+      = link_to t('English'), ""
   .main_image
     .inner
       p#slideshow
@@ -38,7 +45,7 @@ article.contents
           h4.ca-main2 = t('list')
         .circle
           .circle-inner
-      li
+      li.unimplement
         = link_to ""
           span.ca-icon
             i.fas.fa-utensils
@@ -48,7 +55,7 @@ article.contents
           h4.ca-main2 = t('experience')
         .circle
           .circle-inner
-      li
+      li.unimplement
         = link_to ""
           span.ca-icon
             i.fas.fa-shopping-cart
@@ -58,7 +65,7 @@ article.contents
           h4.ca-main2 = t('purchase')
         .circle
           .circle-inner
-      li
+      li.unimplement
         = link_to ""
           span.ca-icon
             i.far.fa-question-circle

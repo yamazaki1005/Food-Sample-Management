@@ -1,11 +1,16 @@
 // color =================================
 $base-color: #F8F9FA;
 $sub-color: #EEC27B;
-$accent-color: #ff7c1e;
-$card-color: #fff;
+$accent-color: #ff8c3a;
 
-$footer-color: #ff8c3a;
+$card-color: #fff;
+$card-hover-color: $sub-color;
+
+$footer-color: $accent-color;
 $logo-color:  white;
 $logo-boder-color: #ffc107;
-$circle-coler: #EEC27B;
+$circle-coler: $sub-color;
 $circle-base-color: white;
+
+$link-btn-color: white;
+$link-hover-color: $sub-color;

@@ -1,45 +1,15 @@
 = render partial: 'modal'
-.bg-light
-  .container-custom
-    h1.mx-auto.title
-      = t('product_list')
-    - if user_signed_in?
-      .nav.justify-content-end
-        = link_to t('sign_up'), new_product_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
-
-.bg-light
-  .container
-    .row.form-inline
-      - @products.each do | product |
-        .form.col-xs-6.col-sm-4.col-md-2
-          .card.img-thumbnail
-            .card-top
-              = link_to product
-                .card-title
-                  = product.product_name
-            .img-body
-              = link_to product
-                .card-img-top
-                  = image_tag product.image if product.image.attached?
-            / .card-body.px-2.py-3
-            /   p.card-text
-            /     .left.inline-block_test
-            /       = t('product_number')
-            /       br
-            /       = t('classification')
-            /     .right.inline-block_test
-            /       = product.product_number
-            /       br
-            /       = product.product_category_id
-                / br
-                / = t('last_order_days')
-                / = product.updated_at.strftime('%Y/%m/%d')
-            - if user_signed_in?
-              p.mb-0
-                / buton.btn.btn-primary.btn-primary-costom.margin-custom type="button" dummy
-                = link_to t('edit'), edit_product_path(product), class: 'btn btn-primary mr-3 btn-primary-costom margin-custom'
-                button.btn.btn-danger data-target="#myModal" data-name=product.product_name data-number=product.product_number data-id=product.id data-toggle="modal" type="button" data-url="products/#{product.id}" 削除
-            - else
-              p.mb-0
-                buton.btn.btn-primary.btn-primary-costom.margin-custom type="button" dummy1
-                buton.btn.btn-primary.btn-primary-costom.margin-custom type="button" dummy2
+= render partial: 'shared/product-title'
+.container
+  .row.form-inline
+    - @products.each do | product |
+      .form.col-sm-2
+        .card
+          .card-top
+            = link_to product
+              .card-title
+                = product.product_name
+          .img-body-pro
+            = link_to product
+              .card-img-top
+                = image_tag product.image if product.image.attached?

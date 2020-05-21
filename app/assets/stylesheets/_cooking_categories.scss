@@ -1,3 +1,4 @@
+// 3Dスライド=========================================
 .image_area{
   background: #ffdc7238;
   position: relative;
@@ -20,9 +21,7 @@
 
 div#carousel {
   perspective: 3000px;
-  // background: #ffdc7238;
   padding: 1% 0 0 0;
-  // overflow: hidden;
   height: 75vh;
 }
 
@@ -120,3 +119,31 @@ div#carousel ~ span:hover {
 .addcolor {
   background-color: #EDBC6C;
 }
+// show＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.itemWrap {
+  margin: 14px 17px 0 50px;
+  padding-right: 13px;
+  background: url("common/bg02.gif") no-repeat right top;
+}
+
+.itemWrap .imgArea {
+  margin: 17px 44px 0 0;
+}
+
+.textArea p {
+  float: right;
+}
+
+.imgArea img {
+  max-height: 80vh;
+  max-width: 48vw;
+  float: right;
+  // object-fit: contain;
+}
+
+.itemWrap .textArea {
+  max-width: 40vw;
+  margin-top: 17px;
+}
+
+

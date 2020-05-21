@@ -35,13 +35,24 @@ class CookingsController < ApplicationController
   end
 
   def create
-    @cooking = Cooking.new(cooking_params)
-    if @cooking.valid?
-      @cooking.save
+    begin
+      @cooking = Cooking.new(cooking_params)
+      @cooking.save!
       redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
-    else
+    rescue ActiveRecord::RecordInvalid => e
+      pp e.record.errors
+      render :new
+    rescue
       render :new
     end
+
+    # @cooking = Cooking.new(cooking_params)
+    # if @cooking.valid?
+    #   @cooking.save
+    #   redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
+    # else
+    #   render :new
+    # end
   end
 
   def destroy
@@ -52,7 +63,7 @@ class CookingsController < ApplicationController
   private
 
   def cooking_params
-    params.require(:cooking).permit(:cooking_name, :cooking_category_id, :product_category_id, :user_id, :image, :created_at, :updated_at, { :product_ids=> [] }, :image)
+    params.require(:cooking).permit(:cooking_name, :cooking_category_id, :product_category_id, :user_id, :image, :created_at, :updated_at, { product_ids: [] })
   end
 
   def set_cooking

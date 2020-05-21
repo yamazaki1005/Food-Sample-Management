@@ -1,54 +1,26 @@
 = render partial: 'modal'
-.bg-light
-  .container-custom
-    h1.mx-auto.title
-      = t('detail')
-
-    .nav.justify-content-end
-     = link_to t('product_list'), products_path, class: 'nav-link margin-custom btn-primary-costom'
-     table.table.table-hover
-      tbody
-      tr
-        th= Product.human_attribute_name(:id)
-        td= @product.id
-      tr
-        th= Product.human_attribute_name(:product_name)
-        td= @product.product_name
-      / tr
-      /   th= Product.human_attribute_name(:image)
-      /   td.img-mini= @product.image if @product.image.attached?
-      tr
-        th= Product.human_attribute_name(:classification)
-        td= @product.product_category_id
-      tr
-        th= Product.human_attribute_name(:page)
-        td= @product.page
-      tr
-        th= Product.human_attribute_name(:product_number)
-        td= @product.product_number
-      tr
-        th= Product.human_attribute_name(:discontinued)
-        td= @product.discontinued
-      tr
-        th= Product.human_attribute_name(:image)
-        td.img_custom= image_tag @product.image if @product.image.attached?
-      tr
-        th= Product.human_attribute_name(:unit)
-        td= @product.unit
-      tr
-        th= Product.human_attribute_name(:unit_name)
-        td= @product.unit_name
-      tr
-        th= Product.human_attribute_name(:price)
-        td= @product.price
-      tr
-        th= Product.human_attribute_name(:created_at)
-        td= @product.created_at.strftime('%Y/%m/%d')
-      tr
-        th= Product.human_attribute_name(:updated_at)
-        td= @product.updated_at.strftime('%Y/%m/%d')
-
-    - if user_signed_in?
-      = link_to t('edit'), edit_product_path, class: 'btn btn-primary mr-3'
-      button.btn.btn-danger data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
-        = t('delete')
+= render partial: 'shared/product-title'
+.itemWrap.row
+  .imgArea.col-sm-6
+    p
+      = image_tag @product.image if @product.image.attached?
+  .textArea.col-sm-6
+    h2
+      = @product.product_name
+      p
+        - if user_signed_in?
+          = link_to t('edit'), edit_product_path, class: 'btn mr-3 link-btn'
+          button.btn.delete-btn data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
+            = t('delete')
+    h3
+      =link_to t('cooking_list'), cookings_path, class: 'nav-link btn margin-custom link-btn'
+      = @product.product_name
+      = t('msg.cooking-using')
+    .textBlock.row.form-inline
+      - @product.cooking_product_relations.each do |cooking_product_relation|
+        .col-sm-3
+          .card= link_to cooking_product_relation.cooking
+            .card-title
+              = cooking_product_relation.cooking.cooking_name
+            = image_tag cooking_product_relation.cooking.image, class: "pro-img"
+#graydisplay

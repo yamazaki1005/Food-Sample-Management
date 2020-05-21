@@ -4,5 +4,5 @@
     h1.mx-auto.title
       = t('product_edit')
     .nav.justify-content-end
-      = link_to t('product_list'), products_path, class: 'nav-link btn btn-primary margin-custom btn-primary-costom'
+      = link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
     = render partial: 'form', locals: { product: @product }

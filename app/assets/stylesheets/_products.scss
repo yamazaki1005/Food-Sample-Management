@@ -9,32 +9,34 @@
 }
 
 /* card ================================ */
+.card {
+  margin: 5px 0;
+}
+
 .card-top {
-  height: 25px;
+  padding: 8px 0;
   background: lemonchiffon;
 }
 
-.img-body {
-  padding: 5px;
-  margin-bottom: 5px;
-  text-align:  center;
-  height: 180px;
+.img-body-pro {
+  text-align: center;
+  height: 30vh;
+  width:100%;
+  object-fit: contain;
+  overflow: hidden;
   position: relative;
 }
 
 .card:hover {
-  background-color: $accent-color;
+  background-color: $card-hover-color;
   transition: 0.3s ease-out;
   opacity: 0.9;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .card-img-top img{
-  border-radius: 5px 5px 0 0;
-  // width: 90%;
-  max-width: 190px;
-  max-height: 180px;
-  height: auto;
+  max-width: 120%;
+  max-height: 120%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -42,6 +44,11 @@
   right: 0;
   margin: auto;
   transition: all 0.5s;
+}
+
+.img-body-pro .card-img-top img{
+  max-width: 105%;
+  max-height: 105%;
 }
 
 .card-content {
@@ -81,6 +88,12 @@
 
 .card-body {
   padding: 1px;
+  color: black;
+}
+
+.form .card {
+  width: 190px;
+  height: 170px;
 }
 
 .py-3 {
