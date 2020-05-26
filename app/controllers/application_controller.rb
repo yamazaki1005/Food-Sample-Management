@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
   end
 
+  def set_all_cooking_categories
+    @all_cooking_categories = CookingCategory.all
+  end
+
   def set_search_query
     @q = current_user.products.ransack(params[:q]) if session[:user_id]
     @products = @q.result(products_number: true) if session[:user_id]
