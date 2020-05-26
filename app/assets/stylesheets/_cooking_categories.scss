@@ -134,11 +134,11 @@ div#carousel ~ span:hover {
   float: right;
 }
 
-.imgArea img {
+.itemWrap .imgArea img {
   max-height: 80vh;
   max-width: 48vw;
   float: right;
-  // object-fit: contain;
+  cursor: pointer;
 }
 
 .itemWrap .textArea {
