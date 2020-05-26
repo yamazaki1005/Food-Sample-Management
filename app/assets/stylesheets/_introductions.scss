@@ -1,0 +1,41 @@
+.contents {
+  max-width: 100%;
+}
+
+.introduction-img {
+  max-width: 100%;
+  text-align: center;
+}
+
+.introduction-img img{
+  max-width: 100%;
+  width: 150%;
+  padding: 10px;
+}
+
+.sub-container {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+}
+
+.sub-container img {
+  width: 50%;
+  opacity: 1;
+  // padding: 40px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #EEC27B;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+}

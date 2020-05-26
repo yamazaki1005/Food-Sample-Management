@@ -1,0 +1,31 @@
+.contents.row
+  .introduction-img.col-sm-6
+    = image_tag 'common/img002.jpg'
+    / メモ
+    / 画像を選択したら拡大（料理や規格品と同じ）
+    / ページ読み込み時に各パーツがフェードインするように
+    / 動きのあるもの・おもしろいと感じるものを作りたい。
+  .col-sm-6
+    .sub-container.event-img
+      .back
+      h2
+        | 匠の技
+      = link_to "/cooking_categories/40"
+        = image_tag 'common/event2018.jpg'
+        / .col-sm-6.event-img
+        /   = link_to "/cooking_categories/40"
+        /     = image_tag 'common/event2019.jpg'
+    .sub-container.product-img
+      .back
+      h2
+        | 豊富な規格部品
+      = link_to "/products"
+        = image_tag 'common/products/big_001.jpg'
+/ .main_banner
+/     .center-content
+/       = link_to cooking_categories_url, class: "restaurant"
+/         span.restaurant-first
+/         span.left-door
+/         span.right-door
+/         span.restaurant-last
+/ 「食堂」入るならどこかに入れたい
