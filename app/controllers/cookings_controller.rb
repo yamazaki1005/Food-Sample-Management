@@ -6,6 +6,7 @@ class CookingsController < ApplicationController
   before_action :set_products, only: %i[new create edit update]
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
+  before_action :set_all_cooking_categories, only: %i[index show]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
 
@@ -45,14 +46,6 @@ class CookingsController < ApplicationController
     rescue
       render :new
     end
-
-    # @cooking = Cooking.new(cooking_params)
-    # if @cooking.valid?
-    #   @cooking.save
-    #   redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
-    # else
-    #   render :new
-    # end
   end
 
   def destroy

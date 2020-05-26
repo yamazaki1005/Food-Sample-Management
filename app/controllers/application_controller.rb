@@ -3,7 +3,6 @@
 # app_whole_manage_due_to_class
 class ApplicationController < ActionController::Base
   helper_method :current_user
-  # before_action :set_locale
   protect_from_forgery with: :exception
   before_action :set_search_query
 
@@ -15,6 +14,10 @@ class ApplicationController < ActionController::Base
 
   def set_cooking_categories
     @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
+  end
+
+  def set_all_cooking_categories
+    @all_cooking_categories = CookingCategory.all
   end
 
   def set_search_query

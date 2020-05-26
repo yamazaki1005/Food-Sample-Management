@@ -7,9 +7,20 @@
         .col-sm-3
           = link_to cooking
             .card
+              .ribbon.ribbon-top-right
+                span= cooking.cooking_category.classification_name
               .card-top
                 .card-title
                   = cooking.cooking_name
               .img-body-co
                 .card-img-top
                   = image_tag cooking.image if cooking.image.attached?
+  .container
+    .row
+      - @all_cooking_categories.each do | cooking_category |
+        .col-xs-6.col-sm-4.col-md-3
+          .card.img-thumbnail
+            .card-top
+              = link_to cooking_category
+                .card-title
+                  = cooking_category.classification_name

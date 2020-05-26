@@ -2,7 +2,7 @@ h1.mx-auto.title.image_area
   = t('cooking_category_list')
   #carousel
     figure#spinner
-      - @cooking_categories.each.with_index(1) do | cooking_category, n |
+      - @all_cooking_categories.each.with_index(1) do | cooking_category, n |
         div class="sample_img sample_img#{n}"
           = link_to cooking_category
             .spinner_img=image_tag "/assets/#{cooking_category.classification_reference_name}.jpg"
@@ -15,8 +15,8 @@ h1.mx-auto.title.image_area
 .bg-light
   .container
     .row.form-inline
-      - @cooking_categories.each.with_index(1) do | cooking_category, m |
-        .form.col-xs-6.col-sm-4.col-md-3
+      - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
+        .col-xs-6.col-sm-4.col-md-3
           div class="card img-thumbnail gallery-item#{m}"
             .card-top
               = link_to cooking_category

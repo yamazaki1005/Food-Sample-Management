@@ -1,13 +1,10 @@
 class CookingCategoriesController < ApplicationController
   before_action :set_cooking_category, only: %i[show]
+  before_action :set_all_cooking_categories, only: %i[index show]
 
-  def index
-    @cooking_categories = CookingCategory.all
-  end
+  def index; end
 
-  def show
-
-  end
+  def show; end
 
   private
 
