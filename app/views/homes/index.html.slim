@@ -1,4 +1,4 @@
-article.contents
+article
   ul.m-header-lang
     li.m-header-lang__item
       / 日本語・英語の切り替え
@@ -11,11 +11,11 @@ article.contents
       p#slideshow
         = link_to "", cookings_url
         / 後に別の画像に差し替える
-        = image_tag 'sample1.jpg', class: 'first active'
-        = image_tag 'sample2.jpg'
-        = image_tag 'sample3.jpg'
-        = image_tag 'sample4.jpg'
-        = image_tag 'sample5.jpg', class: 'last'
+        = image_tag 'top/sample1.jpg', class: 'first active'
+        = image_tag 'top/sample2.jpg'
+        = image_tag 'top/sample3.jpg'
+        = image_tag 'top/sample4.jpg'
+        = image_tag 'top/sample5.jpg', class: 'last'
     .main_banner
       .center-content
         = link_to cooking_categories_url, class: "restaurant"

@@ -4,6 +4,9 @@
   .itemWrap.row
     .imgArea.col-sm-6
       p
+        .mask
+          .caption
+            | クリックして拡大表示
         = image_tag @cooking.image if @cooking.image.attached?
     .textArea.col-sm-6
       h2

@@ -4,7 +4,12 @@ $(document).on('turbolinks:load', function () {
     $("#graydisplay").html($(this).prop("outerHTML"));
     $("#graydisplay").fadeIn(200);
   });
-  
+
+  $(".imgArea .mask").click(function () {
+    $("#graydisplay").html($(".imgArea img").prop("outerHTML"));
+    $("#graydisplay").fadeIn(200);
+  });
+
   $("#graydisplay, #graydisplay img").click(function () {
     $("#graydisplay").fadeOut(200);
   });

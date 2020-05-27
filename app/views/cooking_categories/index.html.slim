@@ -17,8 +17,8 @@ h1.mx-auto.title.image_area
     .row.form-inline
       - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
         .col-xs-6.col-sm-4.col-md-3
-          div class="card img-thumbnail gallery-item#{m}"
-            .card-top
-              = link_to cooking_category
+          = link_to cooking_category
+            div class="card img-thumbnail gallery-item#{m}"
+              .card-top
                 .card-title
                   = cooking_category.classification_name

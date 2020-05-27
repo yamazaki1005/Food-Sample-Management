@@ -19,8 +19,8 @@
     .row
       - @all_cooking_categories.each do | cooking_category |
         .col-xs-6.col-sm-4.col-md-3
-          .card.img-thumbnail
-            .card-top
-              = link_to cooking_category
-                .card-title
-                  = cooking_category.classification_name
+          = link_to cooking_category
+            .card.img-thumbnail
+              .card-top
+                  .card-title
+                    = cooking_category.classification_name
