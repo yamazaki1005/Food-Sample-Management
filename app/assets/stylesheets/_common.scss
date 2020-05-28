@@ -107,7 +107,6 @@ strong, .bold {
 }
 /* body ================================ */
 body {
-  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   color: #333;
   font-size: 12px;
   font-size: .75rem;
@@ -115,6 +114,10 @@ body {
   line-height: 17px;
   letter-spacing: 2px;
   background: url("top/texture_2.jpg") left top repeat;
+}
+
+.wf-roundedmplus1c {
+  font-family: "M PLUS Rounded 1c";
 }
 
 .container {
@@ -713,8 +716,8 @@ footer .footer_inner .footer_bottom .logo {
 .ribbon span {
   position: absolute;
   display: block;
-  width: 225px;
-  padding: 5px 0;
+  width: 260px;
+  padding: 6px 0;
   background-color: $ribbon-color;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   color: #fff;
@@ -737,11 +740,11 @@ footer .footer_inner .footer_bottom .logo {
 
 .ribbon-top-right::before {
   top: 0;
-  left: 25px;
+  left: 39px;
 }
 
 .ribbon-top-right::after {
-  bottom: 25px;
+  bottom: 39px;
   right: 0;
 }
 

@@ -70,8 +70,8 @@ ja:
   question: 質問
   self_introduction: 自己紹介
   text: テキストテキスト
-  catch_copy1: 食品サンプル総合サイト
-  # catch_copy2:
+  catch_copy1: 目で見る美味しさ
+  catch_copy2: 食品サンプル
 
   msg:
     delete_confirm: データを削除しますか？

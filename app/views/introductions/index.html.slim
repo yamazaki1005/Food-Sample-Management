@@ -1,50 +1,50 @@
-.contents.row
-  .introduction-img.col-sm-8.imgArea
+.contents
+  .introduction-img.imgArea
     = image_tag 'common/img002.jpg'
     = image_tag 'common/img003.jpg'
     = image_tag 'common/img004.jpg'
     = image_tag 'common/img005.jpg'
     = image_tag 'common/img006.jpg'
-  .col-sm-4
-    .sub-container
-      .intorduction-circle3
-        .top-left-item
-          = image_tag 'top/sample1.jpg'
-      .intorduction-circle3
-        .bottom-left-item
-          = image_tag 'top/sample2.jpg'
-      .intorduction-circle3
-        .top-right-item
-          = image_tag 'top/sample3.jpg'
-      .intorduction-circle3
-        .bottom-right-item
-          = image_tag 'top/sample4.jpg'
-      h2
-        | 「食品サンプル食堂」
-      .introduction-barnner
-        .center-content
-          = link_to cooking_categories_url, class: "restaurant"
-            span.restaurant-first
-            span.left-door
-            span.right-door
-            span.restaurant-last
-    .sub-container
-      .intorduction-circle
-      .intorduction-circle2
-        .intorduction-circle-inner
-      h2
-        | 「食品サンプル展」
-      = link_to "/cooking_categories/40"
-        = image_tag 'common/event2018.jpg'
-        / .col-sm-6
-        /   = link_to "/cooking_categories/40"
-        /     = image_tag 'common/event2019.jpg'
-    .sub-container
-      .intorduction-circle
-      .intorduction-circle2
-        .intorduction-circle-inner
-      h2
-        | 「豊富な規格部品」
-      = link_to "/products"
-        = image_tag 'common/products/big_001.jpg'
+.row
+  .sub-container.col-sm-4
+    .intorduction-circle3
+      .top-left-item
+        = image_tag 'top/sample1.jpg'
+    .intorduction-circle3
+      .bottom-left-item
+        = image_tag 'top/sample2.jpg'
+    .intorduction-circle3
+      .top-right-item
+        = image_tag 'top/sample3.jpg'
+    .intorduction-circle3
+      .bottom-right-item
+        = image_tag 'top/sample4.jpg'
+    h2
+      | 「食品サンプル食堂」
+    .introduction-barnner
+      .center-content
+        = link_to cooking_categories_url, class: "restaurant"
+          span.restaurant-first
+          span.left-door
+          span.right-door
+          span.restaurant-last
+  .sub-container.col-sm-4
+    .intorduction-circle
+    .intorduction-circle2
+      .intorduction-circle-inner
+    h2
+      | 「食品サンプル展」
+    = link_to "/cooking_categories/40"
+      = image_tag 'common/event2018.jpg'
+      / .col-sm-6
+      /   = link_to "/cooking_categories/40"
+      /     = image_tag 'common/event2019.jpg'
+  .sub-container.col-sm-4
+    .intorduction-circle
+    .intorduction-circle2
+      .intorduction-circle-inner
+    h2
+      | 「豊富な規格部品」
+    = link_to "/products"
+      = image_tag 'common/products/big_001.jpg'
 #graydisplay

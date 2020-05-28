@@ -2,6 +2,8 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
   = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
   .catch-copy
     = t('catch_copy1')
+    br
+    = t('catch_copy2')
   #navbarCollapse.collapse.navbar-collapse.my-subnavbar
     ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
@@ -20,15 +22,15 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
             = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link btn-warning btn my-btn-warning'
     ul.navbar-nav.ml-auto.functions
       li.nav-btn
-        a[href="/introductions"]
-          i.fas.fa-search.nav-icon
-          .nav-text
-            =t('know')
-      li.nav-btn
         a[href="/cookings"]
           i.far.fa-images.nav-icon
           .nav-text
             =t('view')
+      li.nav-btn
+        a[href="/introductions"]
+          i.fas.fa-search.nav-icon
+          .nav-text
+            =t('know')
       li.nav-btn.unimplement
         a[href=""]
           i.fas.fa-utensils.nav-icon
