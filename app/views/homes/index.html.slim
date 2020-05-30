@@ -81,10 +81,9 @@ article
           h3.ca-sub2 = t('self_introduction')
         .circle
           .circle-inner
-  = render partial: 'introductions/food_sample_recipe'
   .background-co
-    = render partial: 'shared/cooking-title'
     = render partial: 'cookings/cooking_list'
+  = render partial: 'introductions/food_sample_recipe'
   footer
     .footer_inner.my-footer
       .footer_nav01
@@ -94,25 +93,21 @@ article
               h2
                 = link_to ""
                   = t('food-sample')
-                  strong = t('introduction')
+                  strong = t('list')
               ul.sub_list
                 li= link_to ""
-                   = t('text')
-                    / | ・食品サンプルとは？
+                   | 和食
                 li= link_to ""
-                   = t('text')
-                    / | ・食品サンプルの歴史
+                   | 洋食
                 li= link_to ""
-                   = t('text')
-                    / | ・食品サンプルの効果
+                   | 中華
                 li= link_to ""
-                   = t('text')
-                    / | ・食品サンプルの作り方
+                   | エスニック
             li
               h2
                 = link_to ""
                   = t('food-sample')
-                  strong = t('list')
+                  strong = t('introduction')
               ul.sub_list
                 li= link_to ""
                    = t('text')
@@ -207,3 +202,5 @@ article
           = image_tag 'common/logo2.png', class: 'footer-logo'
           p.copyright
              = t('catch_copy1')
+#page_top
+  a[href="#"]
