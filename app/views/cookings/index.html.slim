@@ -1,20 +1,7 @@
 .background-co
   = render partial: 'modal'
   = render partial: 'shared/cooking-title'
-  .container
-    .row.form-inline
-      - @cookings.each do | cooking |
-        .col-sm-3
-          = link_to cooking
-            .card
-              .ribbon.ribbon-top-right
-                span= cooking.cooking_category.classification_name
-              .card-top
-                .card-title
-                  = cooking.cooking_name
-              .img-body-co
-                .card-img-top
-                  = image_tag cooking.image if cooking.image.attached?
+  = render partial: 'cooking_list'
   .container
     .row
       - @all_cooking_categories.each do | cooking_category |
@@ -24,3 +11,4 @@
               .card-top
                   .card-title
                     = cooking_category.classification_name
+

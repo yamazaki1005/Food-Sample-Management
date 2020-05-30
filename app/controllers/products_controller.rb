@@ -78,8 +78,4 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
-
-  def set_cookings
-    @cookings = Cooking.all
-  end
 end

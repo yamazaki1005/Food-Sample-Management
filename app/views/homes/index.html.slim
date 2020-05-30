@@ -81,6 +81,10 @@ article
           h3.ca-sub2 = t('self_introduction')
         .circle
           .circle-inner
+  = render partial: 'introductions/food_sample_recipe'
+  .background-co
+    = render partial: 'shared/cooking-title'
+    = render partial: 'cookings/cooking_list'
   footer
     .footer_inner.my-footer
       .footer_nav01

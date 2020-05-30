@@ -4,15 +4,14 @@
 class CookingsController < ApplicationController
   before_action :set_cooking, only: %i[show edit update destroy]
   before_action :set_products, only: %i[new create edit update]
+  before_action :set_cookings, only: %i[index]
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
 
-  def index
-    @cookings = Cooking.all
-  end
+  def index; end
 
   def show; end
 
@@ -61,9 +60,5 @@ class CookingsController < ApplicationController
 
   def set_cooking
     @cooking = Cooking.find(params[:id])
-  end
-
-  def set_products
-    @products = Product.all
   end
 end
