@@ -33,7 +33,9 @@
                   i.fas.fa-search
               ul.sub_list
                 li= link_to ""
-                   | サンプル食堂
+                   | 食品サンプルの作り方
+                li= link_to ""
+                   | 食品サンプル食堂
                 li= link_to ""
                   | 豊富な規格部品
                 li= link_to ""
@@ -71,21 +73,21 @@
                    | よくある質問
                 li= link_to "#"
                    | お問い合わせ
-          ul.list.lowBlock
-            li.unimplement
-              h2
-                = link_to ""
-                  = t('text')
-                    / | 一般のお客さまへ
-                  span = t('text')
-                      / | （商品のご紹介）
-            li.unimplement
-              h2
-                = link_to ""
-                  = t('text')
-                    / | 企業のお客さまへ
-                  span = t('text')
-                      / | （販促物カタログのご紹介）
+          / ul.list.lowBlock
+          /   li.unimplement
+          /     h2
+          /       = link_to ""
+          /         = t('text')
+          /           / | 一般のお客さまへ
+          /         span = t('text')
+          /             / | （商品のご紹介）
+          /   li.unimplement
+          /     h2
+          /       = link_to ""
+          /         = t('text')
+          /           / | 企業のお客さまへ
+          /         span = t('text')
+          /             / | （販促物カタログのご紹介）
       .footer_nav02
         .inner
           .nav_block
@@ -106,3 +108,5 @@
           = image_tag 'common/logo2.png', class: 'footer-logo'
           p.copyright
              = t('catch_copy1')
+             br
+             = t('catch_copy2')

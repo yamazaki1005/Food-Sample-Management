@@ -453,12 +453,7 @@ header {
 
 footer .footer_inner .footer_nav01 .inner {
   padding-top: 28px;
-  // width: 990px;
   margin: 0 auto
-}
-
-footer .footer_inner .footer_nav01 .inner ul.list {
-  // width: 990px
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list:before,
@@ -473,6 +468,8 @@ footer .footer_inner .footer_nav01 .inner ul.list:after {
 
 footer .footer_inner .footer_nav01 .inner ul.list>li {
   display: inline-table;
+  text-align: initial;
+  width: 15%;
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list>li h2 a {
@@ -496,6 +493,14 @@ footer .footer_inner .footer_nav01 .inner ul.list>li ul.sub_list li a {
   margin-bottom: 7px;
   font-size: .6875rem;
   letter-spacing: 0
+}
+
+.sub_list {
+  padding-left: 13px;
+}
+
+.list {
+  text-align: center;
 }
 
 footer .footer_inner .footer_nav01 .inner ul.lowBlock li {
@@ -526,7 +531,6 @@ footer .footer_inner .footer_nav01 a:hover {
 }
 
 footer .footer_inner .footer_nav02 {
-  // width: 990px;
   margin: 0 auto;
   background: url("top/list_line.gif") left top repeat-x;
   padding-top: 10px
@@ -534,7 +538,8 @@ footer .footer_inner .footer_nav02 {
 
 footer .footer_inner .footer_nav02>.inner {
   background: url("top/list_line.gif") left bottom repeat-x;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  padding-left: 5%;
 }
 
 footer .footer_inner .footer_nav02>.inner:before,
@@ -657,7 +662,7 @@ footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .line_btn {
 footer .footer_inner .footer_bottom {
   // width: 990px;
   margin: 0 auto;
-  padding: 23px 0 19px 0
+  padding: 23px 0 19px 5%;
 }
 
 footer .footer_inner .footer_bottom:before,
