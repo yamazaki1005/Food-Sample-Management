@@ -1,18 +1,18 @@
 .container
-    .row.form-inline
-      - @cookings.each do | cooking |
-        .col-xs-6.col-sm-3
-          = link_to cooking
-            .card
-              .ribbon.ribbon-top-right
-                - if cooking.cooking_category.classification_name == 'カフェ・スイーツ'
-                    span = "スイーツ"
-                    / 文字数がリボン内に収まらないので短縮
-                - else
-                    span = cooking.cooking_category.classification_name
-              .card-top
-                .card-title
-                  = cooking.cooking_name
-              .img-body-co
-                .card-img-top
-                  = image_tag cooking.image if cooking.image.attached?
+  .row.form-inline
+    - @cooking_category_various.each do | cooking |
+      .col-xs-6.col-sm-3
+        = link_to cooking
+          .card
+            .ribbon.ribbon-top-right
+              - if cooking.cooking_category.classification_name == 'カフェ・スイーツ'
+                span = "スイーツ"
+                / 文字数がリボン内に収まらないので短縮
+              - else
+                span = cooking.cooking_category.classification_name
+            .card-top
+              .card-title
+                = cooking.cooking_name
+            .img-body-co
+              .card-img-top
+                = image_tag cooking.image if cooking.image.attached?
