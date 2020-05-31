@@ -37,8 +37,10 @@
     = image_tag 'top/texture_4.jpg'
   .introduction-img.imgArea.fadein
     = image_tag 'top/texture_4.jpg'
+
 .row
-  = render partial: 'food_sample_cafeteria'
-  = render partial: 'food_sample_exhibition'
-  = render partial: 'food_sample_products'
+  .col-xs-10.col-sm-6
+    = render partial: 'food_sample_exhibition'
+  .col-xs-10.col-sm-6
+    = render partial: 'food_sample_products'
 #graydisplay

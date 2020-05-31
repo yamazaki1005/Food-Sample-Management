@@ -39,7 +39,7 @@
   position: relative;
   max-width: 100%;
   text-align: center;
-  padding: 50px 0;
+  // padding: 50px 0;
 }
 
 .sub-container img {
@@ -168,7 +168,7 @@
 .bottom-right-item {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 50%;
 }
 
 // ==================================
@@ -246,13 +246,12 @@
 
 // =======================
 .fadein {
-	opacity : 0.1;
-	transform : translate(0, 50px);
-	transition : all 500ms;
-	}
+	opacity: 0.1;
+	transform: translate(0, 50px);
+	transition: all 500ms;
+}
 
-/* 画面内に入った状態 */
 .fadein.scrollin {
-	opacity : 1;
-	transform : translate(0, 0);
-	}
+	opacity: 1;
+	transform: translate(0, 0);
+}
