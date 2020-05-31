@@ -1,3 +1,4 @@
+= render partial: 'shared/scroll_navbar'
 article
   ul.m-header-lang
     li.m-header-lang__item
@@ -26,7 +27,7 @@ article
   nav.top_global_nav
     ul.ca-menu
       li
-        = link_to cookings_url
+        = link_to "#food-sample-list"
           span.ca-icon
             i.far.fa-images
         .ca-content
@@ -75,16 +76,20 @@ article
           h4.ca-main2 = t('question')
         .circle
           .circle-inner
-      li.self-introduction
-        = link_to ""
-        .ca-content
-          h3.ca-sub2 = t('self_introduction')
-        .circle
-          .circle-inner
+      / li.self-introduction
+      /   = link_to ""
+      /   .ca-content
+      /     h3.ca-sub2 = t('self_introduction')
+      /   .circle
+      /     .circle-inner
   = render partial: 'introductions/food_sample_recipe'
   .background-co
-    = render partial: 'shared/cooking-title'
+    = render partial: 'shared/cooking_title'
     = render partial: 'cookings/cooking_list'
+  .row
+    = render partial: 'introductions/food_sample_cafeteria'
+    = render partial: 'introductions/food_sample_products'
+    = render partial: 'introductions/food_sample_exhibition'
   footer
     .footer_inner.my-footer
       .footer_nav01
@@ -92,18 +97,26 @@ article
           ul.list
             li
               h2
-                = link_to ""
+                = link_to "#food-sample-list"
                   = t('food-sample')
                   strong = t('list')
               ul.sub_list
-                li= link_to ""
+                li= link_to "/cooking_categories/33"
                    | 和食
-                li= link_to ""
+                li= link_to "/cooking_categories/34"
                    | 洋食
-                li= link_to ""
+                li= link_to "/cooking_categories/35"
                    | 中華
-                li= link_to ""
+                li= link_to "/cooking_categories/36"
                    | エスニック
+                li= link_to "/cooking_categories/37"
+                   | アジア料理
+                li= link_to "/cooking_categories/38"
+                   | カフェ・スイーツ
+                li= link_to "/cooking_categories/39"
+                   | 菓子
+                li= link_to "/cooking_categories/40"
+                   | 匠の技
             li
               h2
                 = link_to ""
@@ -203,5 +216,6 @@ article
           = image_tag 'common/logo2.png', class: 'footer-logo'
           p.copyright
              = t('catch_copy1')
-#page_top
-  a[href="#"]
+#page-top
+  = link_to ""
+    i.fas.fa-angle-up.page-top-icon

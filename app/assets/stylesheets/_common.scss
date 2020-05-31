@@ -217,7 +217,6 @@ header {
   font-size: 21px;
   line-height: 1.7;
   letter-spacing: 0.05em;
-  font-family: 'arial unicode ms','ヒラギノ角ゴ Pro W3','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
 }
 
 .header-menus {
@@ -267,7 +266,7 @@ header {
   overflow: hidden;
   position: relative;
   display: block;
-  margin: 8px 2px 2px 2px;
+  margin: 2px;
   font-size: 80%;
   line-height: 0.9;
   text-align: center;
@@ -381,6 +380,65 @@ header {
 
 .m-header-lang__item a.is-current:before {
     background-color: $sub-color;
+}
+
+// scroll_nav===========================
+#scroll-nav {
+  display: none;
+}
+
+.sc-header-logo img{
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.sc-nav-text {
+  display: none;
+  color: white;
+}
+
+.sc-catch-copy {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.sc-nav-icon {
+  color: #EEC27B;
+  font-size: 20px;
+}
+
+.sc-ul {
+  float: right;
+  display: table;
+  table-layout: fixed;
+  margin: auto 0;
+  border-collapse: collapse;
+  max-width: 1800px;
+}
+
+.sc-ul li:hover .nav-icon {
+  display: none;
+}
+
+.sc-ul li:hover .sc-nav-text {
+  display: block;
+}
+
+.sc-nav-btn {
+  font-size: 23px;
+  padding: 3px 0px 6px 0px;
+  color: #EEC27B;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.functions li.sc-nav-btn:hover {
+  background-color: $sub-color;
+}
+
+.sc-navbar {
+    padding: 0 10% 0 5%;
 }
 /* show ================================ */
 .img_custom img{

@@ -1,13 +1,9 @@
 .background-co
   = render partial: 'modal'
-  = render partial: 'shared/cooking-title'
+  = render partial: 'shared/cooking_title'
   .itemWrap.row
     .imgArea.col-sm-6
-      p
-        .mask
-          .caption
-            | クリックして拡大表示 拡大に直す
-        = image_tag @cooking.image if @cooking.image.attached?
+      = image_tag @cooking.image if @cooking.image.attached?
     .textArea.col-sm-6
       h2
         = @cooking.cooking_name
@@ -16,8 +12,8 @@
             = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
             button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
               = t('delete')
-      h3
-        =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
+      h5
+        / =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
         = @cooking.cooking_name
         = t('msg.product-used')
       .textBlock.row.form-inline
@@ -27,4 +23,5 @@
               .card-title
                 = cooking_product_relation.product.product_name
               = image_tag cooking_product_relation.product.image, class: "pro-img"
+  = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay

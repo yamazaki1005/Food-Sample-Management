@@ -98,7 +98,6 @@ nav.top_global_nav {
 }
 
 .ca-icon {
-  font-family: 'WebSymbolsRegular', cursive;
   font-size: 40px;
   line-height: 60px;
   position: absolute;
@@ -404,36 +403,37 @@ nav.top_global_nav {
   z-index: 2;
 }
 // ===========================================
-#page_top{
+#page-top{
   width: 60px;
   height: 60px;
   position: fixed;
   right: 1%;
   bottom: 1%;
   background: $sub-color;
-  opacity: 0.8;
   border-radius: 50%;
 }
-#page_top a{
+
+#page-top a{
   position: relative;
   display: block;
   width: 60px;
   height: 60px;
   text-decoration: none;
 }
-#page_top a::before{
-  font-family: 'Font Awesome 5 Free';
+
+.page-top-icon {
   font-weight: 900;
-  content: '\f102';
-  font-size: 30px;
+  font-size: 40px;
   color: #fff;
   position: absolute;
-  width: 28px;
-  height: 28px;
-  top: 6px;
+  width: 32px;
+  height: 32px;
+  top: -11px;
   bottom: 0;
-  right: 0;
+  right: -3px;
   left: 0;
   margin: auto;
   text-align: center;
 }
+
+// ============================

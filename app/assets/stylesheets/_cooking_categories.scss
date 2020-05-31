@@ -121,7 +121,7 @@ div#carousel ~ span:hover {
 }
 // show＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 .itemWrap {
-  margin: 14px 17px 0 50px;
+  margin: 14px 17px 35px 50px;
   padding-right: 13px;
   background: url("common/bg02.gif") no-repeat right top;
 }
@@ -134,11 +134,20 @@ div#carousel ~ span:hover {
   float: right;
 }
 
+.textArea h2 {
+  margin-bottom: 50px;
+}
+
 .itemWrap .imgArea img {
   max-height: 80vh;
   max-width: 48vw;
   float: right;
   cursor: pointer;
+}
+
+.itemWrap .imgArea img:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.01, 1.01);
 }
 
 .itemWrap .textArea {

@@ -12,7 +12,7 @@ ja:
   id: ID
   cookings: 料理
   cooking_name: 料理名
-  cooking_list: 料理一覧
+  cooking_list: 食品サンプル料理一覧
   cooking_update: 料理更新
   created_at: 作成日
   updated_at: 更新日
