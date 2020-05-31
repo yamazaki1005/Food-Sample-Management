@@ -395,12 +395,12 @@ header {
 
 footer .footer_inner .footer_nav01 .inner {
   padding-top: 28px;
-  width: 990px;
+  // width: 990px;
   margin: 0 auto
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list {
-  width: 990px
+  // width: 990px
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list:before,
@@ -468,7 +468,7 @@ footer .footer_inner .footer_nav01 a:hover {
 }
 
 footer .footer_inner .footer_nav02 {
-  width: 990px;
+  // width: 990px;
   margin: 0 auto;
   background: url("top/list_line.gif") left top repeat-x;
   padding-top: 10px
@@ -490,7 +490,7 @@ footer .footer_inner .footer_nav02>.inner:after {
 }
 
 footer .footer_inner .footer_nav02>.inner .nav_block {
-  width: 710px;
+  // width: 710px;
   float: left
 }
 
@@ -597,7 +597,7 @@ footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .line_btn {
 }
 
 footer .footer_inner .footer_bottom {
-  width: 990px;
+  // width: 990px;
   margin: 0 auto;
   padding: 23px 0 19px 0
 }
@@ -637,10 +637,14 @@ footer .footer_inner .footer_bottom .logo {
 }
 
 // switch=============================
+.container-custom {
+  position: relative;
+}
+
 .cooking-product-switch {
   position: absolute;
   left: 0;
-  top: 116px;
+  top: 0;
   display: flex;
   z-index: 12;
 }

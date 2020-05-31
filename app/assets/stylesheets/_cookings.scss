@@ -37,15 +37,26 @@
   clear:both;
 }
 
-.img-body-co {
+
+@media screen and (max-width:480px){
+  .img-body-co {
   overflow: hidden;
   text-align: center;
-  height: 41vh;
+  height: 55vh;
   width: 100%;
   object-fit: contain;
   position: relative;
+  }
 }
 
+.img-body-co {
+overflow: hidden;
+text-align: center;
+height: 41vh;
+width: 100%;
+object-fit: contain;
+position: relative;
+}
 //  ================================
 .textArea h3 {
   margin: 20px 0 10px 0;
