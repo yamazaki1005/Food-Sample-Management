@@ -1,3 +1,4 @@
+// 区切り線と画像の設定======================
 .contents {
   max-width: 100%;
   background-color: #f8faed;
@@ -143,7 +144,7 @@
   position: relative;
   border-radius: 65px;
 }
-// =======================================
+// 食堂から飛び出す円の場所=======================================
 .intorduction-circle3 img {
   border-radius: 50%;
   width: 30px;
@@ -171,7 +172,7 @@
   bottom: 50%;
 }
 
-// ==================================
+// 波区切り線==================================
 
 @mixin bubbles($bubbles-type, $color) {
   @if $bubbles-type == a {
@@ -244,7 +245,7 @@
   }
 }
 
-// =======================
+// 画像をスクロールでフェードイン=======================
 .fadein {
 	opacity: 0.1;
 	transform: translate(0, 50px);

@@ -1,21 +1,20 @@
 $(document).on('turbolinks:load', function () {
+  var pagetop = $('#page-top');
   var pagetop2 = $('#scroll-nav');
+
+  pagetop.hide();
   pagetop2.hide();
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 115) {
       pagetop2.show();
+      if ($(this).scrollTop() > 1000) {
+        pagetop.fadeIn();
+      } else {
+        pagetop.fadeOut();
+      }
     } else {
       pagetop2.hide();
-    }
-  });
-
-  var pagetop = $('#page-top');
-  pagetop.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1000) {
-      pagetop.fadeIn();
-    } else {
-      pagetop.fadeOut();
     }
   });
 

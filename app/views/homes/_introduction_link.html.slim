@@ -1,7 +1,7 @@
 .container-custom.bg-white
   .home-title
-    | もっと知る
+    = t('konw-more')
     i.fas.fa-search
     .nav.btn-area
       = link_to introductions_path, class: 'nav-link btn link-btn home-link'
-        | 食品サンプル紹介
+        = t('food-sample2', v: t('introduction'))

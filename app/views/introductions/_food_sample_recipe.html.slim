@@ -1,13 +1,18 @@
 .cooking-recipe
   section.py-5.section-bubble1
-    h1.text-center 食品サンプルを知る
+    h1.text-center
+      = t('msg.know-food-sample')
     .container
-      h1 シリコン型作成
-      p シリコンで食材の表面を写し取ります。
+      h1
+        = t('msg.procedure-1')
+      p
+        = t('msg.procedure-1-text')
   section.py-5.section-bubble2
     .container
-      h1 型採り
-      p 色付けした樹脂を流し込みオーブンで加熱します。
+      h1
+        = t('msg.procedure-2')
+      p
+        = t('msg.procedure-2-text')
   .introduction-img.imgArea.fadein
     = image_tag 'top/texture_4.jpg'
   .introduction-img.imgArea.fadein

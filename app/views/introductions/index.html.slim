@@ -1,30 +1,40 @@
-
-/ = render partial: 'food_sample_recipe'
 .cooking-recipe
   section.py-5.section-bubble1
-    h1.text-center 食品サンプルを知る
+    h1.text-center
+      = t('msg.know-food-sample')
     .container
-      h1 シリコン型作成
-      p シリコンで食材の表面を写し取ります。
+      h1
+        = t('msg.procedure-1')
+      p
+        = t('msg.procedure-1-text')
   section.py-5.section-bubble2
     .container
-      h1 型採り
-      p 色付けした樹脂を流し込みオーブンで加熱します。
+      h1
+        = t('msg.procedure-2')
+      p
+        = t('msg.procedure-2-text')
   section.py-5.section-bubble3
     .container
-      h1 パーツ原型完成
-      p パーツをシリコン方から取り外し余分な部分を取り除きます。
+      h1
+        = t('msg.procedure-3')
+      p
+        = t('msg.procedure-3-text')
   section.py-5.section-bubble4
     .container
-      h1 着色
-      p エアブラシや筆を使って着色します。
+      h1
+        = t('msg.procedure-4')
+      p
+        = t('msg.procedure-4-text')
   section.py-5.section-bubble5
     .container
-      h1 盛り付け
-      p パーツ同士を組み合わせて接着します。
+      h1
+        = t('msg.procedure-5')
+      p
+        = t('msg.procedure-5-text')
   section.py-5.section-bubble6
     .container
-      h1 完成！
+      h1
+        = t('msg.complete')
   .introduction-img.imgArea.fadein
     = image_tag 'top/texture_4.jpg'
   .introduction-img.imgArea.fadein
@@ -37,7 +47,6 @@
     = image_tag 'top/texture_4.jpg'
   .introduction-img.imgArea.fadein
     = image_tag 'top/texture_4.jpg'
-
 .row
   .col-xs-10.col-sm-6
     = render partial: 'food_sample_exhibition'
