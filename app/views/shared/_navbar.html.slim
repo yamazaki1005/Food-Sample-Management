@@ -22,27 +22,27 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
             = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link btn-warning btn my-btn-warning'
     ul.navbar-nav.ml-auto.functions
       li.nav-btn
-        a[href="/#food-sample-list"]
+        = link_to cookings_path
           i.far.fa-images.nav-icon
           .nav-text
             =t('view')
       li.nav-btn
-        a[href="/introductions"]
+        = link_to introductions_path
           i.fas.fa-search.nav-icon
           .nav-text
             =t('know')
       li.nav-btn.unimplement
-        a[href=""]
+        = link_to ""
           i.fas.fa-utensils.nav-icon
           .nav-text
             =t('create')
       li.nav-btn.unimplement
-        a[href=""]
+        = link_to ""
           i.fas.fa-shopping-cart.nav-icon
           .nav-text
             =t('buy')
       li.nav-btn.unimplement
-        a[href=""]
+        = link_to ""
           i.far.fa-question-circle.nav-icon
           .nav-text
             =t('listen')

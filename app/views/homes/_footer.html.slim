@@ -1,0 +1,108 @@
+.footer_inner.my-footer
+      .footer_nav01
+        .inner
+          ul.list
+            li
+              h2
+                = link_to "#food-sample-list"
+                  = t('food-sample')
+                  strong = t('list')
+                  i.far.fa-images
+              ul.sub_list
+                li= link_to "/cooking_categories/33"
+                   | 和食
+                li= link_to "/cooking_categories/34"
+                   | 洋食
+                li= link_to "/cooking_categories/35"
+                   | 中華
+                li= link_to "/cooking_categories/36"
+                   | エスニック
+                li= link_to "/cooking_categories/37"
+                   | アジア料理
+                li= link_to "/cooking_categories/38"
+                   | カフェ・スイーツ
+                li= link_to "/cooking_categories/39"
+                   | 菓子
+                li= link_to "/cooking_categories/40"
+                   | 匠の技
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('introduction')
+                  i.fas.fa-search
+              ul.sub_list
+                li= link_to ""
+                   | サンプル食堂
+                li= link_to ""
+                  | 豊富な規格部品
+                li= link_to ""
+                  | 食品サンプル展
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('experience')
+                  i.fas.fa-utensils
+              ul.sub_list.unimplement
+                li= link_to ""
+                  | 食品サンプル体験
+                li= link_to ""
+                  | 開催中のイベント
+                li= link_to ""
+                  | 過去のイベント
+            li
+              h2
+                = link_to ""
+                  = t('food-sample')
+                  strong = t('purchase')
+                  i.fas.fa-shopping-cart
+              ul.sub_list.unimplement
+                li= link_to ""
+                   | オンラインショップ
+            li
+              h2
+                = link_to "#"
+                  = t('food-sample')
+                  strong = t('question')
+                  i.far.fa-question-circle
+              ul.sub_list.unimplement
+                li= link_to "#"
+                   | よくある質問
+                li= link_to "#"
+                   | お問い合わせ
+          ul.list.lowBlock
+            li.unimplement
+              h2
+                = link_to ""
+                  = t('text')
+                    / | 一般のお客さまへ
+                  span = t('text')
+                      / | （商品のご紹介）
+            li.unimplement
+              h2
+                = link_to ""
+                  = t('text')
+                    / | 企業のお客さまへ
+                  span = t('text')
+                      / | （販促物カタログのご紹介）
+      .footer_nav02
+        .inner
+          .nav_block
+            ul
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+              li= link_to ""
+                   = t('text')
+      .footer_bottom
+        .navbar-brand.footer_logo
+        = link_to ""
+          = image_tag 'common/logo2.png', class: 'footer-logo'
+          p.copyright
+             = t('catch_copy1')

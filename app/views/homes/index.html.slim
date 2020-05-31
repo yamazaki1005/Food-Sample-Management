@@ -1,4 +1,3 @@
-= render partial: 'shared/scroll_navbar'
 article
   ul.m-header-lang
     li.m-header-lang__item
@@ -27,7 +26,7 @@ article
   nav.top_global_nav
     ul.ca-menu
       li
-        = link_to "#food-sample-list"
+        = link_to cookings_path
           span.ca-icon
             i.far.fa-images
         .ca-content
@@ -82,140 +81,13 @@ article
       /     h3.ca-sub2 = t('self_introduction')
       /   .circle
       /     .circle-inner
-  = render partial: 'introductions/food_sample_recipe'
   .background-co
     = render partial: 'shared/cooking_title'
     = render partial: 'cookings/cooking_list'
-  .row
-    = render partial: 'introductions/food_sample_cafeteria'
-    = render partial: 'introductions/food_sample_products'
-    = render partial: 'introductions/food_sample_exhibition'
+  = render partial: 'introductions/food_sample_recipe'
+  / .row
+  /   = render partial: 'introductions/food_sample_cafeteria'
+  /   = render partial: 'introductions/food_sample_products'
+  /   = render partial: 'introductions/food_sample_exhibition'
   footer
-    .footer_inner.my-footer
-      .footer_nav01
-        .inner
-          ul.list
-            li
-              h2
-                = link_to "#food-sample-list"
-                  = t('food-sample')
-                  strong = t('list')
-              ul.sub_list
-                li= link_to "/cooking_categories/33"
-                   | 和食
-                li= link_to "/cooking_categories/34"
-                   | 洋食
-                li= link_to "/cooking_categories/35"
-                   | 中華
-                li= link_to "/cooking_categories/36"
-                   | エスニック
-                li= link_to "/cooking_categories/37"
-                   | アジア料理
-                li= link_to "/cooking_categories/38"
-                   | カフェ・スイーツ
-                li= link_to "/cooking_categories/39"
-                   | 菓子
-                li= link_to "/cooking_categories/40"
-                   | 匠の技
-            li
-              h2
-                = link_to ""
-                  = t('food-sample')
-                  strong = t('introduction')
-              ul.sub_list
-                li= link_to ""
-                   = t('text')
-                    / | ・食品サンプルをシェアしよう！
-                li= link_to ""
-                   = t('text')
-                    / | ・みんなの投稿
-                li= link_to ""
-                   = t('text')
-                    / | ・わたしの投稿
-                li= link_to ""
-                   = t('text')
-                    / | ・特集レシピ
-            li
-              h2
-                = link_to ""
-                  = t('food-sample')
-                  strong = t('experience')
-              ul.sub_list.unimplement
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-            li
-              h2
-                = link_to ""
-                  = t('food-sample')
-                  strong = t('purchase')
-              ul.sub_list.unimplement
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-            li
-              h2
-                = link_to ""
-                  = t('food-sample')
-                  strong = t('question')
-              ul.sub_list.unimplement
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-                li= link_to ""
-                   = t('text')
-          ul.list.lowBlock
-            li.unimplement
-              h2
-                = link_to ""
-                  = t('text')
-                    / | 一般のお客さまへ
-                  span = t('text')
-                      / | （商品のご紹介）
-            li.unimplement
-              h2
-                = link_to ""
-                  = t('text')
-                    / | 企業のお客さまへ
-                  span = t('text')
-                      / | （販促物カタログのご紹介）
-      .footer_nav02
-        .inner
-          .nav_block
-            ul
-              li= link_to ""
-                   = t('text')
-              li= link_to ""
-                   = t('text')
-              li= link_to ""
-                   = t('text')
-              li= link_to ""
-                   = t('text')
-              li= link_to ""
-                   = t('text')
-      .footer_bottom
-        .navbar-brand.footer_logo
-        = link_to ""
-          = image_tag 'common/logo2.png', class: 'footer-logo'
-          p.copyright
-             = t('catch_copy1')
-#page-top
-  = link_to ""
-    i.fas.fa-angle-up.page-top-icon
+    = render partial: 'homes/footer'

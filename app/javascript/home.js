@@ -8,6 +8,16 @@ $(document).on('turbolinks:load', function () {
       pagetop2.hide();
     }
   });
+
+  var pagetop = $('#page-top');
+  pagetop.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1000) {
+      pagetop.fadeIn();
+    } else {
+      pagetop.fadeOut();
+    }
+  });
 });
 
 $(document).ready(function () {
@@ -28,15 +38,6 @@ $(document).ready(function () {
       });
     }, 4000);
 
-  var pagetop = $('#page-top');
-  pagetop.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1000) {
-      pagetop.fadeIn();
-    } else {
-      pagetop.fadeOut();
-    }
-  });
   pagetop.click(function () {
     $('body,html').animate({
       scrollTop: 0

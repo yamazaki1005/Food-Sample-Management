@@ -15,5 +15,8 @@ html
     - if flash.notice.present?
       = render 'shared/flash_massages'
     = render partial: 'shared/navbar'
+    = render partial: 'shared/scroll_navbar'
     = yield
-
+    #page-top
+      = link_to ""
+        i.fas.fa-angle-up.page-top-icon

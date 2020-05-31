@@ -7,27 +7,27 @@
     #navbarCollapse.collapse.navbar-collapse.my-subnavbar
       ul.ml-auto.sc-ul.functions
         li.sc-nav-btn
-          a[href="/#food-sample-list"]
+          = link_to cookings_path
             i.far.fa-images.nav-icon
             .sc-nav-text
               =t('view')
         li.sc-nav-btn
-          a[href="/introductions"]
+          = link_to introductions_path
             i.fas.fa-search.nav-icon
             .sc-nav-text
               =t('know')
         li.sc-nav-btn.unimplement
-          a[href=""]
+          = link_to ""
             i.fas.fa-utensils.nav-icon
             .sc-nav-text
               =t('create')
         li.sc-nav-btn.unimplement
-          a[href=""]
+          = link_to ""
             i.fas.fa-shopping-cart.nav-icon
             .sc-nav-text
               =t('buy')
         li.sc-nav-btn.unimplement
-          a[href=""]
+          = link_to ""
             i.far.fa-question-circle.nav-icon
             .sc-nav-text
               =t('listen')
