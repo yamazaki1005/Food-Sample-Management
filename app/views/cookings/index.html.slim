@@ -5,14 +5,14 @@
     .row.form-inline
       - @cookings.each do | cooking |
         .col-xs-6.col-sm-3
-          - if cooking.cooking_category.classification_name == '匠の技'
+          - if cooking.cooking_category.classification_name == t('Craftsmanship')
             - break
             / 匠の技（食品サンプル展）を分けるための仮処置：一覧には非表示にする
           = link_to cooking
             .card
               .ribbon.ribbon-top-right
-                - if cooking.cooking_category.classification_name == 'カフェ・スイーツ'
-                  span = "スイーツ"
+                - if cooking.cooking_category.classification_name == t('sweets')
+                  span = t('sweets2')
                   / 文字数がリボン内に収まらないので短縮
                 - else
                   span = cooking.cooking_category.classification_name

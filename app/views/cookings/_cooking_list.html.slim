@@ -5,8 +5,8 @@
         = link_to cooking
           .card
             .ribbon.ribbon-top-right
-              - if cooking.cooking_category.classification_name == 'カフェ・スイーツ'
-                span = "スイーツ"
+              - if cooking.cooking_category.classification_name == t('sweets')
+                span = t('sweets2')
                 / 文字数がリボン内に収まらないので短縮
               - else
                 span = cooking.cooking_category.classification_name

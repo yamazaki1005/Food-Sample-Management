@@ -6,15 +6,13 @@ $(document).on('turbolinks:load', function () {
   pagetop2.hide();
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 115) {
-      pagetop2.show();
-      if ($(this).scrollTop() > 1000) {
-        pagetop.fadeIn();
-      } else {
-        pagetop.fadeOut();
-      }
-    } else {
+    if ($(this).scrollTop() <= 115) {
       pagetop2.hide();
+    } else if ($(this).scrollTop() > 115 && $(this).scrollTop() <= 1000){
+      pagetop2.show();
+      pagetop.fadeOut();
+    } else if ($(this).scrollTop() > 1000){
+      pagetop.fadeIn();
     }
   });
 
