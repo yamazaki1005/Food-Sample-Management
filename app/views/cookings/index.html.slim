@@ -1,14 +1,21 @@
 .background-co
   = render partial: 'modal'
-  = render partial: 'shared/cooking-title'
+  = render partial: 'shared/cooking_title'
   .container
     .row.form-inline
       - @cookings.each do | cooking |
-        .col-sm-3
+        .col-xs-6.col-sm-3
+          - if cooking.cooking_category.classification_name == t('Craftsmanship')
+            - break
+            / 匠の技（食品サンプル展）を分けるための仮処置：一覧には非表示にする
           = link_to cooking
             .card
               .ribbon.ribbon-top-right
-                span= cooking.cooking_category.classification_name
+                - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
+                  span = t('sweets')
+                  / 文字数がリボン内に収まらないので短縮
+                - else
+                  span = cooking.cooking_category.classification_name
               .card-top
                 .card-title
                   = cooking.cooking_name
@@ -19,8 +26,8 @@
     .row
       - @all_cooking_categories.each do | cooking_category |
         .col-xs-6.col-sm-4.col-md-3
-          .card.img-thumbnail
-            .card-top
-              = link_to cooking_category
+          = link_to cooking_category
+            .card.img-thumbnail
+              .card-top
                 .card-title
                   = cooking_category.classification_name

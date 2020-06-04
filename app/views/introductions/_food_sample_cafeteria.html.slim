@@ -1,0 +1,22 @@
+.sub-container
+  .intorduction-circle3
+    .top-left-item
+      = image_tag 'top/sample1.jpg'
+  .intorduction-circle3
+    .bottom-left-item
+      = image_tag 'top/sample2.jpg'
+  .intorduction-circle3
+    .top-right-item
+      = image_tag 'top/sample3.jpg'
+  .intorduction-circle3
+    .bottom-right-item
+      = image_tag 'top/sample4.jpg'
+  h2
+    = t('food-sample-cafeteria')
+  .introduction-barnner
+    .center-content
+      = link_to cooking_categories_url, class: "restaurant"
+        span.restaurant-first
+        span.left-door
+        span.right-door
+        span.restaurant-last

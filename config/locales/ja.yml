@@ -12,7 +12,8 @@ ja:
   id: ID
   cookings: 料理
   cooking_name: 料理名
-  cooking_list: 料理一覧
+  cooking_list: 食品サンプル料理一覧
+  cooking_list2: 食品サンプルを見る
   cooking_update: 料理更新
   created_at: 作成日
   updated_at: 更新日
@@ -70,8 +71,34 @@ ja:
   question: 質問
   self_introduction: 自己紹介
   text: テキストテキスト
-  catch_copy1: 食品サンプル総合サイト
-  # catch_copy2:
+  catch_copy1: 目で見る美味しさ
+  catch_copy2: 食品サンプル
+
+  food-sample-cafeteria: 食品サンプル食堂
+  food-sample-exhibition: 食品サンプル展
+  food-sample-products: 豊富な規格部品
+
+  Japanese-food: 和食
+  Western-food: 洋食
+  Chinese-food: 中華
+  Ethnic: エスニック
+  Asian-food: アジア料理
+  cafe_and_sweets: カフェ・スイーツ
+  sweets: スイーツ
+  confection: 菓子
+  Craftsmanship: 匠の技
+
+  view-more: もっと見る
+  konw-more: もっと知る
+
+  How-to-make: 食品サンプルの作り方
+  Food-sample-experience: 食品サンプル体験
+  Upcoming-events: 開催中のイベント
+  Past-events: 過去のイベント
+
+  online-shop: オンラインショップ
+  Frequently-Asked-Questions: よくある質問
+  Contact-Us: お問い合わせ
 
   msg:
     delete_confirm: データを削除しますか？
@@ -83,6 +110,19 @@ ja:
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     cooking-using: "を使った料理"
     product-used: "に使われている規格部品"
+
+    know-food-sample: 食品サンプルを知る
+    procedure-1: シリコン型作成
+    procedure-1-text: シリコンで食材の表面を写し取ります。
+    procedure-2: 型採り
+    procedure-2-text: 色付けした樹脂を流し込みオーブンで加熱します。
+    procedure-3: パーツ原型完成
+    procedure-3-text: パーツをシリコン方から取り外し余分な部分を取り除きます。
+    procedure-4: 着色
+    procedure-4-text: エアブラシや筆を使って着色します。
+    procedure-5: 盛り付け
+    procedure-5-text: パーツ同士を組み合わせて接着します。
+    complete: 完成！
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」

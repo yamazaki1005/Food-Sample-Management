@@ -97,17 +97,14 @@ strong, .bold {
 
 // 未実装用
 .unimplement * {
-  // text-decoration: line-through;
   cursor: not-allowed;
 }
 
 .unimplement:hover {
-  // text-decoration: line-through;
   cursor: not-allowed;
 }
 /* body ================================ */
 body {
-  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   color: #333;
   font-size: 12px;
   font-size: .75rem;
@@ -115,6 +112,10 @@ body {
   line-height: 17px;
   letter-spacing: 2px;
   background: url("top/texture_2.jpg") left top repeat;
+}
+
+.wf-roundedmplus1c {
+  font-family: "M PLUS Rounded 1c";
 }
 
 .container {
@@ -214,7 +215,6 @@ header {
   font-size: 21px;
   line-height: 1.7;
   letter-spacing: 0.05em;
-  font-family: 'arial unicode ms','ヒラギノ角ゴ Pro W3','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
 }
 
 .header-menus {
@@ -377,7 +377,66 @@ header {
 }
 
 .m-header-lang__item a.is-current:before {
-    background-color: $sub-color;
+  background-color: $sub-color;
+}
+
+// scroll_nav===========================
+#scroll-nav {
+  display: none;
+}
+
+.sc-header-logo img{
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.sc-nav-text {
+  display: none;
+  color: white;
+}
+
+.sc-catch-copy {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.sc-nav-icon {
+  color: #EEC27B;
+  font-size: 20px;
+}
+
+.sc-ul {
+  float: right;
+  display: table;
+  table-layout: fixed;
+  margin: auto 0;
+  border-collapse: collapse;
+  max-width: 1800px;
+}
+
+.sc-ul li:hover .nav-icon {
+  display: none;
+}
+
+.sc-ul li:hover .sc-nav-text {
+  display: block;
+}
+
+.sc-nav-btn {
+  font-size: 23px;
+  padding: 3px 0px 6px 0px;
+  color: #EEC27B;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.functions li.sc-nav-btn:hover {
+  background-color: $sub-color;
+}
+
+.sc-navbar {
+  padding: 0 10% 0 5%;
 }
 /* show ================================ */
 .img_custom img{
@@ -392,12 +451,7 @@ header {
 
 footer .footer_inner .footer_nav01 .inner {
   padding-top: 28px;
-  width: 990px;
   margin: 0 auto
-}
-
-footer .footer_inner .footer_nav01 .inner ul.list {
-  width: 990px
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list:before,
@@ -412,6 +466,8 @@ footer .footer_inner .footer_nav01 .inner ul.list:after {
 
 footer .footer_inner .footer_nav01 .inner ul.list>li {
   display: inline-table;
+  text-align: initial;
+  width: 15%;
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list>li h2 a {
@@ -435,6 +491,14 @@ footer .footer_inner .footer_nav01 .inner ul.list>li ul.sub_list li a {
   margin-bottom: 7px;
   font-size: .6875rem;
   letter-spacing: 0
+}
+
+.sub_list {
+  padding-left: 13px;
+}
+
+.list {
+  text-align: center;
 }
 
 footer .footer_inner .footer_nav01 .inner ul.lowBlock li {
@@ -465,7 +529,6 @@ footer .footer_inner .footer_nav01 a:hover {
 }
 
 footer .footer_inner .footer_nav02 {
-  width: 990px;
   margin: 0 auto;
   background: url("top/list_line.gif") left top repeat-x;
   padding-top: 10px
@@ -473,7 +536,8 @@ footer .footer_inner .footer_nav02 {
 
 footer .footer_inner .footer_nav02>.inner {
   background: url("top/list_line.gif") left bottom repeat-x;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  padding-left: 5%;
 }
 
 footer .footer_inner .footer_nav02>.inner:before,
@@ -487,7 +551,6 @@ footer .footer_inner .footer_nav02>.inner:after {
 }
 
 footer .footer_inner .footer_nav02>.inner .nav_block {
-  width: 710px;
   float: left
 }
 
@@ -594,9 +657,8 @@ footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .line_btn {
 }
 
 footer .footer_inner .footer_bottom {
-  width: 990px;
   margin: 0 auto;
-  padding: 23px 0 19px 0
+  padding: 23px 0 19px 5%;
 }
 
 footer .footer_inner .footer_bottom:before,
@@ -634,10 +696,18 @@ footer .footer_inner .footer_bottom .logo {
 }
 
 // switch=============================
+.container-custom {
+  position: relative;
+}
+
+#food-sample-list {
+  height: 120px;
+}
+
 .cooking-product-switch {
   position: absolute;
   left: 0;
-  top: 116px;
+  top: 0;
   display: flex;
   z-index: 12;
 }
@@ -713,8 +783,8 @@ footer .footer_inner .footer_bottom .logo {
 .ribbon span {
   position: absolute;
   display: block;
-  width: 225px;
-  padding: 5px 0;
+  width: 260px;
+  padding: 6px 0;
   background-color: $ribbon-color;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   color: #fff;
@@ -737,11 +807,11 @@ footer .footer_inner .footer_bottom .logo {
 
 .ribbon-top-right::before {
   top: 0;
-  left: 25px;
+  left: 39px;
 }
 
 .ribbon-top-right::after {
-  bottom: 25px;
+  bottom: 39px;
   right: 0;
 }
 

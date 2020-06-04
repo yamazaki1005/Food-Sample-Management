@@ -24,7 +24,9 @@
 }
 
 nav.top_global_nav {
-  margin: 35px 20px;
+  margin: 70px 0px;
+  height: 17vh;
+  min-height: 280px;
 }
 
 #slideshow {
@@ -40,7 +42,7 @@ nav.top_global_nav {
 #slideshow img {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 8;
   width: 100%;
   opacity: 0.0;
@@ -50,7 +52,7 @@ nav.top_global_nav {
   opacity: 1;
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 10;
 }
 
@@ -81,7 +83,7 @@ nav.top_global_nav {
   position: relative;
   float: left;
   background-color: #fff;
-  margin-left:-48px;
+  margin-left: -48px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   border-radius: 125px;
   transition: all 400ms linear;
@@ -98,7 +100,6 @@ nav.top_global_nav {
 }
 
 .ca-icon {
-  font-family: 'WebSymbolsRegular', cursive;
   font-size: 40px;
   line-height: 60px;
   position: absolute;
@@ -215,8 +216,8 @@ nav.top_global_nav {
 
 @-moz-keyframes moveFromBottom {
   from {
-  -moz-transform: translateY(200%) scale(0.5);
-  opacity: 0;
+    -moz-transform: translateY(200%) scale(0.5);
+    opacity: 0;
   }
   to {
     -moz-transform: translateY(0%) scale(1);
@@ -402,4 +403,50 @@ nav.top_global_nav {
   transition: all 0.4s ease-out 1.0s;
   opacity: 1;
   z-index: 2;
+}
+// ===========================================
+#page-top{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  background: $sub-color;
+  border-radius: 50%;
+}
+
+#page-top a{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+
+.page-top-icon {
+  font-weight: 900;
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -11px;
+  bottom: 0;
+  right: -3px;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+// cooking_link============================
+.home-title {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-link {
+  display: block;
+  margin: auto;
+  width: 50%;
 }

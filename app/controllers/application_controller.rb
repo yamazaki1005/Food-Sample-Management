@@ -24,4 +24,12 @@ class ApplicationController < ActionController::Base
     @q = current_user.products.ransack(params[:q]) if session[:user_id]
     @products = @q.result(products_number: true) if session[:user_id]
   end
+
+  def set_cookings
+    @cookings = Cooking.all
+  end
+
+  def set_products
+    @products = Product.all
+  end
 end

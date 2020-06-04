@@ -12,13 +12,12 @@ h1.mx-auto.title.image_area
       =image_tag "menu_chumon_family.png"
   span.ss-icon.left_arrow &lt;
   span.ss-icon.right_arrow &gt;
-.bg-light
-  .container
-    .row.form-inline
-      - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
-        .col-xs-6.col-sm-4.col-md-3
+.container
+  .row.form-inline
+    - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
+      .col-xs-6.col-sm-4.col-md-3
+        = link_to cooking_category
           div class="card img-thumbnail gallery-item#{m}"
             .card-top
-              = link_to cooking_category
-                .card-title
-                  = cooking_category.classification_name
+              .card-title
+                = cooking_category.classification_name

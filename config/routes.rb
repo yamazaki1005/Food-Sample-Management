@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   end
 
   resources :cooking_categories
+  resources :introductions
 end
