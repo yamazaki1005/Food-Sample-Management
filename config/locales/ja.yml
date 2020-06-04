@@ -83,8 +83,8 @@ ja:
   Chinese-food: 中華
   Ethnic: エスニック
   Asian-food: アジア料理
-  sweets: カフェ・スイーツ
-  sweets2: スイーツ
+  cafe_and_sweets: カフェ・スイーツ
+  sweets: スイーツ
   confection: 菓子
   Craftsmanship: 匠の技
 
@@ -121,7 +121,7 @@ ja:
     procedure-4: 着色
     procedure-4-text: エアブラシや筆を使って着色します。
     procedure-5: 盛り付け
-    procedure-6-text: パーツ同士を組み合わせて接着します。
+    procedure-5-text: パーツ同士を組み合わせて接着します。
     complete: 完成！
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
