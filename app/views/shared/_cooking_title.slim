@@ -4,7 +4,7 @@
       = link_to t('cookings'), cookings_path, class: "is-current"
     li.switch-item
       = link_to t('products'), products_path
-  h1.mx-auto.title
+  h1.mx-auto.title.pt-4
     = t('cooking_list2')
   - if user_signed_in?
     .nav.justify-content-end.btn-area

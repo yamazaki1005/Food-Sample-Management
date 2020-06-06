@@ -123,6 +123,8 @@ ja:
     procedure-5: 盛り付け
     procedure-5-text: パーツ同士を組み合わせて接着します。
     complete: 完成！
+
+    find_from_category: カテゴリーから探す
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」

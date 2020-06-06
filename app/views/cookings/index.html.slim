@@ -22,12 +22,4 @@
               .img-body-co
                 .card-img-top
                   = image_tag cooking.image if cooking.image.attached?
-  .container
-    .row
-      - @all_cooking_categories.each do | cooking_category |
-        .col-xs-6.col-sm-4.col-md-3
-          = link_to cooking_category
-            .card.img-thumbnail
-              .card-top
-                .card-title
-                  = cooking_category.classification_name
+  = render partial: 'cooking_categories/cooking_category_list'

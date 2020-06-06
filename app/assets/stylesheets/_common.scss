@@ -501,20 +501,6 @@ footer .footer_inner .footer_nav01 .inner ul.list>li ul.sub_list li a {
   text-align: center;
 }
 
-footer .footer_inner .footer_nav01 .inner ul.lowBlock li {
-  width: inherit !important
-}
-
-footer .footer_inner .footer_nav01 .inner ul.lowBlock li h2 a {
-  width: inherit !important;
-  margin-bottom: 10px !important
-}
-
-footer .footer_inner .footer_nav01 .inner ul.lowBlock li h2 a span {
-  font-size: 11px;
-  font-size: .6875rem
-}
-
 footer .footer_inner .footer_nav01 a:hover {
   font-weight: bolder;
   color: white;
@@ -528,132 +514,17 @@ footer .footer_inner .footer_nav01 a:hover {
   transition: all .3s ease
 }
 
-footer .footer_inner .footer_nav02 {
-  margin: 0 auto;
-  background: url("top/list_line.gif") left top repeat-x;
-  padding-top: 10px
+hr {
+  border-top: 1px solid $sub-color;
+  border-bottom: 1px solid $accent-color;
 }
 
-footer .footer_inner .footer_nav02>.inner {
-  background: url("top/list_line.gif") left bottom repeat-x;
-  padding-bottom: 10px;
-  padding-left: 5%;
-}
-
-footer .footer_inner .footer_nav02>.inner:before,
-footer .footer_inner .footer_nav02>.inner:after {
-  content: "";
-  display: table
-}
-
-footer .footer_inner .footer_nav02>.inner:after {
-  clear: both
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block {
-  float: left
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul:before,
-footer .footer_inner .footer_nav02>.inner .nav_block ul:after {
-  content: "";
-  display: table
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul:after {
-  clear: both
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul li {
-  float: left;
-  padding-top: 3px
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul li a {
-  font-size: 12px;
-  font-size: .75rem;
-  letter-spacing: 0;
-  padding-left: 18px;
-  padding-right: 18px;
-  background: url("top/list_separate.png") left top repeat-y
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul li a:hover {
-  font-weight: bolder;
-  color: white;
-  -webkit-text-shadow: 0 0 10px #fff;
-  -webkit-transition: all .3s ease;
-  -moz-text-shadow: 0 0 10px #fff;
-  -moz-transition: all .3s ease;
-  -ms-text-shadow: 0 0 10px #fff;
-  -ms-transition: all .3s ease;
-  text-shadow: 0 0 10px #fff;
-  transition: all .3s ease
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul li:nth-child(1) a {
-  padding-left: 0;
-  padding-right: 5px;
-  background: 0
-}
-
-footer .footer_inner .footer_nav02>.inner .nav_block ul li:nth-child(2) a {
-  background: 0
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block {
-  margin-right: -15px;
-  float: right
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner {
-  margin-left: -25px
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner:before,
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner:after {
-  content: "";
-  display: table
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner:after {
-  clear: both
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns {
-  float: right;
-  width: 210px
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns ul {
-  display: table;
-  width: 210px !important
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns ul li {
-  display: table-cell;
-  margin-right: 16px;
-  width: 105px !important;
-  overflow: hidden !important;
-  vertical-align: top
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns ul li.fb {
-  margin-right: 0
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns ul li.fb iframe {
-  width: 105px !important
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .sns_btns ul li.tw iframe[data-twttr-rendered] {
-  width: 105px !important
-}
-
-footer .footer_inner .footer_nav02>.inner .share_btns_block .inner .line_btn {
-  width: 80px;
-  float: left;
-  margin-right: 24px
+hr:after {
+  content: '';
+  display: block;
+  margin-top: 2px;
+  border-top: 1px solid $sub-color;
+  border-bottom: 1px solid $accent-color;
 }
 
 footer .footer_inner .footer_bottom {
@@ -701,7 +572,7 @@ footer .footer_inner .footer_bottom .logo {
 }
 
 #food-sample-list {
-  height: 120px;
+  height: 150px;
 }
 
 .cooking-product-switch {

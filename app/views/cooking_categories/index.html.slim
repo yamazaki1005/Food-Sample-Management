@@ -13,6 +13,8 @@ h1.mx-auto.title.image_area
   span.ss-icon.left_arrow &lt;
   span.ss-icon.right_arrow &gt;
 .container
+  h4.text-center
+    = t('msg.find_from_category')
   .row.form-inline
     - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
       .col-xs-6.col-sm-4.col-md-3

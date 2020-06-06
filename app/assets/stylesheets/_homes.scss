@@ -406,11 +406,11 @@ nav.top_global_nav {
 }
 // ===========================================
 #page-top{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: fixed;
-  right: 1%;
-  bottom: 1%;
+  right: 3%;
+  bottom: 4%;
   background: $sub-color;
   border-radius: 50%;
 }
@@ -418,8 +418,8 @@ nav.top_global_nav {
 #page-top a{
   position: relative;
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   text-decoration: none;
 }
 
