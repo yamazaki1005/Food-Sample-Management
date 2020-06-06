@@ -8,7 +8,7 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
     ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
         / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
-        - if current_user.id ==! 1
+        - if current_user.id >= 2
           li.nav-item
             = link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn link-btn'
         li.my-navbtn
