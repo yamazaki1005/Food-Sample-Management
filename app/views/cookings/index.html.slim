@@ -5,9 +5,6 @@
     .row.form-inline
       - @cookings.each do | cooking |
         .col-xs-6.col-sm-3
-          - if cooking.cooking_category.classification_name == t('Craftsmanship')
-            - break
-            / 匠の技（食品サンプル展）を分けるための仮処置：一覧には非表示にする
           = link_to cooking
             .card
               .ribbon.ribbon-top-right

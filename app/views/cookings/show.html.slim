@@ -13,7 +13,6 @@
             button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
               = t('delete')
       h5
-        / =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
         = @cooking.cooking_name
         = t('msg.product-used')
       .textBlock.row.form-inline
@@ -23,5 +22,10 @@
               .card-title
                 = cooking_product_relation.product.product_name
               = image_tag cooking_product_relation.product.image, class: "pro-img"
+      =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
+      div 登録した人
+      = @cooking.user_id
+      - if @cooking.user_id == 1
+        | ゲストユーザー
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay

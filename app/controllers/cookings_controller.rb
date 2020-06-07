@@ -37,6 +37,7 @@ class CookingsController < ApplicationController
   def create
     begin
       @cooking = Cooking.new(cooking_params)
+      @cooking.user_id = current_user.id
       @cooking.save!
       redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
     rescue ActiveRecord::RecordInvalid => e

@@ -5,8 +5,10 @@
     li.switch-item
       = link_to t('products'), products_path
   h1.mx-auto.title.pt-4
-    = t('cooking_list2')
-  - if user_signed_in?
+    = t('view_food_samples')
     .nav.justify-content-end.btn-area
-      = link_to new_cooking_path, class: 'nav-link btn margin-custom link-btn'
-        = t('new_registration', v: t('cookings'))
+      = link_to cookings_path, class: 'nav-link btn margin-custom link-btn'
+        = t('cooking_list')
+      - if user_signed_in?
+          = link_to new_cooking_path, class: 'nav-link btn margin-custom link-btn'
+            = t('new_registration', v: t('cookings'))
