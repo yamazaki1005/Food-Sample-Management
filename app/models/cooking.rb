@@ -3,8 +3,8 @@
 # Cooking
 class Cooking < ApplicationRecord
 
-  has_many :cooking_product_relations, dependent: :destroy, autosave: false
-  has_many :products, through: :cooking_product_relations, autosave: false
+  has_many :cooking_product_relations, dependent: :destroy
+  has_many :products, through: :cooking_product_relations
   has_one_attached :image
   belongs_to :product_category
   belongs_to :cooking_category

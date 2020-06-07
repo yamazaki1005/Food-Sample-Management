@@ -27,5 +27,8 @@
       = @cooking.user_id
       - if @cooking.user_id == 1
         | ゲストユーザー
+      h5
+        |メモ
+      = @cooking.remark
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay
