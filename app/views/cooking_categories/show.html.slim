@@ -1,8 +1,8 @@
 .background-co
-  = render partial: 'shared/cooking_title'
-  .cooking-category-title
-    = @cooking_category.classification_name
   .container
+    = render partial: 'shared/cooking_title'
+    .cooking-category-title
+      = @cooking_category.classification_name
     .row.form-inline
       - @cooking_category.cookings.each do | cooking |
         .col-sm-3

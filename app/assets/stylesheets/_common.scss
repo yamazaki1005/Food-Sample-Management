@@ -569,9 +569,6 @@ footer .footer_inner .footer_bottom .logo {
 // switch=============================
 .container-custom {
   position: relative;
-}
-
-#food-sample-list {
   height: 150px;
 }
 
@@ -581,6 +578,10 @@ footer .footer_inner .footer_bottom .logo {
   top: 0;
   display: flex;
   z-index: 12;
+}
+
+.container-custom ul {
+  padding-left: 0;
 }
 
 .switch-item a.is-current {

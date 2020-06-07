@@ -1,6 +1,7 @@
 .background-co
   = render partial: 'modal'
-  = render partial: 'shared/cooking_title'
+  .container
+    = render partial: 'shared/cooking_title'
   .itemWrap.row
     .imgArea.col-sm-6
       = image_tag @cooking.image if @cooking.image.attached?

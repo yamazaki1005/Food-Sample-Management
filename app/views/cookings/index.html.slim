@@ -1,7 +1,7 @@
 .background-co
   = render partial: 'modal'
-  = render partial: 'shared/cooking_title'
   .container
+    = render partial: 'shared/cooking_title'
     .row.form-inline
       - @cookings.each do | cooking |
         .col-xs-6.col-sm-3

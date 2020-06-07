@@ -6,7 +6,7 @@
       = link_to t('products'), products_path
   h1.mx-auto.title.pt-4
     = t('view_food_samples')
-    .nav.justify-content-end.btn-area
+    .nav.justify-content-end
       = link_to cookings_path, class: 'nav-link btn margin-custom link-btn'
         = t('cooking_list')
       - if user_signed_in?
