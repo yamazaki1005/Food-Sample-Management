@@ -18,14 +18,20 @@
               = f.select :cooking_category_id, @cooking_categories
 
           .form-group.row
-            = f.label t('classification'), class: 'col-sm-2 col-form-label'
+            = f.label t('product_classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field
               = f.select :product_category_id, @product_categories
+              | 複数選択
 
           .form-group.row
             = f.label t('product_list'), class: 'col-sm-2 col-form-label'
-            .col-sm-10
-              = f.collection_check_boxes :product_ids, @products, :id, :product_name, include_hidden: false
+            #form_check_box_list.col-sm-10
+              = f.collection_check_boxes(:product_ids, @foodstuff, :id, :product_name, include_hidden: false) do |b|
+                = b.label { b.check_box + b.text }
+              #span
+               | 未選択
+              #span2
+               | ajax表示用
 
           .form-group.row
             = f.label t('remark'), class: 'col-sm-2 col-form-label'

@@ -22,7 +22,8 @@ ja:
   product_name: 品名
   product_number: 品番
   page: ページ
-  classification: 分類
+  classification: 料理分類
+  product_classification: 食材分類
   discontinued: 廃番
   lot: Lot
   count: 個

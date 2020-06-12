@@ -24,10 +24,10 @@
                 = cooking_product_relation.product.product_name
               = image_tag cooking_product_relation.product.image, class: "pro-img"
       =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
-      div 登録した人
+      div 登録した人のID
       = @cooking.user_id
-      - if @cooking.user_id == 1
-        | ゲストユーザー
+      - if @cooking.user_id == current_user.id && @cooking.user_id > 1
+        | あなたの投稿！
       h5
         |メモ
       = @cooking.remark
