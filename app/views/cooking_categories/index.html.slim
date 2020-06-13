@@ -1,25 +1,30 @@
 h1.mx-auto.title.image_area
   = t('cooking_category_list')
-  #carousel
-    figure#spinner
-      - @all_cooking_categories.each.with_index(1) do | cooking_category, n |
-        div class="sample_img sample_img#{n}"
-          = link_to cooking_category
-            .spinner_img=image_tag "/assets/#{cooking_category.classification_reference_name}.jpg"
+  .carousel
+    figure
+      img[src="/assets/Japanese.jpg"]
+      img[src="/assets/Western.jpg"]
+      img[src="/assets/Chinese.jpg"]
+      img[src="/assets/Ethnic.jpg"]
+      img[src="/assets/Asia.jpg"]
+      img[src="/assets/Sweets.jpg"]
+      img[src="/assets/Confectionery.jpg"]
+      img[src="/assets/Craftsmanship.jpg"]
+    nav
+      button.nav.prev.arrow-btn
+        | ←
+      button.nav.next.arrow-btn
+        | →
     .image_area_left
       =image_tag "Clerk.png"
     .image_area_right
       =image_tag "menu_chumon_family.png"
-  span.ss-icon.left_arrow &lt;
-  span.ss-icon.right_arrow &gt;
-.container
-  h4.text-center
-    = t('msg.find_from_category')
-  .row.form-inline
-    - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
-      .col-xs-6.col-sm-4.col-md-3
-        = link_to cooking_category
-          div class="card img-thumbnail gallery-item#{m}"
-            .card-top
-              .card-title
-                = cooking_category.classification_name
+  .container
+    .row.form-inline
+      - @all_cooking_categories.each.with_index(1) do | cooking_category, m |
+        .col-xs-6.col-sm-4.col-md-3
+          = link_to cooking_category
+            div class="card img-thumbnail gallery-item#{m}"
+              .card-top
+                .card-title
+                  = cooking_category.classification_name
