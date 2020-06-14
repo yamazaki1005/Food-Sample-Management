@@ -88,7 +88,7 @@ $apothem: 482.842712474619px;
         box-sizing: border-box;
         padding: $item-separation / 2;
         margin: 30px 0px;
-        opacity: 0.95;
+        background-color: $slider-color;
         border: 1mm ridge $sub-opacity-color;
         border-radius: 10px;
         cursor: pointer;
