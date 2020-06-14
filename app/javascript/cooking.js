@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function () {
         }
         if ($(`#form_check_box_list${product_classification}`).find("label").length == 0) { /* チェックボックスの生成。初めて表示するときだけ適用する */
           for (let i = 0; i < data.length; i++) {
-            let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}">${data[i]["product_name"]}</input></label>`;
+            let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}" class="checkbox-input"><span class="checkbox-parts">${data[i]["product_name"]}</span></input></label>`;
             $(`#form_check_box_list${product_classification}`).append(addedElem); /* 該当のIDをもつdivに定義したhtmlを適用させる */
           }
         }

@@ -30,6 +30,7 @@ ja:
   weight: Kg
   price: 価格
   remark: 備考
+  memo: メモ
   image: 画像
   reset: リセットする
 
@@ -40,7 +41,9 @@ ja:
   guest_login: ゲストログイン
   account_edit: アカウント編集
   products: 食材
-  product_list: 食材一覧
+  product_list: 食材選択
+  selected_foodstuff: 選択した食材
+  multiple_selection: "   複数選択"
   search_product_number: 品番を入力...
   admin_users: ユーザー管理(管理者権限)
 
