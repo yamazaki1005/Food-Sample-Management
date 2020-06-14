@@ -18,8 +18,6 @@ class CookingsController < ApplicationController
   def new
     @cooking = Cooking.new
     @cooking.cooking_product_relations.build
-
-    @foodstuff = Product.where(product_category_id: "1")
   end
 
   def foodstuff

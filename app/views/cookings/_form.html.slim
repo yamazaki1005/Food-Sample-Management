@@ -25,13 +25,10 @@
 
           .form-group.row
             = f.label t('product_list'), class: 'col-sm-2 col-form-label'
-            #form_check_box_list.col-sm-10
-              = f.collection_check_boxes(:product_ids, @foodstuff, :id, :product_name, include_hidden: false) do |b|
-                = b.label { b.check_box + b.text }
-              #span
-               | 未選択
-              #span2
-               | ajax表示用
+            - @product_categories.length.times do |s|
+              div id="form_check_box_list#{s+1}"
+            #span
+              | 未選択
 
           .form-group.row
             = f.label t('remark'), class: 'col-sm-2 col-form-label'

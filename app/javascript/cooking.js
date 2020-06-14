@@ -19,19 +19,8 @@ $(document).on('turbolinks:load', function () {
     modal.find("form").attr("action", url);
   });
 
-
-
   $('select[name="cooking[product_category_id]"]').change(function () {
-    var product_classification = $(this).val();
-    console.log("食材分類のIDは" + product_classification + "です。");
-
-     function buildHTML(data) {
-       var html = `
-                  h1 ${data[0]}
-                `;
-       return html;
-     }
-
+    var product_classification = $(this).val(); /*食材分類ID取得*/
     $.ajax({
       type: 'GET',
       url: '/cookings/foodstuff',
@@ -41,10 +30,19 @@ $(document).on('turbolinks:load', function () {
       dataType: 'json'
     })
       .done(function (data) {
-        console.log("成功♪");
-        console.log(data);
-        var html = buildHTML(data);
-        $("#form_check_box_list").append(html);
+        for ( let t = 1; t < 29; t++) {
+          if ( product_classification == t ) {
+            $(`#form_check_box_list${product_classification}`).show(); /* ドロップダウンリストから選択された食材IDに該当するチェックボックスを表示 */
+          } else {
+            $(`#form_check_box_list${t}`).hide(); /* それ以外は非表示*/
+          }
+        }
+        if ($(`#form_check_box_list${product_classification}`).find("label").length == 0) { /* チェックボックスの生成。初めて表示するときだけ適用する */
+          for (let i = 0; i < data.length; i++) {
+            let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}">${data[i]["product_name"]}</input></label>`;
+            $(`#form_check_box_list${product_classification}`).append(addedElem); /* 該当のIDをもつdivに定義したhtmlを適用させる */
+          }
+        }
       })
       .fail(function () {
         console.log("失敗");
@@ -53,9 +51,11 @@ $(document).on('turbolinks:load', function () {
 
   // チェックを入れた内容を一覧表示
   let product_check = [];
-  $('input:checkbox[name="cooking[product_ids][]"]').click(function () {
-    var arr_text = $(this).parent('label').text();
-    if (product_check.some(num => num === arr_text ) ) {
+  $(document).on("change", '[name="cooking[product_ids][]"]', function () {
+    var arr_text = $(this).parent("label").text();
+    console.log(arr_text);
+
+    if (product_check.some((num) => num === arr_text)) {
       // 配列から削除
       var idx = $.inArray(arr_text, product_check);
       if (idx >= 0) {
@@ -68,7 +68,6 @@ $(document).on('turbolinks:load', function () {
         return self.indexOf(x) === i;
       });
     }
-    $('#span').text(product_check);
-    console.log(product_check);
+    $("#span").text(product_check);
   });
 });
