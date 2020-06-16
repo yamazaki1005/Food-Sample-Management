@@ -20,7 +20,7 @@
           .form-group.row
             = f.label t('product_classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field.select-box01
-              = f.select :product_category_id, @product_categories
+              = f.select :product_category_id, @product_categories, {}, {id: 'select_pro_category'}
               = t('multiple_selection')
 
           .form-group.row
