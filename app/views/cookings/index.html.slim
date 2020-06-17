@@ -3,7 +3,7 @@
   .container
     = render partial: 'shared/cooking_title'
     .row.form-inline
-      - @cookings.each do | cooking |
+      - @cookings_page.each do | cooking |
         .col-xs-6.col-sm-3
           = link_to cooking
             .card
@@ -19,4 +19,5 @@
               .img-body-co
                 .card-img-top
                   = image_tag cooking.image if cooking.image.attached?
+    = paginate @cookings_page
   = render partial: 'cooking_categories/cooking_category_list'

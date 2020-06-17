@@ -137,7 +137,6 @@ ja:
     #     update: を更新しました。
     # (controller)
     # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
-
   activerecord:
     models:
       product: 食材
@@ -164,3 +163,10 @@ ja:
         create: 登録する
         submit: 保存する
         update: 更新する
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."
