@@ -1,0 +1,11 @@
+body
+  - if user_signed_in?
+    = link_to "新規投稿", ''
+    = link_to "ログアウト", '', method: :delete
+    = link_to "マイページ", user_path(current_user.id)
+  - else
+    = link_to "新規登録", ''
+    = link_to "ログイン", ''
+  = link_to "ツイート一覧", ''
+  = link_to "ユーザー一覧", ''
+  = yield

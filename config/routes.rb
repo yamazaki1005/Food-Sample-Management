@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'homes#index'
 
   devise_for :users
+  resources :users
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -15,6 +16,9 @@ Rails.application.routes.draw do
 
   resources :cookings do
     resource :cooking_product_relations, only: [:create, :destroy]
+    collection do
+      get 'foodstuff'
+    end
   end
 
   resources :cooking_categories

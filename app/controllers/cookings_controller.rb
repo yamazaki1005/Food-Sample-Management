@@ -20,6 +20,11 @@ class CookingsController < ApplicationController
     @cooking.cooking_product_relations.build
   end
 
+  def foodstuff
+    # bp
+    @foodstuff = Product.where(product_category_id: params[:product_category_id])
+  end
+
   def edit; end
 
   def update
@@ -37,6 +42,7 @@ class CookingsController < ApplicationController
   def create
     begin
       @cooking = Cooking.new(cooking_params)
+      @cooking.user_id = current_user.id
       @cooking.save!
       redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
     rescue ActiveRecord::RecordInvalid => e
@@ -55,7 +61,7 @@ class CookingsController < ApplicationController
   private
 
   def cooking_params
-    params.require(:cooking).permit(:cooking_name, :cooking_category_id, :product_category_id, :user_id, :image, :created_at, :updated_at, { product_ids: [] })
+    params.require(:cooking).permit(:cooking_name, :cooking_category_id, :product_category_id, :user_id, :image, :created_at, :updated_at, { product_ids: [] }, :remark)
   end
 
   def set_cooking

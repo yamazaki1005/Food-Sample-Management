@@ -31,6 +31,6 @@ class Product < ApplicationRecord
   belongs_to :product_category
   belongs_to :cooking_category
   has_one_attached :image
-  has_many :cooking_product_relations, dependent: :destroy, autosave: false
-  has_many :cookings, through: :cooking_product_relations, autosave: false
+  has_many :cooking_product_relations, dependent: :destroy
+  has_many :cookings, through: :cooking_product_relations
 end

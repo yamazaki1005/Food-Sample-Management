@@ -1,7 +1,7 @@
+= render 'shared/flash_massages'
 .container-login
   h1
     = t('devise.sessions.new.sign_in')
-  = render 'shared/flash_massages'
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .form-group
       = f.label :email
@@ -15,5 +15,5 @@
         = f.label :remember_me, class: 'form-check-label' do
           = resource.class.human_attribute_name('remember_me')
     .form-group
-      = f.submit t('devise.sessions.new.sign_in'), class: 'btn btn-bloc btn-block'
+      = f.submit t('devise.sessions.new.sign_in'), class: 'btn btn-bloc btn-block nav-link btn link-btn'
   = render 'devise/shared/links'

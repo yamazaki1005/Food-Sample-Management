@@ -3,17 +3,18 @@ ja:
   Japanese: 日本語
   last_order_days: 前回発注日
   new_registration: "%{v}新規登録"
+  top_page: トップページ
 
   edit: 編集
   update: 更新
-  product_edit: 規格部品編集
+  product_edit: 食材編集
   detail: 登録内容
 
   id: ID
   cookings: 料理
   cooking_name: 料理名
   cooking_list: 食品サンプル料理一覧
-  cooking_list2: 食品サンプルを見る
+  view_food_samples: 食品サンプルを見る
   cooking_update: 料理更新
   created_at: 作成日
   updated_at: 更新日
@@ -21,30 +22,34 @@ ja:
   product_name: 品名
   product_number: 品番
   page: ページ
-  classification: 分類
+  classification: 料理分類
+  product_classification: 食材分類
   discontinued: 廃番
   lot: Lot
   count: 個
   weight: Kg
   price: 価格
   remark: 備考
+  memo: メモ
   image: 画像
   reset: リセットする
 
   login: ログイン
   logout: ログアウト
   sign_up: 新規登録
-  registered_product: 規格品登録
+  registered_product: 食材登録
   guest_login: ゲストログイン
   account_edit: アカウント編集
-  products: 規格品
-  product_list: 規格品一覧
+  products: 食材
+  product_list: 食材選択
+  selected_foodstuff: 選択した食材
+  multiple_selection: "   複数選択"
   search_product_number: 品番を入力...
   admin_users: ユーザー管理(管理者権限)
 
   create: 登録
   profile: プロフィール
-  product: "規格品「%{name}」"
+  product: "食材「%{name}」"
   cooking: "料理「%{name}」"
 
   cooking_category_list: 料理メニュー
@@ -76,7 +81,7 @@ ja:
 
   food-sample-cafeteria: 食品サンプル食堂
   food-sample-exhibition: 食品サンプル展
-  food-sample-products: 豊富な規格部品
+  food-sample-products: 豊富な食材部品
 
   Japanese-food: 和食
   Western-food: 洋食
@@ -109,7 +114,7 @@ ja:
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     cooking-using: "を使った料理"
-    product-used: "に使われている規格部品"
+    product-used: "に使われている食材部品"
 
     know-food-sample: 食品サンプルを知る
     procedure-1: シリコン型作成
@@ -123,6 +128,8 @@ ja:
     procedure-5: 盛り付け
     procedure-5-text: パーツ同士を組み合わせて接着します。
     complete: 完成！
+
+    find_from_category: カテゴリーから探す
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」
@@ -133,7 +140,7 @@ ja:
 
   activerecord:
     models:
-      product: 規格品
+      product: 食材
     attributes:
       cooking:
         cooking_name: 料理名

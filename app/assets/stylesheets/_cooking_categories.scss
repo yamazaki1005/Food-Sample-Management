@@ -1,6 +1,6 @@
 // 3Dスライド=========================================
 .image_area{
-  background: #ffdc7238;
+  // background: #ffdc7238;
   position: relative;
 }
 
@@ -17,103 +17,6 @@
   right: 0px;
   bottom: -5px;
   float: right;
-}
-
-div#carousel {
-  perspective: 3000px;
-  padding: 1% 0 0 0;
-  height: 75vh;
-}
-
-figure#spinner {
-  transform-style: preserve-3d;
-  height: 0%;
-  transform-origin: 54% 40% -500px;
-  transition: 1s;
-}
-
-figure#spinner .sample_img {
-  width: 55%;
-  height: 80%;
-  max-width: 500px;
-  position: absolute;
-  left: 36%;
-  transform-origin: 54% 50% -500px;
-  outline:1px solid transparent;
-}
-
-.spinner_img img {
-  height: 70vh;
-  border-radius:3%;
-  border: 3px solid #343a40;
-  max-height: 530px;
-  margin: 0 70px;
-}
-
-.spinner_img img:hover {
-  transition: 0.3s ease-out;
-  transform: scale(1.05, 1.05);
-  border: 8px $sub-color solid;
-}
-
-.sample_img1 { transform:rotateY(0deg); }
-.sample_img2 { transform: rotateY(-45deg); }
-.sample_img3 { transform: rotateY(-90deg); }
-.sample_img4 { transform: rotateY(-135deg); }
-.sample_img5 { transform: rotateY(-180deg); }
-.sample_img6 { transform: rotateY(-225deg); }
-.sample_img7 { transform: rotateY(-270deg); }
-.sample_img8 { transform: rotateY(-315deg); }
-
-div#carousel ~ span {
-  margin: 4%;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  transition: 0.6s color;
-  position: relative;
-  margin-top: -6rem;
-  border-bottom: none;
-  line-height: 0;
-}
-
-div#carousel ~ span:hover {
-  color: #888;
-  cursor: pointer;
-}
-
-.left_arrow,
-.right_arrow {
-  float: left;
-  color: #444;
-  position: absolute;
-  top: -400px;
-  padding: 1em 2em;
-  cursor: pointer;
-  background: #CCC;
-  border-radius: 5px;
-  border-top: 1px solid #FFF;
-  box-shadow: 0 5px 0 #999;
-  transition: box-shadow 0.1s, top 0.1s;
-}
-
-.left_arrow {
-  float: left;
-}
-
-.right_arrow {
-  float: right;
-}
-
-.left_arrow:hover,
-.right_arrow:hover {
-  color: #000;
-}
-
-.left_arrow:active,
-.right_arrow:active {
-  top: -396px;
-  box-shadow: 0 1px 0 #999;
 }
 
 .addcolor {
@@ -153,4 +56,95 @@ div#carousel ~ span:hover {
 .itemWrap .textArea {
   max-width: 40vw;
   margin-top: 17px;
+}
+// 3Dスライド（修正後）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+$n: 8;
+$item-width: 405px;
+$item-separation: 60px;
+$viewer-distance: 1500px;
+$theta: 2 * 3.141592653589793 / $n;
+$apothem: 482.842712474619px;
+
+.carousel {
+  padding: 20px;
+  perspective: $viewer-distance;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > * {
+    flex: 0 0 auto;
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    width: $item-width;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: 50% 50% (-$apothem);
+      img {
+        width: 100%;
+        box-sizing: border-box;
+        padding: $item-separation / 2;
+        margin: 30px 0px;
+        background-color: $slider-color;
+        border: 1mm ridge $sub-opacity-color;
+        border-radius: 10px;
+        cursor: pointer;
+        &:not(:first-of-type) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 50% 50% (-$apothem);
+        }
+        @for $i from 2 through $n {
+          &:nth-child(#{$i}) {
+            transform: rotateY(#{($i - 1) * $theta}rad);
+          }
+        }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+    button {
+      flex: 0 0 auto;
+      cursor: pointer;
+      letter-spacing: 1px;
+      z-index: 1;
+      display: inline-block;
+      padding: 0.3em 1.1em;
+      text-decoration: none;
+      color: #FFF;
+      background: $sub-color;
+      border-radius: 5px;
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+      font-weight: bold;
+      border: solid 2px #ffc07e;
+    }
+    .prev {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+    }
+    .next {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+    }
+    button:active {
+      transform: translateY(4px);
+      border-bottom: none;
+    }
+    button:focus {
+      outline: 5px auto $accent-color;
+    }
+  }
+}
+
+.carousel figure img:hover {
+  box-shadow: inset 0px 0px 20px 10px $sub-color;
 }
