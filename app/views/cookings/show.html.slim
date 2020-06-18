@@ -9,7 +9,8 @@
       h2
         = @cooking.cooking_name
         p
-          - if user_signed_in?
+          / - if user_signed_in?
+          - if current_user.admin?
             = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
             button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
               = t('delete')
