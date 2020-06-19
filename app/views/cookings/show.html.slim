@@ -8,12 +8,6 @@
     .textArea.col-sm-6
       h2
         = @cooking.cooking_name
-        p
-          / - if user_signed_in?
-          - if current_user.admin?
-            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
-            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
-              = t('delete')
       h5
         = @cooking.cooking_name
         = t('msg.product-used')
@@ -24,13 +18,34 @@
               .card-title
                 = cooking_product_relation.product.product_name
               = image_tag cooking_product_relation.product.image, class: "pro-img"
-      =link_to t('product_list'), products_path, class: 'nav-link btn margin-custom link-btn'
-      div 登録した人のID
-      = @cooking.user_id
-      - if @cooking.user_id == current_user.id && @cooking.user_id > 1
-        | あなたの投稿！
-      h5
-        |メモ
-      = @cooking.remark
+      =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom link-btn'
+
+      - if @cooking.remark.present?
+        .box28
+          .box-title
+            = t('memo')
+          p
+            = @cooking.remark
+
+      - if user_signed_in? && @cooking.user_id == current_user.id
+        .edit-delet-area.float-right
+          .horizontal-border
+            = t('my_sample')
+          .float-right.p-2
+            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
+            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+              = t('delete')
+      - elsif user_signed_in? && @cooking.user_id == 1
+        .edit-delet-area.float-right
+          .horizontal-border
+            = t('guest_sample')
+          .float-right.p-2
+            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
+            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+              = t('delete')
+      - else
+        .edit-delet-area.float-right
+          .horizontal-border
+            = t('everyones_sample')
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay

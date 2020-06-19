@@ -1,9 +1,9 @@
 #food-sample-list.container-custom
   ul.cooking-product-switch
     li.switch-item
-      = link_to t('cookings'), cookings_path, class: "is-current"
+      = link_to t('cookings'), cookings_path
     li.switch-item
-      = link_to t('products'), products_path
+      = link_to t('products'), products_path, class: "is-current"
   h1.mx-auto.title.pt-4
     = t('view_food_samples')
     .nav.justify-content-end

@@ -77,4 +77,9 @@ $(document).on('turbolinks:load', function () {
     }
     $("#span").text(productCheck);
   });
+
+  $(document).on("click", "#reset", function () {
+    productCheck = [];
+    $("#span").text(productCheck);
+  });
 });

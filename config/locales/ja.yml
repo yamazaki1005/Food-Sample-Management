@@ -34,6 +34,10 @@ ja:
   image: 画像
   reset: リセットする
 
+  everyones_sample: みんなのサンプル
+  my_sample: わたしのサンプル
+  guest_sample: ゲストのサンプル
+
   login: ログイン
   logout: ログアウト
   sign_up: 新規登録
@@ -42,10 +46,12 @@ ja:
   account_edit: アカウント編集
   products: 食材
   product_list: 食材選択
+  view_product: 食材を見る
   selected_foodstuff: 選択した食材
   multiple_selection: "   複数選択"
   search_product_number: 品番を入力...
   admin_users: ユーザー管理(管理者権限)
+  admin_edit_delete_authority: 管理者権限（編集・削除）
 
   create: 登録
   profile: プロフィール
@@ -114,7 +120,7 @@ ja:
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     cooking-using: "を使った料理"
-    product-used: "に使われている食材部品"
+    product-used: "に使われている食材"
 
     know-food-sample: 食品サンプルを知る
     procedure-1: シリコン型作成

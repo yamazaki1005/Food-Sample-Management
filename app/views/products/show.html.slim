@@ -8,13 +8,7 @@
   .textArea.col-sm-6
     h2
       = @product.product_name
-      p
-        - if user_signed_in?
-          = link_to t('edit'), edit_product_path, class: 'btn mr-3 link-btn'
-          button.btn.delete-btn data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
-            = t('delete')
     h3
-      =link_to t('cooking_list'), cookings_path, class: 'nav-link btn margin-custom link-btn'
       = @product.product_name
       = t('msg.cooking-using')
     .textBlock.row.form-inline
@@ -24,4 +18,13 @@
             .card-title
               = cooking_product_relation.cooking.cooking_name
             = image_tag cooking_product_relation.cooking.image, class: "pro-img"
+    =link_to t('view_food_samples'), cookings_path, class: 'nav-link btn margin-custom link-btn'
+    - if current_user.admin?
+        .edit-delet-area.float-right
+          .horizontal-border
+            = t('admin_edit_delete_authority')
+          .float-right.p-2
+            = link_to t('edit'), edit_product_path, class: 'btn mr-3 link-btn'
+            button.btn.delete-btn data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
+              = t('delete')
 #graydisplay
