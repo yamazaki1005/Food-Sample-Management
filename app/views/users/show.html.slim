@@ -1,0 +1,20 @@
+.background-co
+  = render partial: 'cookings/modal'
+  .container
+    = render partial: 'shared/my_post_title'
+    .row.form-inline
+      - @mycookings.each do | cooking |
+        .col-xs-6.col-sm-3
+          = link_to cooking
+            .card
+              .ribbon.ribbon-top-right
+                - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
+                  span = t('sweets')
+                - else
+                  span = cooking.cooking_category.classification_name
+              .card-top
+                .card-title
+                  = cooking.cooking_name
+              .img-body-co
+                .card-img-top
+                  = image_tag cooking.image if cooking.image.attached?

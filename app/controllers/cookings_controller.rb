@@ -7,6 +7,7 @@ class CookingsController < ApplicationController
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
+  before_action :set_user, only: %i[show]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
   PER = 12

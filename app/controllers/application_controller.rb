@@ -32,4 +32,10 @@ class ApplicationController < ActionController::Base
   def set_products
     @products = Product.all
   end
+
+  def set_user
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
+  end
 end

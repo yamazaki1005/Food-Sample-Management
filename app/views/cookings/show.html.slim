@@ -17,8 +17,8 @@
             .card= link_to cooking_product_relation.product
               .card-title
                 = cooking_product_relation.product.product_name
-              = image_tag cooking_product_relation.product.image, class: "pro-img"
-      =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom link-btn'
+              = image_tag cooking_product_relation.product.image, class: "pro-img" if cooking_product_relation.product.image.attached?
+      / =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom link-btn'
 
       - if @cooking.remark.present?
         .box28
@@ -27,15 +27,7 @@
           p
             = @cooking.remark
 
-      - if user_signed_in? && @cooking.user_id == current_user.id
-        .edit-delet-area.float-right
-          .horizontal-border
-            = t('my_sample')
-          .float-right.p-2
-            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
-            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
-              = t('delete')
-      - elsif user_signed_in? && @cooking.user_id == 1
+      - if user_signed_in? && @cooking.user_id == 1
         .edit-delet-area.float-right
           .horizontal-border
             = t('guest_sample')
@@ -43,9 +35,21 @@
             = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
             button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
               = t('delete')
-      - else
+      - elsif user_signed_in? && @cooking.user_id == current_user.id
         .edit-delet-area.float-right
           .horizontal-border
-            = t('everyones_sample')
+            = t('my_sample')
+          .float-right.p-2
+            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
+            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+              = t('delete')
+      - else
+        - if user_signed_in?
+          .navbar-brand.float-right
+            = link_to user_path(@user.id)
+              .foodsample-logo
+                .fukidashi
+                  = t('your_posts_list')
+                = image_tag 'common/logo3.png'
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay
