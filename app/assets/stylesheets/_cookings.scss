@@ -54,8 +54,10 @@
   font-weight: bold;
   padding: 20px 0 16px;
   margin: 0 5px;
-  color: $accent-color;
   font-size: 20px;
+  a {
+    color: $accent-color;
+  }
 }
 
 .horizontal-border:before {
@@ -78,6 +80,15 @@
   left: 0;
   border-radius: 3px;
   background: $accent-color;
+}
+
+.horizontal-border:hover:before {
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}
+
+.horizontal-border:hover:after {
+  top: 3px;
 }
 
 .edit-delet-area {

@@ -30,7 +30,8 @@
       - if user_signed_in? && @cooking.user_id == 1
         .edit-delet-area.float-right
           .horizontal-border
-            = t('guest_sample')
+            = link_to user_path(1)
+              = t('guest_sample')
           .float-right.p-2
             = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn'
             button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
@@ -49,7 +50,10 @@
             = link_to user_path(@user.id)
               .foodsample-logo
                 .fukidashi
-                  = t('your_posts_list')
+                  - if current_user.id == 1
+                    = t('guest_posts_list')
+                  - else
+                    = t('your_posts_list')
                 = image_tag 'common/logo3.png'
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay

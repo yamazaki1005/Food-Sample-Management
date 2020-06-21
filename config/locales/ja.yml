@@ -38,6 +38,7 @@ ja:
   my_sample: わたしのサンプル
   guest_sample: ゲストのサンプル
   your_posts_list: あなたの投稿一覧
+  guest_posts_list: ゲストの投稿一覧
 
   login: ログイン
   logout: ログアウト
@@ -112,6 +113,8 @@ ja:
   Frequently-Asked-Questions: よくある質問
   Contact-Us: お問い合わせ
 
+  check: チェック！
+
   msg:
     delete_confirm: データを削除しますか？
     create: "%{name}を登録しました。"
@@ -137,6 +140,7 @@ ja:
     complete: 完成！
 
     find_from_category: カテゴリーから探す
+    no_post: 投稿がありません
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」

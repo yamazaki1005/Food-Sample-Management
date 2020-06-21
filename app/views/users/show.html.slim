@@ -1,7 +1,15 @@
 .background-co
   = render partial: 'cookings/modal'
   .container
-    = render partial: 'shared/my_post_title'
+    - if params[:id] == "1"
+      = render partial: 'shared/guest_post_title'
+    - else
+      = render partial: 'shared/my_post_title'
+      - if @mycookings.blank?
+        .balloon3-top.pull-right
+          = t('check')
+        h1.text-center
+          = t('msg.no_post')
     .row.form-inline
       - @mycookings.each do | cooking |
         .col-xs-6.col-sm-3
