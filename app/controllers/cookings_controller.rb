@@ -7,7 +7,7 @@ class CookingsController < ApplicationController
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
-  before_action :set_user, only: %i[show]
+  before_action :set_user, only: %i[index show]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
   PER = 12
@@ -47,7 +47,7 @@ class CookingsController < ApplicationController
       @cooking = Cooking.new(cooking_params)
       @cooking.user_id = current_user.id
       @cooking.save!
-      redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
+      redirect_to user_path(@cooking.user_id), notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
     rescue ActiveRecord::RecordInvalid => e
       pp e.record.errors
       render :new

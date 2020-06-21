@@ -6,7 +6,7 @@
       = link_to t('products'), products_path
   h1.mx-auto.title.pt-4
     = t('view_product')
-  - if current_user.admin?
+  - if user_signed_in? && current_user.admin?
     .nav.justify-content-end
       = link_to new_product_path, class: 'nav-link btn margin-custom link-btn'
         = t('new_registration', v: t('products'))

@@ -19,7 +19,7 @@
               = cooking_product_relation.cooking.cooking_name
             = image_tag cooking_product_relation.cooking.image, class: "pro-img" if cooking_product_relation.cooking.image.attached?
     =link_to t('view_food_samples'), cookings_path, class: 'nav-link btn margin-custom link-btn'
-    - if current_user.admin?
+    - if user_signed_in? && current_user.admin?
         .edit-delet-area.float-right
           .horizontal-border
             = t('admin_edit_delete_authority')
