@@ -34,9 +34,9 @@ ja:
   image: 画像
   reset: リセットする
 
-  everyones_sample: みんなのサンプル
-  my_sample: わたしのサンプル
-  guest_sample: ゲストのサンプル
+  everyones_sample: みんなの投稿
+  my_sample: わたしの投稿
+  guest_sample: ゲストの投稿
   your_posts_list: あなたの投稿一覧
   guest_posts_list: ゲストの投稿一覧
 
@@ -139,7 +139,7 @@ ja:
     procedure-5-text: パーツ同士を組み合わせて接着します。
     complete: 完成！
 
-    find_from_category: カテゴリーから探す
+    find_from_category: カテゴリーから見る
     no_post: 投稿がありません
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:

@@ -8,16 +8,17 @@
     .textArea.col-sm-6
       h2
         = @cooking.cooking_name
-      h5
-        = @cooking.cooking_name
-        = t('msg.product-used')
-      .textBlock.row.form-inline
-        - @cooking.cooking_product_relations.each do |cooking_product_relation|
-          .col-sm-3
-            .card= link_to cooking_product_relation.product
-              .card-title
-                = cooking_product_relation.product.product_name
-              = image_tag cooking_product_relation.product.image, class: "pro-img" if cooking_product_relation.product.image.attached?
+      - if @cooking.cooking_product_relations.present?
+        h5
+          = @cooking.cooking_name
+          = t('msg.product-used')
+        .textBlock.row.form-inline
+          - @cooking.cooking_product_relations.each do |cooking_product_relation|
+            .col-sm-3
+              .card= link_to cooking_product_relation.product
+                .card-title
+                  = cooking_product_relation.product.product_name
+                = image_tag cooking_product_relation.product.image, class: "pro-img" if cooking_product_relation.product.image.attached?
       / =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom link-btn'
 
       - if @cooking.remark.present?
