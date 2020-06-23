@@ -20,7 +20,7 @@
           .form-group.row
             = f.label t('product_classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field.select-box01
-              = f.select :product_category_id, @product_categories, {}, {id: 'select_pro_category'}
+              = f.select :product_category_id, @filter_product_categories, {}, {id: 'select_pro_category'}
               = t('multiple_selection')
 
           .form-group.row
@@ -42,7 +42,7 @@
               .field.image
                 #img_field
                   - if @cooking.image.present?
-                    = image_tag(@cooking.image)
+                    = image_tag (@cooking.image), class: 'preview'
                   - else
                     i.fas.fa-image.add2
                     i.fas.fa-file-upload.add

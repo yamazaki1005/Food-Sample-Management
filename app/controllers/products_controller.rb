@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   before_action :set_cookings, only: %i[new create edit update]
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_filter_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token

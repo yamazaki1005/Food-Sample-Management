@@ -5,6 +5,7 @@ class CookingsController < ApplicationController
   before_action :set_cooking, only: %i[show edit update destroy]
   before_action :set_products, only: %i[new create edit update]
   before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_filter_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
   before_action :set_user, only: %i[index show]
@@ -24,7 +25,6 @@ class CookingsController < ApplicationController
   end
 
   def foodstuff
-    # bp
     @foodstuff = Product.where(product_category_id: params[:product_category_id])
   end
 
