@@ -67,8 +67,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_user
-    if user_signed_in?
-      @user = User.find(current_user.id)
-    end
+    @user = current_user
+  end
+
+  def correct_user
+    @correct_user = User.find(params[:id])
+    redirect_to(root_url) unless @correct_user == current_user
   end
 end

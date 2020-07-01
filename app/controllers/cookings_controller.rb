@@ -9,6 +9,7 @@ class CookingsController < ApplicationController
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
   before_action :set_user, only: %i[index show]
+  before_action :authenticate_user!, only: %i[new create edit update]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
   PER = 12
@@ -28,7 +29,9 @@ class CookingsController < ApplicationController
     @foodstuff = Product.where(product_category_id: params[:product_category_id])
   end
 
-  def edit; end
+  def edit
+    redirect_to(root_url) unless @cooking.user == current_user
+  end
 
   def update
     begin

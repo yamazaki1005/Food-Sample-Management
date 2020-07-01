@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
   before_action :set_product_categories, only: %i[new create edit update]
   before_action :set_filter_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
+  before_action :authenticate_user!, only: %i[new create edit update]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
   PAGE_LIMIT_NUMBER = 30
@@ -23,7 +24,9 @@ class ProductsController < ApplicationController
     @product.cooking_product_relations.build
   end
 
-  def edit; end
+  def edit
+    redirect_to(root_url) unless @product.user_id == current_user
+  end
 
   def create
     @product = Product.new(product_params)
