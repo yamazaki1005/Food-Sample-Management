@@ -28,9 +28,9 @@
               = f.select :cooking_category_id, @cooking_categories
 
           .form-group.row
-            = f.label t('classification'), class: 'col-sm-2 col-form-label'
+            = f.label t('product_classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field
-              = f.select :product_category_id, @product_categories
+              = f.select :product_category_id, @filter_product_categories
 
           .form-group.row
             = f.label t('discontinued'), class: 'col-sm-2 col-form-label'
@@ -65,7 +65,7 @@
                 = form_with(model: @product, local: true) do |form|
                   #img_field
                     - if @product.image.present?
-                      = image_tag(@product.image)
+                      = image_tag (@product.image), class: 'preview'
                     - else
                       i.fas.fa-image.add2
                       i.fas.fa-file-upload.add

@@ -20,29 +20,29 @@
           .form-group.row
             = f.label t('product_classification'), class: 'col-sm-2 col-form-label'
             .col-sm-10.img_field.select-box01
-              = f.select :product_category_id, @product_categories, {}, {id: 'select_pro_category'}
+              = f.select :product_category_id, @filter_product_categories, {}, {id: 'select_pro_category'}
               = t('multiple_selection')
 
           .form-group.row
-            = f.label t('product_list'), class: 'col-form-label col-sm-2'
+            = f.label t('product_list'), class: 'col-form-label col-sm-2 pt-0'
             - @product_categories.length.times do |s|
               div id="form_check_box_list#{s+1}" class="col-sm-10"
 
           .form-group.row
-            = f.label t('selected_foodstuff'), class: 'col-form-label col-sm-2 form-border'
+            = f.label t('selected_foodstuff'), class: 'col-form-label col-sm-2 form-border pt-0'
             #span.col-sm-10.form-border
 
           .form-group.row
-            = f.label t('memo'), class: 'col-sm-2 col-form-label'
+            = f.label t('memo'), class: 'col-sm-2 col-form-label pt-0'
             .col-sm-10
               = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: t('memo')
 
-            = f.label t('image'), class: 'col-sm-2 col-form-label'
+            = f.label t('image'), class: 'col-sm-2 col-form-label pt-0'
             .col-sm-10
               .field.image
                 #img_field
                   - if @cooking.image.present?
-                    = image_tag(@cooking.image)
+                    = image_tag (@cooking.image), class: 'preview'
                   - else
                     i.fas.fa-image.add2
                     i.fas.fa-file-upload.add

@@ -4,14 +4,19 @@
 class CookingsController < ApplicationController
   before_action :set_cooking, only: %i[show edit update destroy]
   before_action :set_products, only: %i[new create edit update]
-  before_action :set_cookings, only: %i[index]
   before_action :set_product_categories, only: %i[new create edit update]
+  before_action :set_filter_product_categories, only: %i[new create edit update]
   before_action :set_cooking_categories, only: %i[new create edit update]
   before_action :set_all_cooking_categories, only: %i[index show]
+  before_action :set_user, only: %i[index show]
+  before_action :authenticate_user!, only: %i[new create edit update]
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
+  PER = 12
 
-  def index; end
+  def index
+    @cookings_page = Cooking.page(params[:page]).per(PER)
+  end
 
   def show; end
 
@@ -21,11 +26,12 @@ class CookingsController < ApplicationController
   end
 
   def foodstuff
-    # bp
     @foodstuff = Product.where(product_category_id: params[:product_category_id])
   end
 
-  def edit; end
+  def edit
+    redirect_to(root_url) unless @cooking.user == current_user
+  end
 
   def update
     begin
@@ -44,7 +50,7 @@ class CookingsController < ApplicationController
       @cooking = Cooking.new(cooking_params)
       @cooking.user_id = current_user.id
       @cooking.save!
-      redirect_to cookings_url, notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
+      redirect_to user_path(@cooking.user_id), notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
     rescue ActiveRecord::RecordInvalid => e
       pp e.record.errors
       render :new

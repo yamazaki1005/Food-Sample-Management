@@ -1,0 +1,33 @@
+.background-co
+  = render partial: 'cookings/modal'
+  .container
+    - if params[:id] == "1"
+      = render partial: 'shared/guest_post_title'
+    - else
+      = render partial: 'shared/my_post_title'
+      - if @mycookings.blank?
+        .balloon3-top.pull-right
+          = t('check')
+        h1.text-center
+          = t('msg.no_post')
+    .row.form-inline
+      - @mycookings.each do | cooking |
+        .col-xs-6.col-sm-3
+          = link_to cooking
+            .card
+              .ribbon.ribbon-top-right
+                - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
+                  span = t('sweets')
+                - else
+                  span = cooking.cooking_category.classification_name
+              .card-top
+                .card-title
+                  = cooking.cooking_name
+              .img-body-co
+                .card-img-top
+                  = image_tag cooking.image if cooking.image.attached?
+              .float-right.p-2
+                = link_to t('edit'), "/cookings/#{cooking.id}/edit", class: 'btn mr-3 link-btn'
+                button.btn.delete-btn data-target="#MyCookingModal" data-name=cooking.cooking_name data-id=cooking.id data-toggle="modal" type="button" data-url="/cookings/#{cooking.id}"
+                  = t('delete')
+    = paginate @mycookings

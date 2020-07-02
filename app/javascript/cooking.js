@@ -19,8 +19,8 @@ $(document).on('turbolinks:load', function () {
     modal.find("form").attr("action", url);
   });
 
-  $("#select_pro_category").change(function () {
-    let productClassification = $(this).val(); /*食材分類ID取得*/
+  function change_checkbox(_this) {
+    let productClassification = $(_this).val(); /*食材分類ID取得*/
     $.ajax({
       type: "GET",
       url: "/cookings/foodstuff",
@@ -55,6 +55,14 @@ $(document).on('turbolinks:load', function () {
       .fail(function () {
         console.log("失敗");
       });
+  };
+
+  // チェックボックス生成イベントをページ読み込み時とドロップダウン変更時に発火させる
+  $(document).ready(function () {
+    change_checkbox("#select_pro_category");
+  });
+  $("#select_pro_category").change(function () {
+    change_checkbox(this);
   });
 
   // チェックを入れた内容を一覧表示
@@ -76,5 +84,14 @@ $(document).on('turbolinks:load', function () {
       });
     }
     $("#span").text(productCheck);
+  });
+
+  $(document).on("click", "#reset", function () {
+    productCheck = [];
+    $("#span").text(productCheck);
+  });
+
+  $(document).on("click", "#edit-btn", function () {
+    console.log("編集ボタンが押されました。");
   });
 });

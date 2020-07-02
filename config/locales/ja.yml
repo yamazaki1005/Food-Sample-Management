@@ -34,6 +34,12 @@ ja:
   image: 画像
   reset: リセットする
 
+  everyones_sample: みんなの投稿
+  my_sample: わたしの投稿
+  guest_sample: ゲストの投稿
+  your_posts_list: あなたの投稿一覧
+  guest_posts_list: ゲストの投稿一覧
+
   login: ログイン
   logout: ログアウト
   sign_up: 新規登録
@@ -42,10 +48,12 @@ ja:
   account_edit: アカウント編集
   products: 食材
   product_list: 食材選択
+  view_product: 食材を見る
   selected_foodstuff: 選択した食材
   multiple_selection: "   複数選択"
   search_product_number: 品番を入力...
   admin_users: ユーザー管理(管理者権限)
+  admin_edit_delete_authority: 管理者権限（編集・削除）
 
   create: 登録
   profile: プロフィール
@@ -105,6 +113,8 @@ ja:
   Frequently-Asked-Questions: よくある質問
   Contact-Us: お問い合わせ
 
+  check: チェック！
+
   msg:
     delete_confirm: データを削除しますか？
     create: "%{name}を登録しました。"
@@ -114,7 +124,7 @@ ja:
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     cooking-using: "を使った料理"
-    product-used: "に使われている食材部品"
+    product-used: "に使われている食材"
 
     know-food-sample: 食品サンプルを知る
     procedure-1: シリコン型作成
@@ -129,7 +139,8 @@ ja:
     procedure-5-text: パーツ同士を組み合わせて接着します。
     complete: 完成！
 
-    find_from_category: カテゴリーから探す
+    find_from_category: カテゴリーから見る
+    no_post: 投稿がありません
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」
@@ -137,7 +148,6 @@ ja:
     #     update: を更新しました。
     # (controller)
     # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
-
   activerecord:
     models:
       product: 食材
@@ -164,3 +174,10 @@ ja:
         create: 登録する
         submit: 保存する
         update: 更新する
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."

@@ -247,9 +247,9 @@
 
 // 画像をスクロールでフェードイン=======================
 .fadein {
-	opacity: 0.1;
-	transform: translate(0, 50px);
-	transition: all 500ms;
+	opacity: 0;
+	transform: translate(0, -150px);
+	transition: all  1500ms;
 }
 
 .fadein.scrollin {

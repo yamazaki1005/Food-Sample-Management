@@ -444,6 +444,9 @@ header {
   max-height: 1300px;
 }
 
+.justify-content-end {
+  margin: 10px;
+}
 //footer==========================================
 .my-footer {
   background-color: $footer-color;
@@ -691,4 +694,12 @@ footer .footer_inner .footer_bottom .logo {
   left: -25px;
   top: 30px;
   transform: rotate(45deg);
+}
+// form==============================
+.preview {
+  max-height: 300px;
+  max-width: 485px;
+  width: auto;
+  display: block;
+  margin: auto;
 }

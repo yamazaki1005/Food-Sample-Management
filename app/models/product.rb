@@ -7,27 +7,27 @@ class Product < ApplicationRecord
             length: { maximum: 30 },
             uniqueness: { case_sensitive: true }
 
-  validates :product_number,
-            presence: true,
-            numericality: { only_integer: true },
-            length: { maximum: 10 },
-            uniqueness: { case_sensitive: true }
+  # validates :product_number,
+  #           presence: true,
+  #           numericality: { only_integer: true },
+  #           length: { maximum: 10 },
+  #           uniqueness: { case_sensitive: true }
 
-  validates :page,
-            numericality: { only_integer: true }
+  # validates :page,
+  #           numericality: { only_integer: true }
 
-  validates :discontinued,
-            inclusion: { in: [true, false] }
+  # validates :discontinued,
+  #           inclusion: { in: [true, false] }
 
-  validates :unit_name,
-            presence: true
+  # validates :unit_name,
+  #           presence: true
 
-  validates :price,
-            numericality: { only_integer: true }
+  # validates :price,
+  #           numericality: { only_integer: true }
 
-  validates :unit,
-            presence: true,
-            numericality: { only_integer: true }
+  # validates :unit,
+  #           presence: true,
+  #           numericality: { only_integer: true }
   belongs_to :product_category
   belongs_to :cooking_category
   has_one_attached :image
