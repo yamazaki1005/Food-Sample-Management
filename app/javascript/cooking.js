@@ -45,10 +45,15 @@ $(document).on('turbolinks:load', function () {
         ) {
           /* チェックボックスの生成。初めて表示するときだけ適用する */
           for (let i = 0; i < data.length; i++) {
-            let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}" class="checkbox-input"><span class="checkbox-parts">${data[i]["product_name"]}</span></input></label>`;
-            $(`#form_check_box_list${productClassification}`).append(
-              addedElem
-            ); /* 該当のIDをもつdivに定義したhtmlを適用させる */
+            var prop = $(`#cooking_product_ids_${data[i]["id"]}`).prop('checked');
+            // 参照用チェックボックスの値に応じてチェックボックスを生成する
+            if (prop) {
+              let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}" class="checkbox-input" checked="checked"><span class="checkbox-parts">${data[i]["product_name"]}</span></input></label>`;
+              $(`#form_check_box_list${productClassification}`).append(addedElem);
+            } else {
+              let addedElem = `<label for="cooking_product_ids_${data[i]["id"]}"><input type="checkbox" value="${data[i]["id"]}" name="cooking[product_ids][]" id="cooking_product_ids_${data[i]["id"]}" class="checkbox-input"><span class="checkbox-parts">${data[i]["product_name"]}</span></input></label>`;
+              $(`#form_check_box_list${productClassification}`).append(addedElem);
+            }
           }
         }
       })
@@ -60,6 +65,11 @@ $(document).on('turbolinks:load', function () {
   // チェックボックス生成イベントをページ読み込み時とドロップダウン変更時に発火させる
   $(document).ready(function () {
     change_checkbox("#select_pro_category");
+    // 読み込み時チェックの入っているものを配列に追加する
+    $('input[name="cooking[product_ids][]"]:checked').each(function () {
+      productCheck.push($(this).next("label").text());
+    });
+    $("#span").text(productCheck);
   });
   $("#select_pro_category").change(function () {
     change_checkbox(this);
@@ -91,7 +101,4 @@ $(document).on('turbolinks:load', function () {
     $("#span").text(productCheck);
   });
 
-  $(document).on("click", "#edit-btn", function () {
-    console.log("編集ボタンが押されました。");
-  });
 });

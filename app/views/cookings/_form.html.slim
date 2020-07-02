@@ -50,4 +50,8 @@
 
               = f.submit nil , class: 'btn btn-block btn_custom link-btn'
               .text-right
-                input[type="reset" value= t('reset') class='btn delete-btn btn_custom' id="reset"]
+                input[type="reset" value= t('reset') class='btn delete-btn btn_custom btn-square-pop mt-3' id="reset"]
+
+#landmark
+  = form_with model: cooking, local: true do |f|
+    = f.collection_check_boxes :product_ids, @products, :id, :product_name
