@@ -3,5 +3,7 @@
     h1.mx-auto.title
       = t('cooking_update')
     .nav.justify-content-end
-      = link_to t('cooking_list'), cookings_path, class: 'nav-link btn margin-custom link-btn'
+      = link_to cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn'
+        = t('cooking_list')
+        i.far.fa-images
     = render partial: 'form', locals: { cooking: @cooking }

@@ -4,9 +4,10 @@
       = link_to t('cookings'), cookings_path, class: "is-current"
     li.switch-item
       = link_to t('products'), products_path
+      .check-food.far.fa-check-circle
   h1.mx-auto.title.pt-4
     = t('view_product')
   - if user_signed_in? && current_user.admin?
     .nav.justify-content-end
-      = link_to new_product_path, class: 'nav-link btn margin-custom link-btn'
+      = link_to new_product_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
         = t('new_registration', v: t('products'))

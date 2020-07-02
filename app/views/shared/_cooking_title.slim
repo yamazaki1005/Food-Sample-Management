@@ -2,18 +2,20 @@
   ul.cooking-product-switch
     li.switch-item
       = link_to t('cookings'), cookings_path
+      .check-cooking.far.fa-check-circle
     li.switch-item
       = link_to t('products'), products_path, class: "is-current"
   h1.mx-auto.title.pt-4
     = t('view_food_samples')
     .nav.justify-content-end
-      = link_to cookings_path, class: 'nav-link btn margin-custom link-btn'
+      = link_to cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
         = t('cooking_list')
+        i.far.fa-images
       - if user_signed_in?
-        = link_to user_path(@user.id), class: 'nav-link btn margin-custom link-btn'
+        = link_to user_path(@user.id), class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
           - if current_user.id == 1
             = t('guest_posts_list')
           - else
             = t('your_posts_list')
-        = link_to new_cooking_path, class: 'nav-link btn margin-custom link-btn'
+        = link_to new_cooking_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3 post-btn'
           = t('new_registration', v: t('cookings'))

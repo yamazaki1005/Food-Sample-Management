@@ -32,11 +32,6 @@
             = f.label t('selected_foodstuff'), class: 'col-form-label col-sm-2 form-border pt-0'
             #span.col-sm-10.form-border
 
-          .form-group.row
-            = f.label t('memo'), class: 'col-sm-2 col-form-label pt-0'
-            .col-sm-10
-              = f.text_area :remark, rows: 3, class: 'form-control', id: 'remark', placeholder: t('memo')
-
             = f.label t('image'), class: 'col-sm-2 col-form-label pt-0'
             .col-sm-10
               .field.image
@@ -48,7 +43,7 @@
                     i.fas.fa-file-upload.add
               = f.file_field :image, class: 'control', id: "file", style: "display:none;"
 
-              = f.submit nil , class: 'btn btn-block btn_custom link-btn'
+              = f.submit nil , class: 'btn btn-block btn_custom btn-square-pop link-btn'
               .text-right
                 input[type="reset" value= t('reset') class='btn delete-btn btn_custom btn-square-pop mt-3' id="reset"]
 

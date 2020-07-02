@@ -28,21 +28,10 @@
   clear: both;
 }
 
-@media screen and (max-width:480px){
-  .img-body-co {
-    overflow: hidden;
-    text-align: center;
-    height: 55vh;
-    width: 100%;
-    object-fit: contain;
-    position: relative;
-  }
-}
-
 .img-body-co {
   overflow: hidden;
   text-align: center;
-  height: 41vh;
+  height: 300px;
   width: 100%;
   object-fit: contain;
   position: relative;
@@ -183,7 +172,7 @@
 
 .card-title {
   font-weight: initial;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .textBlock .card:hover .card-title{
@@ -218,6 +207,7 @@
   height: 95%;
   z-index: 20;
 }
+
 // form=============================
 .form-border {
   border-bottom: solid 2px orange;
