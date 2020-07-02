@@ -120,36 +120,7 @@
   width: 120px;
 }
 
-.fukidashi {
-  display: none;
-  width: 130px;
-  position: absolute;
-  top: 0;
-  padding: 5px;
-  border-radius: 5px;
-  background: $sub-color;
-  color: #fff;
-  font-size: 0.8rem;
-}
 
-.fukidashi:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  bottom: -19px;
-  margin-left: 10px;
-  border: solid transparent;
-  border-color: rgba(51, 204, 153, 0);
-  border-top-color: $sub-color;
-  border-width: 10px;
-  pointer-events: none;
-  content: " ";
-}
-
-.foodsample-logo:hover .fukidashi {
-  display: block;
-}
 //  ================================
 .background-co .form-inline {
   padding: 10px 0 30px 0;

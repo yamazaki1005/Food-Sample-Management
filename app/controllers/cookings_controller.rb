@@ -30,7 +30,9 @@ class CookingsController < ApplicationController
   end
 
   def edit
-    redirect_to(root_url) unless @cooking.user == current_user
+    if @cooking.user != current_user && !current_user.admin?
+      redirect_to root_path, notice: t('msg.Do_not_edit_posts')
+    end
   end
 
   def update
