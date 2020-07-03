@@ -8,7 +8,7 @@
     .textArea.col-sm-6
       h2
         = @cooking.cooking_name
-      = link_to "/cooking_categories/#{@cooking.cooking_category.id}"
+      = link_to cooking_category_path(@cooking.cooking_category.id)
         .ribbon3
           h5 = @cooking.cooking_category.classification_name
       - if @cooking.cooking_product_relations.present?
