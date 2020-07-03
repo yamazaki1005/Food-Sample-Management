@@ -10,16 +10,16 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
         / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
         - if current_user.id >= 2
           li.nav-item
-            = link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn link-btn'
+            = link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn btn-square-pop link-btn mr-3'
         li.my-navbtn
-          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'nav-link btn-warning btn my-btn-warning'
+          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'nav-link login-btn btn mr-3 btn-square-pop'
       - else
           li.nav-item
-            = link_to t('sign_up'), new_user_registration_path, class: 'nav-link btn link-btn'
+            = link_to t('sign_up'), new_user_registration_path, class: 'nav-link btn btn-square-pop link-btn mr-3 post-btn'
           li.nav-item
-            = link_to t('login'), new_user_session_path, class: 'nav-link btn link-btn'
+            = link_to t('login'), new_user_session_path, class: 'nav-link btn btn-square-pop link-btn mr-3'
           li.my-navbtn
-            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link btn-warning btn my-btn-warning'
+            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'nav-link login-btn btn btn-square-pop'
     ul.navbar-nav.ml-auto.functions
       li.nav-btn
         = link_to cookings_path

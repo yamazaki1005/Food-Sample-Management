@@ -114,6 +114,7 @@ ja:
   Contact-Us: お問い合わせ
 
   check: チェック！
+  posts_by_others: 他の人の投稿
 
   msg:
     delete_confirm: データを削除しますか？
@@ -141,6 +142,10 @@ ja:
 
     find_from_category: カテゴリーから見る
     no_post: 投稿がありません
+
+    Do_not_edit_posts: 自身の投稿以外は編集できません
+    Do_not_edit_product: 食材は編集できません
+    Do_not_access_posts_list: 投稿一覧を閲覧する権限がありません
     # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
     # ja:
     #   product_number: 「品番%{number}:%{name}」

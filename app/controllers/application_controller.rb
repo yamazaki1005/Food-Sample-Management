@@ -72,6 +72,8 @@ class ApplicationController < ActionController::Base
 
   def correct_user
     @correct_user = User.find(params[:id])
-    redirect_to(root_url) unless @correct_user == current_user
+    if @correct_user != current_user && !current_user.admin?
+      redirect_to root_path, notice: t('msg.Do_not_access_posts_list')
+    end
   end
 end

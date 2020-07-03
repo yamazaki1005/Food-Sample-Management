@@ -8,6 +8,9 @@
     .textArea.col-sm-6
       h2
         = @cooking.cooking_name
+      = link_to cooking_category_path(@cooking.cooking_category.id)
+        .ribbon3
+          h5 = @cooking.cooking_category.classification_name
       - if @cooking.cooking_product_relations.present?
         h5
           = @cooking.cooking_name
@@ -19,43 +22,25 @@
                 .card-title
                   = cooking_product_relation.product.product_name
                 = image_tag cooking_product_relation.product.image, class: "pro-img" if cooking_product_relation.product.image.attached?
-      / =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom link-btn'
+      / =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom btn-square-pop link-btn'
 
-      - if @cooking.remark.present?
-        .box28
-          .box-title
-            = t('memo')
-          p
-            = @cooking.remark
-
-      - if user_signed_in? && @cooking.user_id == 1
-        .edit-delet-area.float-right
-          .horizontal-border
-            = link_to user_path(1)
-              = t('guest_sample')
-          .float-right.p-2
-            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn', id: 'edit-btn'
-            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
-              = t('delete')
-      - elsif user_signed_in? && @cooking.user_id == current_user.id
+      - if user_signed_in? && @cooking.user_id == current_user.id
         .edit-delet-area.float-right
           .horizontal-border
             = link_to user_path(@user.id)
               = t('my_sample')
           .float-right.p-2
-            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 link-btn', id: 'edit-btn'
-            button.btn.delete-btn data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 btn-square-pop link-btn', id: 'edit-btn'
+            button.btn.delete-btn.btn-square-pop data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
               = t('delete')
-      - else
-        - if user_signed_in?
-          .navbar-brand.float-right
-            = link_to user_path(@user.id)
-              .foodsample-logo
-                .fukidashi
-                  - if current_user.id == 1
-                    = t('guest_posts_list')
-                  - else
-                    = t('your_posts_list')
-                = image_tag 'common/logo3.png'
+      - elsif current_user.try(:admin?)
+        .edit-delet-area.float-right
+          .horizontal-border
+            = link_to user_path(@cooking.user_id)
+              = t('posts_by_others')
+          .float-right.p-2
+            = link_to t('edit'), edit_cooking_path, class: 'btn mr-3 btn-square-pop link-btn', id: 'edit-btn'
+            button.btn.delete-btn.btn-square-pop data-target="#MyCookingModal" data-name=@cooking.cooking_name data-id=@cooking.id data-toggle="modal" type="button" data-url="#{@cooking.id}"
+              = t('delete')
   = render partial: 'cooking_categories/cooking_category_list'
   #graydisplay
