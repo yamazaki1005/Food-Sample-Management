@@ -1,150 +1,150 @@
-// 3Dスライド=========================================
-.image_area{
-  // background: #ffdc7238;
-  position: relative;
-}
+// // 3Dスライド=========================================
+// .image_area{
+//   // background: #ffdc7238;
+//   position: relative;
+// }
 
-.image_area_left img {
-  height:70%;
-  position: absolute;
-  left: 30px;
-  bottom: 5px;
-}
+// .image_area_left img {
+//   height:70%;
+//   position: absolute;
+//   left: 30px;
+//   bottom: 5px;
+// }
 
-.image_area_right img {
-  height:40%;
-  position: absolute;
-  right: 0px;
-  bottom: -5px;
-  float: right;
-}
+// .image_area_right img {
+//   height:40%;
+//   position: absolute;
+//   right: 0px;
+//   bottom: -5px;
+//   float: right;
+// }
 
-.addcolor {
-  background-color: #EDBC6C;
-}
-// show＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-.itemWrap {
-  margin: 14px 17px 35px 50px;
-  padding-right: 13px;
-  background: url("common/bg02.gif") no-repeat right top;
-}
+// .addcolor {
+//   background-color: #EDBC6C;
+// }
+// // show＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// .itemWrap {
+//   margin: 14px 17px 35px 50px;
+//   padding-right: 13px;
+//   background: url("common/bg02.gif") no-repeat right top;
+// }
 
-.itemWrap .imgArea {
-  margin: 0 44px 0 0;
-}
+// .itemWrap .imgArea {
+//   margin: 0 44px 0 0;
+// }
 
-.textArea p {
-  // float: right;
-}
+// .textArea p {
+//   // float: right;
+// }
 
-.textArea h2 {
-  margin-bottom: 50px;
-}
+// .textArea h2 {
+//   margin-bottom: 50px;
+// }
 
-.itemWrap .imgArea img {
-  max-height: 80vh;
-  max-width: 48vw;
-  float: right;
-  cursor: pointer;
-}
+// .itemWrap .imgArea img {
+//   max-height: 80vh;
+//   max-width: 48vw;
+//   float: right;
+//   cursor: pointer;
+// }
 
-.itemWrap .imgArea img:hover {
-  transition: 0.3s ease-out;
-  transform: scale(1.01, 1.01);
-}
+// .itemWrap .imgArea img:hover {
+//   transition: 0.3s ease-out;
+//   transform: scale(1.01, 1.01);
+// }
 
-.itemWrap .textArea {
-  max-width: 40vw;
-  margin-top: 17px;
-}
-// 3Dスライド（修正後）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-$n: 8;
-$item-width: 405px;
-$item-separation: 60px;
-$viewer-distance: 1500px;
-$theta: 2 * 3.141592653589793 / $n;
-$apothem: 482.842712474619px;
+// .itemWrap .textArea {
+//   max-width: 40vw;
+//   margin-top: 17px;
+// }
+// // 3Dスライド（修正後）＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// $n: 8;
+// $item-width: 405px;
+// $item-separation: 60px;
+// $viewer-distance: 1500px;
+// $theta: 2 * 3.141592653589793 / $n;
+// $apothem: 482.842712474619px;
 
-.carousel {
-  padding: 20px;
-  perspective: $viewer-distance;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  > * {
-    flex: 0 0 auto;
-  }
+// .carousel {
+//   padding: 20px;
+//   perspective: $viewer-distance;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   > * {
+//     flex: 0 0 auto;
+//   }
 
-  figure {
-    position: relative;
-    margin: 0;
-    width: $item-width;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    transform-origin: 50% 50% (-$apothem);
-      img {
-        width: 100%;
-        box-sizing: border-box;
-        padding: $item-separation / 2;
-        margin: 30px 0px;
-        background-color: $slider-color;
-        border: 1mm ridge $sub-opacity-color;
-        border-radius: 10px;
-        cursor: pointer;
-        &:not(:first-of-type) {
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform-origin: 50% 50% (-$apothem);
-        }
-        @for $i from 2 through $n {
-          &:nth-child(#{$i}) {
-            transform: rotateY(#{($i - 1) * $theta}rad);
-          }
-        }
-    }
-  }
+//   figure {
+//     position: relative;
+//     margin: 0;
+//     width: $item-width;
+//     transform-style: preserve-3d;
+//     transition: transform 0.5s;
+//     transform-origin: 50% 50% (-$apothem);
+//       img {
+//         width: 100%;
+//         box-sizing: border-box;
+//         padding: $item-separation / 2;
+//         margin: 30px 0px;
+//         background-color: $slider-color;
+//         border: 1mm ridge $sub-opacity-color;
+//         border-radius: 10px;
+//         cursor: pointer;
+//         &:not(:first-of-type) {
+//           position: absolute;
+//           left: 0;
+//           top: 0;
+//           transform-origin: 50% 50% (-$apothem);
+//         }
+//         @for $i from 2 through $n {
+//           &:nth-child(#{$i}) {
+//             transform: rotateY(#{($i - 1) * $theta}rad);
+//           }
+//         }
+//     }
+//   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 0;
-    button {
-      flex: 0 0 auto;
-      cursor: pointer;
-      letter-spacing: 1px;
-      z-index: 1;
-      display: inline-block;
-      padding: 0.3em 1.1em;
-      text-decoration: none;
-      color: #FFF;
-      background: $sub-color;
-      border-radius: 5px;
-      box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-      font-weight: bold;
-      border: solid 2px #ffc07e;
-    }
-    .prev {
-      position: absolute;
-      top: 10%;
-      left: 10%;
-    }
-    .next {
-      position: absolute;
-      top: 10%;
-      right: 10%;
-    }
-    button:active {
-      transform: translateY(4px);
-      border-bottom: none;
-    }
-    button:focus {
-      outline: 5px auto $accent-color;
-    }
-  }
-}
+//   nav {
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px 0 0;
+//     button {
+//       flex: 0 0 auto;
+//       cursor: pointer;
+//       letter-spacing: 1px;
+//       z-index: 1;
+//       display: inline-block;
+//       padding: 0.3em 1.1em;
+//       text-decoration: none;
+//       color: #FFF;
+//       background: $sub-color;
+//       border-radius: 5px;
+//       box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+//       font-weight: bold;
+//       border: solid 2px #ffc07e;
+//     }
+//     .prev {
+//       position: absolute;
+//       top: 10%;
+//       left: 10%;
+//     }
+//     .next {
+//       position: absolute;
+//       top: 10%;
+//       right: 10%;
+//     }
+//     button:active {
+//       transform: translateY(4px);
+//       border-bottom: none;
+//     }
+//     button:focus {
+//       outline: 5px auto $accent-color;
+//     }
+//   }
+// }
 
-.carousel figure img:hover {
-  box-shadow: inset 0px 0px 20px 10px $sub-color;
-}
+// .carousel figure img:hover {
+//   box-shadow: inset 0px 0px 20px 10px $sub-color;
+// }
