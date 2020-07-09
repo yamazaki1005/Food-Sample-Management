@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Categories
-class CategoryInitialData < ActiveRecord::Migration[6.0]
+class ProductCategoryInitialData < ActiveRecord::Migration[6.0]
   def up
     names = [
       '規格完成品',
@@ -34,11 +34,11 @@ class CategoryInitialData < ActiveRecord::Migration[6.0]
       'ソフトクリーム部品'
     ]
     names.each do |n|
-      Category.create(classification_name: n)
+      ProductCategory.create(classification_name: n)
     end
   end
 
   def down
-    Category.delete_all
+    ProductCategory.delete_all
   end
 end
