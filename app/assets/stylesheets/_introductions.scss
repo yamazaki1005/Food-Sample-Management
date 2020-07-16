@@ -1,258 +1,258 @@
-// // 区切り線と画像の設定======================
-// .contents {
-//   max-width: 100%;
-//   background-color: #f8faed;
-// }
+// 区切り線と画像の設定======================
+.contents {
+  max-width: 100%;
+  background-color: #f8faed;
+}
 
-// .cooking-recipe {
-//   position: relative;
-// }
+.cooking-recipe {
+  position: relative;
+}
 
-// .introduction-img {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 10vw;
-//   margin: auto;
-//   object-fit: cover;
-// }
+.introduction-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10vw;
+  margin: auto;
+  object-fit: cover;
+}
 
-// .introduction-img img{
-//   border-radius: 50%;
-//   max-width: 350px;
-//   max-height: 350px;
-//   width: 300%;
-// }
+.introduction-img img{
+  border-radius: 50%;
+  max-width: 350px;
+  max-height: 350px;
+  width: 300%;
+}
 
-// .introduction-img:nth-of-type(1) { top: 15vh; right: 20%; }
-// .introduction-img:nth-of-type(2) { top: 62vh; right: -18%; }
-// .introduction-img:nth-of-type(3) { top: 38%; right: 4%; }
-// .introduction-img:nth-of-type(4) { top: 55%; right: 31%; }
-// .introduction-img:nth-of-type(5) { top: 72%; right: -11%; }
-// .introduction-img:nth-of-type(6) { top: 90%; right: 20%; }
+.introduction-img:nth-of-type(1) { top: 15vh; right: 20%; }
+.introduction-img:nth-of-type(2) { top: 62vh; right: -18%; }
+.introduction-img:nth-of-type(3) { top: 38%; right: 4%; }
+.introduction-img:nth-of-type(4) { top: 55%; right: 31%; }
+.introduction-img:nth-of-type(5) { top: 72%; right: -11%; }
+.introduction-img:nth-of-type(6) { top: 90%; right: 20%; }
 
-// .introduction-img img:hover {
-//   transition: 0.3s ease-out;
-//   transform: scale(1.05, 1.05);
-// }
+.introduction-img img:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.05, 1.05);
+}
 
-// .sub-container {
-//   position: relative;
-//   max-width: 100%;
-//   text-align: center;
-//   // padding: 50px 0;
-// }
+.sub-container {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  // padding: 50px 0;
+}
 
-// .sub-container img {
-//   width: 50%;
-//   opacity: 1;
-// }
+.sub-container img {
+  width: 50%;
+  opacity: 1;
+}
 
-// .sub-container img:hover{
-//   transition: 0.3s ease-out;
-//   transform: scale(1.1, 1.1);
-// }
+.sub-container img:hover{
+  transition: 0.3s ease-out;
+  transform: scale(1.1, 1.1);
+}
 
-// .intorduction-circle {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-//   background-color: $sub-opacity-color;
-//   border-radius: 50%;
-//   width: 350px;
-//   height: 350px;
-//   z-index: -1;
-// }
+.intorduction-circle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $sub-opacity-color;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  z-index: -1;
+}
 
-// .intorduction-circle2 {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-//   border-radius: 50%;
-//   opacity: 0.9;
-//   width: 200px;
-//   height: 200px;
-//   background: $circle-coler;
-//   z-index: -3;
-//   transition: all 4s linear;
-//   animation: loading 10s infinite;
-// }
+.intorduction-circle2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  opacity: 0.9;
+  width: 200px;
+  height: 200px;
+  background: $circle-coler;
+  z-index: -3;
+  transition: all 4s linear;
+  animation: loading 10s infinite;
+}
 
-// .intorduction-circle3 {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-//   border-radius: 50%;
-//   width: 150px;
-//   height: 150px;
-//   z-index: -3;
-//   transition: all 4s linear;
-// }
+.intorduction-circle3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  z-index: -3;
+  transition: all 4s linear;
+}
 
-// .sub-container .intorduction-circle3:nth-of-type(1) {
-//   animation: loading 7s infinite;
-// }
-// .sub-container .intorduction-circle3:nth-of-type(2) {
-//   animation: loading 8s infinite;
-// }
-// .sub-container .intorduction-circle3:nth-of-type(3) {
-//   animation: loading 4s infinite;
-// }
-// .sub-container .intorduction-circle3:nth-of-type(4) {
-//   animation: loading 5s infinite;
-// }
-// .sub-container .intorduction-circle3:nth-of-type(5) {
-//   animation: loading 6s infinite;
-// }
+.sub-container .intorduction-circle3:nth-of-type(1) {
+  animation: loading 7s infinite;
+}
+.sub-container .intorduction-circle3:nth-of-type(2) {
+  animation: loading 8s infinite;
+}
+.sub-container .intorduction-circle3:nth-of-type(3) {
+  animation: loading 4s infinite;
+}
+.sub-container .intorduction-circle3:nth-of-type(4) {
+  animation: loading 5s infinite;
+}
+.sub-container .intorduction-circle3:nth-of-type(5) {
+  animation: loading 6s infinite;
+}
 
-// .intorduction-circle-inner {
-//   position: absolute;
-//   top: 4%;
-//   left: 4%;
-//   width: 180px;
-//   height: 180px;
-//   background: url("top/texture_2.jpg") left top repeat;
-//   border-radius: 50%;
-//   z-index: -2;
-// }
+.intorduction-circle-inner {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  width: 180px;
+  height: 180px;
+  background: url("top/texture_2.jpg") left top repeat;
+  border-radius: 50%;
+  z-index: -2;
+}
 
-// .introduction-barnner {
-//   margin: 20px auto;
-//   text-align: center;
-//   width: 245px;
-//   height: 245px;
-//   z-index: 12;
-//   background: white;
-//   border-radius: 115px;
-//   box-shadow: 5px 5px 5px $sub-color;
-// }
+.introduction-barnner {
+  margin: 20px auto;
+  text-align: center;
+  width: 245px;
+  height: 245px;
+  z-index: 12;
+  background: white;
+  border-radius: 115px;
+  box-shadow: 5px 5px 5px $sub-color;
+}
 
-// .introduction-barnner > div,
-// .introduction-barnner > div > a {
-//   display: block;
-//   width: 250px;
-//   height: 250px;
-//   position: relative;
-//   border-radius: 65px;
-// }
-// // 食堂から飛び出す円の場所=======================================
-// .intorduction-circle3 img {
-//   border-radius: 50%;
-//   width: 30px;
-//   height: 30px;
-// }
+.introduction-barnner > div,
+.introduction-barnner > div > a {
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 65px;
+}
+// 食堂から飛び出す円の場所=======================================
+.intorduction-circle3 img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
 
-// .top-left-item {
-//   position: absolute;
-//   top: 0;
-// }
+.top-left-item {
+  position: absolute;
+  top: 0;
+}
 
-// .bottom-left-item {
-//   position: absolute;
-//   bottom: 0;
-// }
+.bottom-left-item {
+  position: absolute;
+  bottom: 0;
+}
 
-// .top-right-item {
-//   position: absolute;
-//   right: 0;
-// }
+.top-right-item {
+  position: absolute;
+  right: 0;
+}
 
-// .bottom-right-item {
-//   position: absolute;
-//   right: 0;
-//   bottom: 50%;
-// }
+.bottom-right-item {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}
 
-// // 波区切り線==================================
+// 波区切り線==================================
 
-// @mixin bubbles($bubbles-type, $color) {
-//   @if $bubbles-type == a {
-//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{url-friendly-colour($color)}' viewBox='0 0 1185 248'><circle cx='76' cy='121.1' r='20' class='a'/><circle cx='870' cy='201.1' r='11' class='a'/><circle cx='814.5' cy='165.6' r='24.5' class='a'/><path d='M0 0v17.7c22.7 14.8 53 31.9 90.7 51.5 150.8 78 322 116.6 424.8 69.3 102.9-47.4 138-69.3 210.8-69.3s118.3 48.6 219.5 38.3 76.3-59.3 188.7-59.3c18.9 0 35.5 2.6 50.5 6.8V0H0z' class='a'/></svg>");
-//   }
-//   @else if $bubbles-type == b {
-//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1185 248'><path d='M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193C15 197.2 31.6 199.8 50.5 199.8zM1109 106.9c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20C1089 115.9 1098 106.9 1109 106.9zM370.5 57.9c13.5 0 24.5 11 24.5 24.5 0 13.5-11 24.5-24.5 24.5S346 95.9 346 82.4C346 68.9 357 57.9 370.5 57.9zM315 35.9c6.1 0 11 4.9 11 11s-4.9 11-11 11 -11-4.9-11-11S308.9 35.9 315 35.9z' fill='#{url-friendly-colour($color)}'/></svg>");
-//   }
-// }
+@mixin bubbles($bubbles-type, $color) {
+  @if $bubbles-type == a {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{url-friendly-colour($color)}' viewBox='0 0 1185 248'><circle cx='76' cy='121.1' r='20' class='a'/><circle cx='870' cy='201.1' r='11' class='a'/><circle cx='814.5' cy='165.6' r='24.5' class='a'/><path d='M0 0v17.7c22.7 14.8 53 31.9 90.7 51.5 150.8 78 322 116.6 424.8 69.3 102.9-47.4 138-69.3 210.8-69.3s118.3 48.6 219.5 38.3 76.3-59.3 188.7-59.3c18.9 0 35.5 2.6 50.5 6.8V0H0z' class='a'/></svg>");
+  }
+  @else if $bubbles-type == b {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1185 248'><path d='M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193C15 197.2 31.6 199.8 50.5 199.8zM1109 106.9c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20C1089 115.9 1098 106.9 1109 106.9zM370.5 57.9c13.5 0 24.5 11 24.5 24.5 0 13.5-11 24.5-24.5 24.5S346 95.9 346 82.4C346 68.9 357 57.9 370.5 57.9zM315 35.9c6.1 0 11 4.9 11 11s-4.9 11-11 11 -11-4.9-11-11S308.9 35.9 315 35.9z' fill='#{url-friendly-colour($color)}'/></svg>");
+  }
+}
 
-// @mixin section-bubble-with-colors($bubble-type, $currentcolor, $nextcolor) {
-//   @extend .section-bubble;
-//   background-color: $currentcolor;
-//   &:after {
-//     background-color: $nextcolor;
-//     @include bubbles($bubble-type, $currentcolor);
-//   }
-// }
+@mixin section-bubble-with-colors($bubble-type, $currentcolor, $nextcolor) {
+  @extend .section-bubble;
+  background-color: $currentcolor;
+  &:after {
+    background-color: $nextcolor;
+    @include bubbles($bubble-type, $currentcolor);
+  }
+}
 
-// @function url-friendly-colour($colour) {
-//     @return '%23' + str-slice('#{$colour}', 2, -1)
-// }
+@function url-friendly-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1)
+}
 
-// .section-bubble {
-//   margin-bottom: $spacer-height;
-//   position: relative;
-//   &:after
-//   {
-//     content: '';
-//     position: absolute;
-//     bottom: 0;
-//     z-index: -1;
-//     width: 100%;
-//     height: $spacer-height;
-//     background-size: 100%;
-//     transform: translate(0, 100%);
-//   }
-// }
+.section-bubble {
+  margin-bottom: $spacer-height;
+  position: relative;
+  &:after
+  {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: $spacer-height;
+    background-size: 100%;
+    transform: translate(0, 100%);
+  }
+}
 
-// .section-bubble1 {
-//   @include section-bubble-with-colors(a, $section1-bg-color, $section2-bg-color);
-// }
-// .section-bubble2 {
-//   @include section-bubble-with-colors(b, $section2-bg-color, $section3-bg-color);
-// }
-// .section-bubble3 {
-//   @include section-bubble-with-colors(a, $section3-bg-color, $section4-bg-color);
-// }
-// .section-bubble4 {
-//   @include section-bubble-with-colors(b, $section4-bg-color, $section5-bg-color);
-// }
-// .section-bubble5 {
-//   @include section-bubble-with-colors(a, $section5-bg-color, $section6-bg-color);
-// }
-// .section-bubble6 {
-//   @include section-bubble-with-colors(b, $section6-bg-color, $section3-bg-color);
-// }
+.section-bubble1 {
+  @include section-bubble-with-colors(a, $section1-bg-color, $section2-bg-color);
+}
+.section-bubble2 {
+  @include section-bubble-with-colors(b, $section2-bg-color, $section3-bg-color);
+}
+.section-bubble3 {
+  @include section-bubble-with-colors(a, $section3-bg-color, $section4-bg-color);
+}
+.section-bubble4 {
+  @include section-bubble-with-colors(b, $section4-bg-color, $section5-bg-color);
+}
+.section-bubble5 {
+  @include section-bubble-with-colors(a, $section5-bg-color, $section6-bg-color);
+}
+.section-bubble6 {
+  @include section-bubble-with-colors(b, $section6-bg-color, $section3-bg-color);
+}
 
-// .section-bubble_type-a {
-//   @extend .section-bubble;
-//   &:after {
-//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 1185 248'><circle cx='76' cy='121.1' r='20' class='a'/><circle cx='870' cy='201.1' r='11' class='a'/><circle cx='814.5' cy='165.6' r='24.5' class='a'/><path d='M0 0v17.7c22.7 14.8 53 31.9 90.7 51.5 150.8 78 322 116.6 424.8 69.3 102.9-47.4 138-69.3 210.8-69.3s118.3 48.6 219.5 38.3 76.3-59.3 188.7-59.3c18.9 0 35.5 2.6 50.5 6.8V0H0z' class='a'/></svg>");
-//   }
-// }
+.section-bubble_type-a {
+  @extend .section-bubble;
+  &:after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 1185 248'><circle cx='76' cy='121.1' r='20' class='a'/><circle cx='870' cy='201.1' r='11' class='a'/><circle cx='814.5' cy='165.6' r='24.5' class='a'/><path d='M0 0v17.7c22.7 14.8 53 31.9 90.7 51.5 150.8 78 322 116.6 424.8 69.3 102.9-47.4 138-69.3 210.8-69.3s118.3 48.6 219.5 38.3 76.3-59.3 188.7-59.3c18.9 0 35.5 2.6 50.5 6.8V0H0z' class='a'/></svg>");
+  }
+}
 
-// .section-bubble_type-b {
-//   @extend .section-bubble;
-//   &:after {
-//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1185 248'><path d='M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193C15 197.2 31.6 199.8 50.5 199.8zM1109 106.9c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20C1089 115.9 1098 106.9 1109 106.9zM370.5 57.9c13.5 0 24.5 11 24.5 24.5 0 13.5-11 24.5-24.5 24.5S346 95.9 346 82.4C346 68.9 357 57.9 370.5 57.9zM315 35.9c6.1 0 11 4.9 11 11s-4.9 11-11 11 -11-4.9-11-11S308.9 35.9 315 35.9z' fill='red'/></svg>");
-//   }
-// }
+.section-bubble_type-b {
+  @extend .section-bubble;
+  &:after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1185 248'><path d='M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193C15 197.2 31.6 199.8 50.5 199.8zM1109 106.9c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20C1089 115.9 1098 106.9 1109 106.9zM370.5 57.9c13.5 0 24.5 11 24.5 24.5 0 13.5-11 24.5-24.5 24.5S346 95.9 346 82.4C346 68.9 357 57.9 370.5 57.9zM315 35.9c6.1 0 11 4.9 11 11s-4.9 11-11 11 -11-4.9-11-11S308.9 35.9 315 35.9z' fill='red'/></svg>");
+  }
+}
 
-// // 画像をスクロールでフェードイン=======================
-// .fadein {
-// 	opacity: 0;
-// 	transform: translate(0, -150px);
-// 	transition: all  1500ms;
-// }
+// 画像をスクロールでフェードイン=======================
+.fadein {
+	opacity: 0;
+	transform: translate(0, -150px);
+	transition: all  1500ms;
+}
 
-// .fadein.scrollin {
-// 	opacity: 1;
-// 	transform: translate(0, 0);
-// }
+.fadein.scrollin {
+	opacity: 1;
+	transform: translate(0, 0);
+}

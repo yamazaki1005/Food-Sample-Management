@@ -6,8 +6,9 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.5.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "node-sass-import": "^2.0.1",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },
@@ -16,7 +17,10 @@
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "engines" : {
+  "engines": {
     "node": "13.8.0"
+  },
+  "scripts": {
+    "build-css": "node-sass app/assets/stylesheets/application.scss app/assets/stylesheets/application.css --output-style expanded --importer node_modules/node-sass-import"
   }
 }
