@@ -1,309 +1,309 @@
-// // Place all the styles related to the products controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: https://sass-lang.com/
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
 
-// /* 位置修正 ================================ */
-// .margin-custom {
-//   margin-right: 5px !important;
-//   padding: 6px 10px;
-// }
+/* 位置修正 ================================ */
+.margin-custom {
+  margin-right: 5px !important;
+  padding: 6px 10px;
+}
 
-// /* card ================================ */
-// .card {
-//   margin: 5px 0;
-//   position: relative;
-// }
+/* card ================================ */
+.card {
+  margin: 5px 0;
+  position: relative;
+}
 
-// .card-top {
-//   padding: 8px 0;
-//   background: lemonchiffon;
-// }
+.card-top {
+  padding: 8px 0;
+  background: lemonchiffon;
+}
 
-// .img-body-pro {
-//   text-align: center;
-//   height: 30vh;
-//   width: 100%;
-//   object-fit: contain;
-//   overflow: hidden;
-//   position: relative;
-// }
+.img-body-pro {
+  text-align: center;
+  height: 30vh;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
 
-// .card:hover {
-//   background-color: $card-hover-color;
-//   transition: 0.3s ease-out;
-//   opacity: 0.9;
-//   transform: scale(1.05, 1.05);
-//   z-index: 15;
-// }
+.card:hover {
+  background-color: $card-hover-color;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+  transform: scale(1.05, 1.05);
+  z-index: 15;
+}
 
-// .card-img-top img{
-//   max-width: 150%;
-//   max-height: 130%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   margin: auto;
-//   transition: all 0.5s;
-// }
+.card-img-top img{
+  max-width: 150%;
+  max-height: 130%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.5s;
+}
 
-// .img-body-pro .card-img-top img{
-//   max-width: 105%;
-//   max-height: 105%;
-// }
+.img-body-pro .card-img-top img{
+  max-width: 105%;
+  max-height: 105%;
+}
 
-// .card-content {
-//   padding: 20px;
-// }
+.card-content {
+  padding: 20px;
+}
 
-// .card-title {
-//   font-size: 18px;
-//   font-weight: bold;
-//   margin-bottom: 20px;
-//   text-align: center;
-//   color: darkslategray;
-//   margin: 0px;
-// }
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: darkslategray;
+  margin: 0px;
+}
 
-// .card-text {
-//   color: #1b1919;
-//   font-size: 14px;
-//   line-height: 1.5;
-// }
+.card-text {
+  color: #1b1919;
+  font-size: 14px;
+  line-height: 1.5;
+}
 
-// .card-link {
-//   text-align: center;
-//   border-top: 1px solid #eee;
-//   padding: 20px;
-// }
+.card-link {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
 
-// .card-link a {
-//   text-decoration: none;
-//   color: #0bd;
-//   margin: 0 10px;
-// }
+.card-link a {
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+}
 
-// .card-link a:hover {
-//   color: #0090aa;
-// }
+.card-link a:hover {
+  color: #0090aa;
+}
 
-// .card-body {
-//   padding: 1px;
-//   color: black;
-// }
+.card-body {
+  padding: 1px;
+  color: black;
+}
 
-// .form .card {
-//   width: 190px;
-//   height: 170px;
-// }
+.form .card {
+  width: 190px;
+  height: 170px;
+}
 
-// .py-3 {
-//   padding: 0.5px !important;
-// }
+.py-3 {
+  padding: 0.5px !important;
+}
 
-// /* form ================================ */
-// #img_field {
-//   font-size: 15px;
-//   margin-top: 10px;
-//   padding: 5px 8px;
-//   border: solid 1px #EDBC6C;
-//   color: #666;
-//   position: relative;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   width: auto;
-//   height: 300px;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-color: #fff;
-//   overflow: hidden;
-//   box-sizing: border-box;
-//   transition: 0.3s ease-out;
-// }
+/* form ================================ */
+#img_field {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
 
-// #img_field i {
-//   font-size: 100px;
-//   color: #aaa;
-//   line-height: 250px;
-//   margin: 0 auto;
-//   transition: 0.3s ease-out;
-// }
+#img_field i {
+  font-size: 100px;
+  color: #aaa;
+  line-height: 250px;
+  margin: 0 auto;
+  transition: 0.3s ease-out;
+}
 
-// #img_field i.add {
-//   font-size: 50px;
-//   position: absolute;
-//   top: -90px;
-//   right: 15px;
-// }
+#img_field i.add {
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  right: 15px;
+}
 
-// #img_field i.add2 {
-//   font-size: 150px;
-//   position: absolute;
-//   top: 10%;
-//   right: 40%;
-// }
+#img_field i.add2 {
+  font-size: 150px;
+  position: absolute;
+  top: 10%;
+  right: 40%;
+}
 
-// #img_field:hover {
-//   background-color: #EDBC6C;
-//   transition: 0.3s ease-out;
-//   opacity: 0.9;
-// }
+#img_field:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
 
-// #img_field:hover i {
-//   transition: 0.3s ease-out;
-//   display: block;
-//   color: #fff;
-// }
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff;
+}
 
-// .preview {
-//   max-height: 300px;
-//   max-width: 485px;
-//   width: auto;
-//   display: block;
-//   margin: auto;
-// }
+.preview {
+  max-height: 300px;
+  max-width: 485px;
+  width: auto;
+  display: block;
+  margin: auto;
+}
 
-// .btn_custom {
-//   margin-top: 10px;
-// }
+.btn_custom {
+  margin-top: 10px;
+}
 
-// /* input-form ================================ */
+/* input-form ================================ */
 
-// .custom-input-form {
-//   padding: 20px 20px 0px;
-//   border-radius: 20px;
-// }
+.custom-input-form {
+  padding: 20px 20px 0px;
+  border-radius: 20px;
+}
 
-// .field .radio_btn {
-//   display: none;
-// }
+.field .radio_btn {
+  display: none;
+}
 
-// .lot-form-control {
-//   display: inline-block;
-//   width: 70%;
-//   float: left;
-//   height: calc(2.25rem + 2px);
-//   padding: .375rem .75rem;
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   color: #495057;
-//   background-color: #fff;
-//   background-clip: padding-box;
-//   border: 1px solid #ced4da;
-//   border-radius: .25rem;
-//   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-// }
+.lot-form-control {
+  display: inline-block;
+  width: 70%;
+  float: left;
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
-// // チェックが入っていないとき
-// .field .radio_btn + label {
-//   display: inline-block;
-//   box-sizing: border-box;
-//   font-size: 16px;
-//   font-weight: normal;
-//   color: #888;
-//   border: solid 1px #EDBC6C;
-//   border-radius: 5px;
-//   margin: 5px 0px 0px 5px;
-//   padding: 3px 15px;
-//   background-color: #fff;
-//   cursor: pointer;
-// }
+// チェックが入っていないとき
+.field .radio_btn + label {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: normal;
+  color: #888;
+  border: solid 1px #EDBC6C;
+  border-radius: 5px;
+  margin: 5px 0px 0px 5px;
+  padding: 3px 15px;
+  background-color: #fff;
+  cursor: pointer;
+}
 
-// // チェックが入ったとき
-// .field .radio_btn:checked + label {
-//   color: #fff;
-//   background-color: #EDBC6C;
-//   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-// }
+// チェックが入ったとき
+.field .radio_btn:checked + label {
+  color: #fff;
+  background-color: #EDBC6C;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
 
-// /* check_box =========================== */
+/* check_box =========================== */
 
-// .check-box { display: none; }
+.check-box { display: none; }
 
-// .check-box + label {
-//   display: block;
-//   position: relative;
-//   padding-left: 35px;
-//   margin-bottom: 20px;
-//   font: 14px/20px 'Open Sans', Arial, sans-serif;
-//   color: #ddd;
-//   cursor: pointer;
-//   -webkit-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-// }
+.check-box + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px 'Open Sans', Arial, sans-serif;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
-// .check-box + label:last-child { margin-bottom: 0; }
+.check-box + label:last-child { margin-bottom: 0; }
 
-// .check-box + label:before {
-//   content: '';
-//   display: block;
-//   width: 30px;
-//   height: 30px;
-//   border: 4px solid #dc3545;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   opacity: .6;
-//   -webkit-transition: all .12s, border-color .08s;
-//   transition: all .12s, border-color .08s;
-// }
+.check-box + label:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #dc3545;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
 
-// .check-box:checked + label:before {
-//   width: 20px;
-//   height: 45px;
-//   top: -20px;
-//   left: 15px;
-//   border-radius: 0;
-//   opacity: 1;
-//   border-top-color: transparent;
-//   border-left-color: transparent;
-//   -webkit-transform: rotate(45deg);
-//   transform: rotate(45deg);
-// }
+.check-box:checked + label:before {
+  width: 20px;
+  height: 45px;
+  top: -20px;
+  left: 15px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-// .discontinued {
-//   color: white !important;
-//   text-decoration: none;
-//   -webkit-transition: 1.8s;
-//   -moz-transition: 1.8s;
-//   -o-transition: 1.8s;
-//   -ms-transition: 1.8s;
-//   transition: 1.8s;
-// }
-// /*  =========================== */
+.discontinued {
+  color: white !important;
+  text-decoration: none;
+  -webkit-transition: 1.8s;
+  -moz-transition: 1.8s;
+  -o-transition: 1.8s;
+  -ms-transition: 1.8s;
+  transition: 1.8s;
+}
+/*  =========================== */
 
-// #product_category_id {
-//   padding: 5px 27px;
-//   border: solid 1px #EDBC6C;
-//   color: #666;
-//   position: relative;
-//   border-radius: 5px;
-//   width: auto;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   background-color: cornsilk;
-//   overflow: hidden;
-//   box-sizing: border-box;
-//   transition: 0.3s ease-out;
-// }
+#product_category_id {
+  padding: 5px 27px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  border-radius: 5px;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: cornsilk;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
 
-// #product_category_id:hover {
-//   background-color: #EDBC6C;
-//   transition: 0.3s ease-out;
-//   opacity: 0.9;
-// }
+#product_category_id:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
 
-// .img_field {
-//   position: relative;
-// }
+.img_field {
+  position: relative;
+}
 
-// .img_field i.add3 {
-//   font-size: 23px;
-//   position: absolute;
-//   top: 14%;
-//   right: 93%;
-//   z-index: 1;
-//   color: #666;
-// }
+.img_field i.add3 {
+  font-size: 23px;
+  position: absolute;
+  top: 14%;
+  right: 93%;
+  z-index: 1;
+  color: #666;
+}
