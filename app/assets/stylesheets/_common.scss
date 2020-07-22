@@ -1,12 +1,5 @@
 @import "definition";
-@import "bootstrap/scss/bootstrap";
-// ログイン画面
 
-.container-login {
-  @extend .container-fluid;
-  max-width: 576px;
-  padding: 2rem;
-}
 /* flash ================================ */
 .flash {
   padding: 10px 0;
@@ -19,14 +12,6 @@
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
-}
-
-.alert-notice {
-  @extend .alert-info;
-}
-
-.alert-alert {
-  @extend .alert-danger;
 }
 
 .alert {
