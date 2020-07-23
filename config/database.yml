@@ -49,6 +49,10 @@ test:
 #
 production:
   <<: *default
-  database: food_sample_management_production
-  username: food_sample_management
-  password: <%= ENV['FOOD_SAMPLE_MANAGEMENT_DATABASE_PASSWORD'] %>
+  # database: food_sample_management_production
+  # username: food_sample_management
+  # password: <%= ENV['FOOD_SAMPLE_MANAGEMENT_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
