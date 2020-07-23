@@ -1,15 +1,18 @@
-$(document).on('turbolinks:load', function () {
+$(document).ready(function () {
   var angle = 0;
   var emphasis_count = 1;
   $(".gallery-item1").addClass('addcolor');
 
-  var carousel = document.querySelector(".carousel"),
+
+  if ($(".carousel").length) {
+    var carousel = document.querySelector(".carousel"),
       figure = carousel.querySelector("figure"),
       nav = carousel.querySelector("nav"),
       numImages = figure.childElementCount,
       theta = (2 * Math.PI) / numImages,
       currImage = 0;
-  nav.addEventListener("click", onClick, true);
+    nav.addEventListener("click", onClick, true);
+  }
 
   function onClick(e) {
     e.stopPropagation();
