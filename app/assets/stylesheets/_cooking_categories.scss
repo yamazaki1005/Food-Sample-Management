@@ -77,7 +77,6 @@ $apothem: 482.842712474619px;
   > * {
     flex: 0 0 auto;
   }
-
   figure {
     position: relative;
     margin: 0;
@@ -149,4 +148,38 @@ $apothem: 482.842712474619px;
 
 .carousel figure img:hover {
   box-shadow: inset 0px 0px 20px 10px $sub-color;
+}
+
+
+@media (max-width: 500px) {
+.image_area_left,
+.image_area_right {
+  display: none;
+}
+
+.carousel {
+  padding: 70px 20px 0px 20px;
+}
+
+.carousel figure img {
+  margin: 0;
+}
+
+.carousel nav button {
+padding: 0.1em 0.6em;
+
+}
+
+.carousel nav .next {
+  position: absolute;
+  top: 1%;
+  right: 4%;
+}
+
+.carousel nav .prev {
+  position: absolute;
+  top: 1%;
+  left: 4%;
+}
+
 }
