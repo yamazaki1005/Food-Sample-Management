@@ -14,6 +14,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.text :remark
       t.integer :unit
       t.integer :user_id
+      t.integer :product_category_id
 
       t.timestamps
     end

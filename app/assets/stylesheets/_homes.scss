@@ -1,13 +1,5 @@
 @import "definition";
 
-
-@media (max-width: 500px) {
-
-.main_banner {
-  display: none;
-}
-
-}
 // トップ画像=============================================
 .main_image {
   position: relative;
@@ -34,9 +26,9 @@
 }
 
 #top_global_nav {
-  margin: 70px 15px;
-  height: 17vh;
+  padding: 70px 15px;
   min-height: 280px;
+  overflow: hidden;
 }
 
 #slideshow {
@@ -460,3 +452,4 @@
   margin: auto;
   width: 50%;
 }
+
