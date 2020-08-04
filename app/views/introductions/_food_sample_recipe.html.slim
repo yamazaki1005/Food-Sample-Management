@@ -1,20 +1,20 @@
+h1.text-center
+  = t('msg.know-food-sample')
 .cooking-recipe
   section.py-5.section-bubble1
-    h1.text-center
-      = t('msg.know-food-sample')
     .container
       h1
         = t('msg.procedure-1')
       p
         = t('msg.procedure-1-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_1.jpg'
   section.py-5.section-bubble2
     .container
       h1
         = t('msg.procedure-2')
       p
         = t('msg.procedure-2-text')
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_1.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_2.jpg'
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_2.jpg'
   #graydisplay

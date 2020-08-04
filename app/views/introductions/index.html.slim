@@ -1,55 +1,55 @@
+h1.text-center
+  = t('msg.know-food-sample')
 .cooking-recipe
   section.py-5.section-bubble1
-    h1.text-center
-      = t('msg.know-food-sample')
     .container
       h1
         = t('msg.procedure-1')
       p
         = t('msg.procedure-1-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_1.jpg'
   section.py-5.section-bubble2
     .container
       h1
         = t('msg.procedure-2')
       p
         = t('msg.procedure-2-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_2.jpg'
   section.py-5.section-bubble3
     .container
       h1
         = t('msg.procedure-3')
       p
         = t('msg.procedure-3-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_3.jpg'
   section.py-5.section-bubble4
     .container
       h1
         = t('msg.procedure-4')
       p
         = t('msg.procedure-4-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_4.jpg'
   section.py-5.section-bubble5
     .container
       h1
         = t('msg.procedure-5')
       p
         = t('msg.procedure-5-text')
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_1.jpg'
   section.py-5.section-bubble6
     .container
       h1
         = t('msg.complete')
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_1.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_2.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_3.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_4.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_1.jpg'
-  .introduction-img.imgArea.fadein
-    = image_tag 'introduction/IMG_2.jpg'
-.row
-  .col-xs-10.col-sm-6
-    = render partial: 'food_sample_exhibition'
-  .col-xs-10.col-sm-6
-    = render partial: 'food_sample_products'
+    .introduction-img.imgArea.fadein
+      = image_tag 'introduction/IMG_2.jpg'
+/ .row
+/   .col-xs-10.col-sm-6
+/     = render partial: 'food_sample_exhibition'
+/   .col-xs-10.col-sm-6
+/     = render partial: 'food_sample_products'
 #graydisplay

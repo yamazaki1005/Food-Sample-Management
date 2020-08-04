@@ -25,52 +25,51 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
         = link_to cookings_path
           i.far.fa-images.nav-icon
           .nav-text
-            =t('view')
+            = t('view')
       li.nav-btn
         = link_to introductions_path
           i.fas.fa-search.nav-icon
           .nav-text
-            =t('know')
+            = t('know')
       li.nav-btn.unimplement
         = link_to ""
           i.fas.fa-utensils.nav-icon
           .nav-text
-            =t('create')
+            = t('create')
       li.nav-btn.unimplement
         = link_to ""
           i.fas.fa-shopping-cart.nav-icon
           .nav-text
-            =t('buy')
+            = t('buy')
       li.nav-btn.unimplement
         = link_to ""
           i.far.fa-question-circle.nav-icon
           .nav-text
-            =t('listen')
+            = t('listen')
   #nav-drawer
     input#nav-input.nav-unshown type="checkbox" /
     label#nav-open for="nav-input"
       span
     label#nav-close.nav-unshown for="nav-input"
     #nav-content
-      食品サンプル
-      ul.ml-auto.sc-ul.functions
-      li.sc-nav-btn
+      h3.text-center = t('food-sample')
+      .sc-nav-btn.nav-drawer-content
         = link_to cookings_path
           i.far.fa-images.nav-icon
-          =t('view')
-      li.sc-nav-btn
-        = link_to introductions_path
+          = t('view')
+      .sc-nav-btn.nav-drawer-content
+        = link_to introductions_path 
           i.fas.fa-search.nav-icon
-          =t('view')
-      li.sc-nav-btn.unimplement
+          = t('know')
+      .sc-nav-btn.unimplement.nav-drawer-content
         = link_to ""
           i.fas.fa-utensils.nav-icon
-          =t('view')
-      li.sc-nav-btn.unimplement
+          = t('create')
+      .sc-nav-btn.unimplement.nav-drawer-content
         = link_to ""
           i.fas.fa-shopping-cart.nav-icon
-          =t('view')
-      li.sc-nav-btn.unimplement
+          = t('buy')
+      .sc-nav-btn.unimplement.nav-drawer-content
         = link_to ""
           i.far.fa-question-circle.nav-icon
-          =t('view')
+          = t('listen')
