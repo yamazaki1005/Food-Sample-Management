@@ -58,7 +58,7 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
           i.far.fa-images.nav-icon
           = t('view')
       .sc-nav-btn.nav-drawer-content
-        = link_to introductions_path 
+        = link_to introductions_path
           i.fas.fa-search.nav-icon
           = t('know')
       .sc-nav-btn.unimplement.nav-drawer-content
@@ -73,3 +73,18 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
         = link_to ""
           i.far.fa-question-circle.nav-icon
           = t('listen')
+
+      - if user_signed_in?
+        / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
+        - if current_user.id >= 2
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-square-pop link-btn'
+        .sc-nav-btn.nav-drawer-content
+          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'login-btn btn btn-square-pop'
+      - else
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-square-pop link-btn post-btn'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('login'), new_user_session_path, class: 'btn btn-square-pop link-btn'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'login-btn btn btn-square-pop'
