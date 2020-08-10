@@ -411,6 +411,7 @@
   height: 70px;
   position: fixed;
   right: 3%;
+  z-index: 20;
   bottom: 4%;
   background: $sub-color;
   box-shadow: 1px 1px 2px 0px $accent-color;
@@ -503,7 +504,7 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 65%;
+  width: 71%;
   max-width: 330px;
   height: 100%;
   background: #fff;
@@ -557,5 +558,5 @@
 }
 
 #nav-content h4 {
-  padding: 38px 0px;
+  padding: 38px 5px 38px 0px;
 }

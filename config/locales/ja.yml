@@ -128,7 +128,6 @@ ja:
     product-used: "に使われている食材"
 
     know-food-sample: 食品サンプルを知る
-    procedure-0: 料理からパーツ作り
     procedure-1: 料理お預かり
     procedure-2: 製作計画
     procedure-3: 仕様書作成
@@ -137,7 +136,7 @@ ja:
     procedure-6: 樹脂を焼く
     procedure-7: パーツ原型完成
     procedure-8: 吹付けで着色
-    procedure-9: 食材の盛り付け
+    procedure-9: 食材盛り付け
     complete: 完成！
 
     find_from_category: カテゴリーから見る
