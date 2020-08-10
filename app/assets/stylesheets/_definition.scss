@@ -1,6 +1,6 @@
 // color =================================
 $base-color: #F8F9FA;
-$sub-color: #EEC27B;
+$sub-color: #ffca74;
 $accent-color: #ff8c3a;
 $sub-opacity-color: rgba(238,194,123,0.5);
 
@@ -20,11 +20,8 @@ $link-hover-color: $sub-color;
 $ribbon-color: $sub-color;
 
 $section1-bg-color: #ffffff;
-$section2-bg-color: #FFD2B0;
+$section2-bg-color: $sub-color;
 $section3-bg-color: #ffffff;
-$section4-bg-color: #ffa446d1;
+$section4-bg-color: #ffa446;
 $section5-bg-color: #ffffff;
 $section6-bg-color: $accent-color;
-
-// width height ========================================
-$spacer-height: 20vw;

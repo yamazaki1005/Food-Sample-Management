@@ -1,24 +1,14 @@
-# README
+はじめに
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+の概要と遊び方
 
-* Ruby version
 
-* System dependencies
+工夫した点・チャレンジした点
 
-* Configuration
+このアプリは以下の言語、フレームワークで構成されています。
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Rails -> 
+HTML & CSS ->
+Bootstrap4 -> 
+jquery -> 

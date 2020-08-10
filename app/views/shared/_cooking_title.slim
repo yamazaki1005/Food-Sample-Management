@@ -7,15 +7,15 @@
       = link_to t('products'), products_path, class: "is-current"
   h1.mx-auto.title.pt-4
     = t('view_food_samples')
-    .nav.justify-content-end
-      = link_to cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
+    .nav.justify-content-end.row
+      = link_to cookings_path, class: 'nav-link btn btn-square-pop link-btn col-sm-6 col-md-4 my-m-2 col-lg-3'
         = t('cooking_list')
         i.far.fa-images
       - if user_signed_in?
-        = link_to user_path(@user.id), class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
+        = link_to user_path(@user.id), class: 'nav-link btn btn-square-pop link-btn col-sm-5 col-md-4 my-m-2 col-lg-2'
           - if current_user.id == 1
             = t('guest_posts_list')
           - else
             = t('your_posts_list')
-        = link_to new_cooking_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3 post-btn'
+        = link_to new_cooking_path, class: 'nav-link btn btn-square-pop link-btn post-btn col-sm-12 col-md-3 my-m-2 col-lg-2'
           = t('new_registration', v: t('cookings'))

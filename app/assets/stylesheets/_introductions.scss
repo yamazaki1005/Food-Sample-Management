@@ -6,6 +6,11 @@
   padding: 20px;
 }
 
+h1.text-center {
+  background: $sub-color;
+  padding-bottom: 40px;
+}
+
 .contents {
   max-width: 100%;
   background-color: #f8faed;
@@ -17,20 +22,33 @@
   top: 0;
   margin: auto;
   object-fit: cover;
+  z-index: 10;
 }
 
 .introduction-img img{
   border-radius: 50%;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 400px;
+  max-height: 400px;
+  box-shadow: 0px 0px 20px 1px white;
+}
+
+.section-bubble11 .introduction-img img {
+  max-width: 650px;
+  max-height: 400px;
 }
 
 .section-bubble1 .introduction-img { left: 30vw; }
-.section-bubble2 .introduction-img { left: 55vw; }
+.section-bubble2 .introduction-img { left: 48vw; }
 .section-bubble3 .introduction-img{ left: 30vw; }
-.section-bubble4 .introduction-img{ left: 30vw; }
+.section-bubble4 .introduction-img{ left: 48vw; }
 .section-bubble5 .introduction-img{ left: 30vw; }
-.section-bubble6 .introduction-img{ left: 30vw; }
+.section-bubble6 .introduction-img{ left: 48vw; }
+.section-bubble7 .introduction-img { left: 30vw; }
+.section-bubble8 .introduction-img { left: 48vw; }
+.section-bubble9 .introduction-img{ left: 30vw; }
+.section-bubble10 .introduction-img{ left: 48vw; }
+.section-bubble11 .introduction-img{ left: 15vw; }
+.section-bubble12 .introduction-img{ left: 48vw; }
 
 .introduction-img img:hover {
   transition: 0.3s ease-out;
@@ -197,7 +215,7 @@
 }
 
 .section-bubble {
-  margin-bottom: $spacer-height;
+  margin: -1px 0 20vw 0;;
   position: relative;
   &:after
   {
@@ -206,7 +224,7 @@
     bottom: 0;
     z-index: -1;
     width: 100%;
-    height: $spacer-height;
+    height: 20vw;
     background-size: 100%;
     transform: translate(0, 100%);
   }
@@ -214,21 +232,52 @@
 
 .section-bubble1 {
   @include section-bubble-with-colors(a, $section1-bg-color, $section2-bg-color);
+  box-shadow: 0 0 0px 2px $section1-bg-color;
+  z-index: -1;
 }
 .section-bubble2 {
   @include section-bubble-with-colors(b, $section2-bg-color, $section3-bg-color);
+  box-shadow: 0 0 0px 2px $section2-bg-color;
 }
 .section-bubble3 {
   @include section-bubble-with-colors(a, $section3-bg-color, $section4-bg-color);
+  box-shadow: 0 0 0px 2px $section3-bg-color;
 }
 .section-bubble4 {
   @include section-bubble-with-colors(b, $section4-bg-color, $section5-bg-color);
+  box-shadow: 0 0 0px 2px $section4-bg-color;
 }
 .section-bubble5 {
   @include section-bubble-with-colors(a, $section5-bg-color, $section6-bg-color);
+  box-shadow: 0 0 0px 2px $section5-bg-color;
 }
 .section-bubble6 {
   @include section-bubble-with-colors(b, $section6-bg-color, $section3-bg-color);
+  box-shadow: 0 0 0px 2px $section6-bg-color;
+}
+.section-bubble7 {
+  @include section-bubble-with-colors(a, $section1-bg-color, $section2-bg-color);
+  box-shadow: 0 0 0px 2px $section1-bg-color;
+}
+.section-bubble8 {
+  @include section-bubble-with-colors(b, $section2-bg-color, $section3-bg-color);
+  box-shadow: 0 0 0px 2px $section2-bg-color;
+}
+.section-bubble9 {
+  @include section-bubble-with-colors(a, $section3-bg-color, $section4-bg-color);
+  box-shadow: 0 0 0px 2px $section3-bg-color;
+}
+.section-bubble10 {
+  @include section-bubble-with-colors(b, $section4-bg-color, $section5-bg-color);
+  box-shadow: 0 0 0px 2px $section4-bg-color;
+}
+.section-bubble11 {
+  @include section-bubble-with-colors(a, $section5-bg-color, $section6-bg-color);
+  box-shadow: 0 0 0px 2px $section5-bg-color;
+}
+.section-bubble12 {
+  @include section-bubble-with-colors(b, $section6-bg-color, $section3-bg-color);
+  box-shadow: 0 0 0px 2px $section6-bg-color;
 }
 
 .section-bubble_type-a {

@@ -128,16 +128,16 @@ ja:
     product-used: "に使われている食材"
 
     know-food-sample: 食品サンプルを知る
-    procedure-1: シリコン型作成
-    procedure-1-text: シリコンで食材の表面を写し取ります。
-    procedure-2: 型採り
-    procedure-2-text: 色付けした樹脂を流し込みオーブンで加熱します。
-    procedure-3: パーツ原型完成
-    procedure-3-text: パーツをシリコン方から取り外し余分な部分を取り除きます。
-    procedure-4: 着色
-    procedure-4-text: エアブラシや筆を使って着色します。
-    procedure-5: 盛り付け
-    procedure-5-text: パーツ同士を組み合わせて接着します。
+    procedure-0: 料理からパーツ作り
+    procedure-1: 料理お預かり
+    procedure-2: 製作計画
+    procedure-3: 仕様書作成
+    procedure-4: 料理見本処理
+    procedure-5: シリコンで型採り
+    procedure-6: 樹脂を焼く
+    procedure-7: パーツ原型完成
+    procedure-8: 吹付けで着色
+    procedure-9: 食材の盛り付け
     complete: 完成！
 
     find_from_category: カテゴリーから見る

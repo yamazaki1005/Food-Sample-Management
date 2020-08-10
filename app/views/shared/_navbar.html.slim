@@ -52,7 +52,8 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
       span
     label#nav-close.nav-unshown for="nav-input"
     #nav-content
-      h3.text-center = t('food-sample')
+      = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
+      h4.text-center = t('food-sample')
       .sc-nav-btn.nav-drawer-content
         = link_to cookings_path
           i.far.fa-images.nav-icon
