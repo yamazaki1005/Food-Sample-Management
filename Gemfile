@@ -32,9 +32,8 @@ gem 'data-confirm-modal'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
-gem 'aws-sdk', '~> 2'
 gem 'dotenv-rails'
-
+gem 'aws-sdk-s3', require: false
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
