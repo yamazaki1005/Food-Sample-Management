@@ -2,6 +2,9 @@
 @media (max-width: 768px) {
   $spacer-height: 19.91vw;
 
+  .list {
+    text-align: left;
+  }
   .catch-copy {
     font-size: 18px;
     line-height: 1.7;
