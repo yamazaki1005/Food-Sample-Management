@@ -34,3 +34,5 @@ yarn-debug.log*
 .DS_Store
 /vendor/bundle
 /.idea
+
+.env
